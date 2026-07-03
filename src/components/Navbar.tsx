@@ -1,15 +1,21 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
 const NAV_LINKS = [
   { label: "Inicio", to: "/" as const, hash: undefined },
-  { label: "Productos", to: "/" as const, hash: "misiones" },
   { label: "Plataforma", to: "/" as const, hash: "brujula" },
   { label: "Comunidad", to: "/" as const, hash: "comunidad" },
   { label: "Recursos", to: "/" as const, hash: "recursos" },
   { label: "Nosotros", to: "/" as const, hash: "nosotros" },
+];
+
+const MISIONES = [
+  { label: "Misión Familias", sub: "Método PUENTE", to: "/mision-familias" as const },
+  { label: "Misión Docentes", sub: "Método FARO", to: "/mision-docentes" as const },
+  { label: "Misión Jóvenes", sub: "Método DECIDE", to: "/mision-jovenes" as const },
+  { label: "Misión Adultos", sub: "Método DECIDE", to: "/mision-adultos" as const },
 ];
 
 const LOGIN_URL = "https://app.familyhelp.com/login";
