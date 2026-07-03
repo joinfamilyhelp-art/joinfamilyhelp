@@ -16,6 +16,8 @@ const MISIONES = [
     audience: "Misión Familias",
     method: "Método PUENTE",
     to: "/mision-familias" as const,
+    iconBg: "bg-rose-50",
+    iconColor: "text-rose-600",
     description:
       "Un camino para reconectar, sostener acuerdos y cuidar los vínculos que sostienen la vida familiar.",
   },
@@ -24,6 +26,8 @@ const MISIONES = [
     audience: "Misión Docentes",
     method: "Método FARO",
     to: "/mision-docentes" as const,
+    iconBg: "bg-sky-50",
+    iconColor: "text-sky-600",
     description:
       "Herramientas para acompañar el aula desde la claridad, el propósito y la presencia consciente.",
   },
@@ -32,6 +36,8 @@ const MISIONES = [
     audience: "Misión Jóvenes",
     method: "Método DECIDE",
     to: "/mision-jovenes" as const,
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-600",
     description:
       "Un espacio para detenerse, elegir con intención y construir un camino propio, paso a paso.",
   },
@@ -40,6 +46,8 @@ const MISIONES = [
     audience: "Misión Adultos",
     method: "Método DECIDE",
     to: "/mision-adultos" as const,
+    iconBg: "bg-amber-50",
+    iconColor: "text-amber-600",
     description:
       "Pequeñas decisiones conscientes para cuidar lo importante y avanzar con serenidad y foco.",
   },
