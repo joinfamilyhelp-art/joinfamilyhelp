@@ -127,7 +127,7 @@ function Home() {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="#brujula"
+                href="/plataforma"
                 className="inline-flex items-center gap-2 rounded-full border border-[--color-brand-mist] bg-white px-6 py-3 text-sm font-medium text-[--color-brand-ink] transition-colors hover:border-[--color-brand-violet-soft]"
               >
                 <Compass className="h-4 w-4 text-[--color-brand-violet]" />
@@ -141,81 +141,6 @@ function Home() {
             >
               Desarrollamos capacidades para que decidas tu propio camino.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* IDENTIDAD Y MANIFIESTO */}
-      <section id="nosotros" className="border-t border-[--color-brand-mist] bg-[--color-brand-mist]">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="mx-auto mb-16 max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[--color-brand-violet]">
-              Identidad y manifiesto
-            </p>
-            <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
-              style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
-            >
-              Una empresa. Un primer sistema.
-            </h2>
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-            {/* Family Help */}
-            <article className="flex flex-col rounded-3xl border border-white bg-white p-8 shadow-[0_1px_0_rgba(15,23,42,0.03)] sm:p-10">
-              <div className="mb-6 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--color-brand-mist] text-[--color-brand-indigo]">
-                <Heart className="h-5 w-5 fill-[--color-brand-coral] text-[--color-brand-coral]" />
-              </div>
-              <h3
-                className="text-2xl text-[--color-brand-ink]"
-                style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
-              >
-                Family Help
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Somos una empresa dedicada a crear tecnología al servicio del desarrollo humano.
-                Nuestra convicción es firme: la tecnología debe fortalecer la capacidad de las
-                personas para decidir y actuar conscientemente, nunca reemplazarla.
-              </p>
-            </article>
-
-            {/* BRÚJULA */}
-            <article
-              id="brujula"
-              className="relative flex flex-col overflow-hidden rounded-3xl border border-[--color-brand-violet-soft]/40 p-8 text-white shadow-md sm:p-10"
-              style={{
-                background:
-                  "linear-gradient(135deg, var(--color-brand-ink) 0%, var(--color-brand-indigo) 55%, var(--color-brand-violet) 100%)",
-              }}
-            >
-              <span className="absolute right-6 top-6 rounded-full bg-white/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur">
-                Primer producto
-              </span>
-              <div className="mb-6 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur">
-                <Compass className="h-5 w-5" />
-              </div>
-              <h3
-                className="text-2xl"
-                style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
-              >
-                BRÚJULA®
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-white/85">
-                Es la primera expresión de nuestra visión. No es únicamente una microapp aislada;
-                es el primer sistema desarrollado por Family Help para acompañar a las personas a
-                recuperar la capacidad de detenerse, recordar lo que quieren cuidar y avanzar con
-                claridad, un paso a la vez.
-              </p>
-              <a
-                href="https://app.joinfamilyhelp.com/brujula"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[--color-brand-ink] transition-all hover:bg-white/90"
-              >
-                Acceder a BRÚJULA®
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </article>
           </div>
         </div>
       </section>
