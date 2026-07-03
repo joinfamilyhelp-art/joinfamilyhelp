@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
@@ -53,8 +53,8 @@ export function Navbar() {
 
         <ul className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((link, i) => (
-            <>
-              <li key={link.label}>
+            <Fragment key={link.label}>
+              <li>
                 <Link
                   to={link.to}
                   hash={link.hash}
@@ -66,7 +66,7 @@ export function Navbar() {
                 </Link>
               </li>
               {i === 0 ? (
-                <li key="misiones-dropdown" className="group relative">
+                <li className="group relative">
                   <button
                     type="button"
                     className="inline-flex items-center gap-1 text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
@@ -90,7 +90,7 @@ export function Navbar() {
                   </div>
                 </li>
               ) : null}
-            </>
+            </Fragment>
           ))}
         </ul>
 
