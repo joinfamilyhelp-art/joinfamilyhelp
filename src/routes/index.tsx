@@ -257,30 +257,7 @@ function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-[--color-brand-mist] bg-white">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-10 sm:flex-row sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2.5">
-            <img
-              src={logoAsset.url}
-              alt=""
-              width={28}
-              height={28}
-              className="h-7 w-7 object-contain"
-              loading="lazy"
-            />
-            <p className="text-sm text-slate-500">
-              © {new Date().getFullYear()} Family Help®. Tecnología al servicio del desarrollo humano.
-            </p>
-          </div>
-          <p
-            className="text-base text-[--color-brand-violet]"
-            style={{ fontFamily: "Satisfy, cursive" }}
-          >
-            Desarrollamos capacidades para que decidas tu propio camino.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

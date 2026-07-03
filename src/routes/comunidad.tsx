@@ -200,11 +200,7 @@ function Comunidad() {
         </div>
       </section>
 
-      <footer className="border-t border-[--color-brand-mist] bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} Family Help®. Tecnología al servicio del desarrollo humano.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
