@@ -18,8 +18,8 @@ const MISIONES = [
   { label: "Misión Adultos", sub: "Método DECIDE", to: "/mision-adultos" as const },
 ];
 
-const LOGIN_URL = "https://app.familyhelp.com/login";
-const BRUJULA_URL = "https://app.familyhelp.com/brujula";
+const LOGIN_URL = "https://app.joinfamilyhelp.com/login";
+const BRUJULA_URL = "https://app.joinfamilyhelp.com/brujula";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
