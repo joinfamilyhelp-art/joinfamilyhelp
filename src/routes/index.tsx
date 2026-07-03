@@ -121,7 +121,7 @@ function Home() {
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
                 href="#misiones"
-                className="inline-flex items-center gap-2 rounded-full bg-[--color-brand-ink] px-6 py-3 text-sm font-medium text-white shadow-sm transition-all hover:bg-[--color-brand-indigo] hover:shadow-md"
+                className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-sky-700 hover:shadow-md"
               >
                 Explorar misiones
                 <ArrowRight className="h-4 w-4" />
