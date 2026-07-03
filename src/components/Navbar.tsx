@@ -133,6 +133,24 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="mt-3 border-t border-[--color-brand-mist] pt-3">
+              <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                Misiones
+              </p>
+              {MISIONES.map((m) => (
+                <Link
+                  key={m.to}
+                  to={m.to}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-[--color-brand-mist]"
+                >
+                  <span className="block text-sm font-semibold text-[--color-brand-ink]">
+                    {m.label}
+                  </span>
+                  <span className="block text-xs text-slate-500">{m.sub}</span>
+                </Link>
+              ))}
+            </div>
             <div className="mt-3 flex flex-col gap-2 border-t border-[--color-brand-mist] pt-3">
               <a
                 href={LOGIN_URL}
