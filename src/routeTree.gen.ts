@@ -9,7 +9,11 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TerminosRouteImport } from './routes/terminos'
+import { Route as RecursosRouteImport } from './routes/recursos'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as PlataformaRouteImport } from './routes/plataforma'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as MisionJovenesRouteImport } from './routes/mision-jovenes'
 import { Route as MisionFamiliasRouteImport } from './routes/mision-familias'
 import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
@@ -17,9 +21,29 @@ import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TerminosRoute = TerminosRouteImport.update({
+  id: '/terminos',
+  path: '/terminos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosRoute = RecursosRouteImport.update({
+  id: '/recursos',
+  path: '/recursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlataformaRoute = PlataformaRouteImport.update({
   id: '/plataforma',
   path: '/plataforma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MisionJovenesRoute = MisionJovenesRouteImport.update({
@@ -60,7 +84,11 @@ export interface FileRoutesByFullPath {
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/mision-jovenes': typeof MisionJovenesRoute
+  '/nosotros': typeof NosotrosRoute
   '/plataforma': typeof PlataformaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/recursos': typeof RecursosRoute
+  '/terminos': typeof TerminosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -69,7 +97,11 @@ export interface FileRoutesByTo {
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/mision-jovenes': typeof MisionJovenesRoute
+  '/nosotros': typeof NosotrosRoute
   '/plataforma': typeof PlataformaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/recursos': typeof RecursosRoute
+  '/terminos': typeof TerminosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -79,7 +111,11 @@ export interface FileRoutesById {
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/mision-jovenes': typeof MisionJovenesRoute
+  '/nosotros': typeof NosotrosRoute
   '/plataforma': typeof PlataformaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/recursos': typeof RecursosRoute
+  '/terminos': typeof TerminosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -90,7 +126,11 @@ export interface FileRouteTypes {
     | '/mision-docentes'
     | '/mision-familias'
     | '/mision-jovenes'
+    | '/nosotros'
     | '/plataforma'
+    | '/privacidad'
+    | '/recursos'
+    | '/terminos'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -99,7 +139,11 @@ export interface FileRouteTypes {
     | '/mision-docentes'
     | '/mision-familias'
     | '/mision-jovenes'
+    | '/nosotros'
     | '/plataforma'
+    | '/privacidad'
+    | '/recursos'
+    | '/terminos'
   id:
     | '__root__'
     | '/'
@@ -108,7 +152,11 @@ export interface FileRouteTypes {
     | '/mision-docentes'
     | '/mision-familias'
     | '/mision-jovenes'
+    | '/nosotros'
     | '/plataforma'
+    | '/privacidad'
+    | '/recursos'
+    | '/terminos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -118,16 +166,48 @@ export interface RootRouteChildren {
   MisionDocentesRoute: typeof MisionDocentesRoute
   MisionFamiliasRoute: typeof MisionFamiliasRoute
   MisionJovenesRoute: typeof MisionJovenesRoute
+  NosotrosRoute: typeof NosotrosRoute
   PlataformaRoute: typeof PlataformaRoute
+  PrivacidadRoute: typeof PrivacidadRoute
+  RecursosRoute: typeof RecursosRoute
+  TerminosRoute: typeof TerminosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terminos': {
+      id: '/terminos'
+      path: '/terminos'
+      fullPath: '/terminos'
+      preLoaderRoute: typeof TerminosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos': {
+      id: '/recursos'
+      path: '/recursos'
+      fullPath: '/recursos'
+      preLoaderRoute: typeof RecursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/plataforma': {
       id: '/plataforma'
       path: '/plataforma'
       fullPath: '/plataforma'
       preLoaderRoute: typeof PlataformaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mision-jovenes': {
@@ -182,7 +262,11 @@ const rootRouteChildren: RootRouteChildren = {
   MisionDocentesRoute: MisionDocentesRoute,
   MisionFamiliasRoute: MisionFamiliasRoute,
   MisionJovenesRoute: MisionJovenesRoute,
+  NosotrosRoute: NosotrosRoute,
   PlataformaRoute: PlataformaRoute,
+  PrivacidadRoute: PrivacidadRoute,
+  RecursosRoute: RecursosRoute,
+  TerminosRoute: TerminosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
