@@ -27,9 +27,9 @@ const MISIONES = [
     audience: "Misión Docentes",
     method: "Método FARO",
     to: "/mision-docentes" as const,
-    iconBg: "bg-amber-100",
-    iconColor: "text-amber-700",
-    accent: "from-amber-50 to-white",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-700",
+    accent: "from-indigo-50 to-white",
     description:
       "Herramientas para acompañar el aula desde la claridad, el propósito y la presencia consciente.",
   },
@@ -49,9 +49,9 @@ const MISIONES = [
     audience: "Misión Adultos",
     method: "Método DECIDE",
     to: "/mision-adultos" as const,
-    iconBg: "bg-orange-100",
-    iconColor: "text-orange-700",
-    accent: "from-orange-50 to-white",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-700",
+    accent: "from-indigo-50 to-white",
     description:
       "Pequeñas decisiones conscientes para cuidar lo importante y avanzar con serenidad y foco.",
   },
@@ -72,14 +72,14 @@ function Home() {
               "linear-gradient(180deg, #fef3ec 0%, #fdf9f4 55%, #ffffff 100%)",
           }}
         />
-        <div className="pointer-events-none absolute -top-24 -left-24 -z-10 h-96 w-96 rounded-full bg-orange-200 opacity-40 blur-3xl" />
+        <div className="pointer-events-none absolute -top-24 -left-24 -z-10 h-96 w-96 rounded-full bg-indigo-200 opacity-40 blur-3xl" />
         <div className="pointer-events-none absolute top-40 -right-24 -z-10 h-[26rem] w-[26rem] rounded-full bg-rose-200 opacity-40 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 left-1/3 -z-10 h-72 w-72 rounded-full bg-amber-200 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-1/3 -z-10 h-72 w-72 rounded-full bg-indigo-200 opacity-30 blur-3xl" />
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-12 lg:gap-16 lg:px-8">
           {/* Columna texto */}
           <div className="lg:col-span-6">
-            <span className="inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-white/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-orange-700 shadow-sm backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-200/70 bg-white/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-indigo-700 shadow-sm backdrop-blur">
               <Sun className="h-3.5 w-3.5" />
               Tecnología cálida · Desarrollo humano
             </span>
@@ -118,14 +118,14 @@ function Home() {
             <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a
                 href="#misiones"
-                className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-700 hover:shadow-lg"
               >
                 Explorar misiones
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="/plataforma"
-                className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white/80 px-6 py-3 text-sm font-medium text-[--color-brand-ink] backdrop-blur transition-colors hover:border-orange-300 hover:bg-white"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white/80 px-6 py-3 text-sm font-medium text-[--color-brand-ink] backdrop-blur transition-colors hover:border-indigo-300 hover:bg-white"
               >
                 <Compass className="h-4 w-4 text-[--color-brand-violet]" />
                 Conocer BRÚJULA®
@@ -143,7 +143,7 @@ function Home() {
           {/* Columna imagen + tarjeta flotante */}
           <div className="relative lg:col-span-6">
             <div className="relative">
-              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-orange-200/60 via-rose-200/40 to-amber-100/40 blur-2xl" />
+              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-indigo-200/60 via-rose-200/40 to-indigo-100/40 blur-2xl" />
               <div className="overflow-hidden rounded-[1.75rem] border border-white/60 shadow-2xl ring-1 ring-black/5">
                 <img
                   src={heroFamily}
@@ -155,7 +155,7 @@ function Home() {
               </div>
 
               {/* Tarjeta flotante */}
-              <div className="absolute -bottom-6 -left-4 max-w-[19rem] rounded-2xl border border-orange-100 bg-white/95 p-5 shadow-xl backdrop-blur sm:-left-8 sm:-bottom-8">
+              <div className="absolute -bottom-6 -left-4 max-w-[19rem] rounded-2xl border border-indigo-100 bg-white/95 p-5 shadow-xl backdrop-blur sm:-left-8 sm:-bottom-8">
                 <div className="flex items-center gap-2">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-rose-100 text-rose-600">
                     <Heart className="h-4 w-4 fill-current" />
@@ -171,8 +171,8 @@ function Home() {
               </div>
 
               {/* Chip superior */}
-              <div className="absolute -top-4 right-4 hidden rounded-full border border-amber-200 bg-white/95 px-4 py-2 text-xs font-medium text-amber-700 shadow-lg backdrop-blur sm:flex sm:items-center sm:gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+              <div className="absolute -top-4 right-4 hidden rounded-full border border-indigo-200 bg-white/95 px-4 py-2 text-xs font-medium text-indigo-700 shadow-lg backdrop-blur sm:flex sm:items-center sm:gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
                 Basado en evidencia · Sin alarmismo
               </div>
             </div>
@@ -182,11 +182,11 @@ function Home() {
 
       {/* MISIONES */}
       <section id="misiones" className="relative overflow-hidden bg-white">
-        <div className="pointer-events-none absolute -top-24 right-1/4 -z-0 h-72 w-72 rounded-full bg-amber-100 opacity-50 blur-3xl" />
+        <div className="pointer-events-none absolute -top-24 right-1/4 -z-0 h-72 w-72 rounded-full bg-indigo-100 opacity-50 blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 left-0 -z-0 h-80 w-80 rounded-full bg-rose-100 opacity-40 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-orange-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-indigo-600">
               Misiones
             </p>
             <h2
@@ -223,7 +223,7 @@ function Home() {
                     {m.method}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">{m.description}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-orange-700 transition-colors group-hover:text-orange-800">
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-700 transition-colors group-hover:text-indigo-800">
                     Conocer misión
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                   </span>
@@ -235,7 +235,7 @@ function Home() {
       </section>
 
       {/* MANIFIESTO cálido */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-rose-50 to-amber-50">
+      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-rose-50 to-indigo-50">
         <div className="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-rose-600">
             Nuestro compromiso
