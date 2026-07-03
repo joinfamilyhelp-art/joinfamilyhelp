@@ -124,7 +124,8 @@ export function MissionLayout(props: MissionLayoutProps) {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-white">
+      <section className="bg-slate-50">
+
         <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
           <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${t.accent}`}>
             {props.problem.eyebrow}
