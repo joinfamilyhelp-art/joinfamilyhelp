@@ -76,6 +76,8 @@ export function MissionLayout(props: MissionLayoutProps) {
 
       {/* HERO */}
       <section className={`relative overflow-hidden ${t.bg}`}>
+        <div className="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rounded-full bg-emerald-100 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-16 right-0 h-96 w-96 rounded-full bg-sky-100 opacity-40 blur-3xl" />
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <Link
             to="/"
