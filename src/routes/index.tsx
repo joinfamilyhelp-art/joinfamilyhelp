@@ -67,6 +67,10 @@ function Home() {
               "linear-gradient(180deg, var(--color-brand-mist) 0%, #ffffff 55%, #ffffff 100%)",
           }}
         />
+        {/* soft gradient blobs */}
+        <div className="pointer-events-none absolute -top-24 -left-24 -z-10 h-96 w-96 rounded-full bg-emerald-100 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-16 right-0 -z-10 h-[28rem] w-[28rem] rounded-full bg-sky-100 opacity-40 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/2 left-1/3 -z-10 h-72 w-72 rounded-full bg-rose-100 opacity-20 blur-3xl" />
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <img
