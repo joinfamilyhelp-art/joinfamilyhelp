@@ -116,6 +116,8 @@ function Plataforma() {
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
                 href={BRUJULA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[--color-brand-ink] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[--color-brand-indigo] hover:shadow-lg"
               >
                 Acceder a la plataforma
@@ -278,6 +280,8 @@ function Plataforma() {
             </p>
             <a
               href={BRUJULA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[--color-brand-ink] shadow-lg transition-all hover:-translate-y-0.5"
             >
               Acceder a la Plataforma Real
