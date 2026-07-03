@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Quote, Users, GraduationCap, UserRound, Sparkles } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/comunidad")({
   head: () => ({
@@ -200,11 +201,7 @@ function Comunidad() {
         </div>
       </section>
 
-      <footer className="border-t border-[--color-brand-mist] bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} Family Help®. Tecnología al servicio del desarrollo humano.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
