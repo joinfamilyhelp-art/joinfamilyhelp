@@ -33,7 +33,7 @@ export const Route = createFileRoute("/plataforma")({
   component: Plataforma,
 });
 
-const BRUJULA_URL = "https://app.familyhelp.com/brujula";
+const BRUJULA_URL = "https://app.joinfamilyhelp.com/brujula";
 
 const FEATURES = [
   {
@@ -139,7 +139,7 @@ function Plataforma() {
                   <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
                   <span className="ml-3 font-mono text-[10px] uppercase tracking-widest text-slate-400">
-                    app.familyhelp.com/brujula
+                    app.joinfamilyhelp.com/brujula
                   </span>
                 </div>
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
