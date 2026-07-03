@@ -195,7 +195,9 @@ function Home() {
                 claridad, un paso a la vez.
               </p>
               <a
-                href="https://app.familyhelp.com/brujula"
+                href="https://app.joinfamilyhelp.com/brujula"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[--color-brand-ink] transition-all hover:bg-white/90"
               >
                 Acceder a BRÚJULA®

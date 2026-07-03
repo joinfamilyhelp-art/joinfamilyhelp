@@ -33,7 +33,7 @@ export const Route = createFileRoute("/plataforma")({
   component: Plataforma,
 });
 
-const BRUJULA_URL = "https://app.familyhelp.com/brujula";
+const BRUJULA_URL = "https://app.joinfamilyhelp.com/brujula";
 
 const FEATURES = [
   {
@@ -116,6 +116,8 @@ function Plataforma() {
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
                 href={BRUJULA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[--color-brand-ink] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[--color-brand-indigo] hover:shadow-lg"
               >
                 Acceder a la plataforma
@@ -139,7 +141,7 @@ function Plataforma() {
                   <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
                   <span className="ml-3 font-mono text-[10px] uppercase tracking-widest text-slate-400">
-                    app.familyhelp.com/brujula
+                    app.joinfamilyhelp.com/brujula
                   </span>
                 </div>
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -278,6 +280,8 @@ function Plataforma() {
             </p>
             <a
               href={BRUJULA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[--color-brand-ink] shadow-lg transition-all hover:-translate-y-0.5"
             >
               Acceder a la Plataforma Real

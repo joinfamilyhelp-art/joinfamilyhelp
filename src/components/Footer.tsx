@@ -55,6 +55,24 @@ export function Footer() {
               Tecnología al servicio del desarrollo humano. Diseñamos capacidades para que
               decidas tu propio camino.
             </p>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a
+                href="https://app.joinfamilyhelp.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full border border-[--color-brand-mist] bg-white px-4 py-2 text-xs font-semibold text-[--color-brand-ink] transition-colors hover:border-[--color-brand-violet-soft]"
+              >
+                Iniciar sesión ↗
+              </a>
+              <a
+                href="https://app.joinfamilyhelp.com/brujula"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full bg-[--color-brand-ink] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[--color-brand-indigo]"
+              >
+                Acceder a BRÚJULA® ↗
+              </a>
+            </div>
           </div>
 
           {/* Productos */}
