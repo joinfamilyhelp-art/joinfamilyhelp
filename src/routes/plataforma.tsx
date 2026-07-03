@@ -183,7 +183,7 @@ function Plataforma() {
       </section>
 
       {/* FEATURES */}
-      <section id="tour" className="border-t border-[--color-brand-mist] bg-white">
+      <section id="tour" className="relative overflow-hidden border-t border-[--color-brand-mist] bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[--color-brand-violet]">
