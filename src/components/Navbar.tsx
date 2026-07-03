@@ -5,8 +5,8 @@ import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
 const NAV_LINKS = [
   { label: "Inicio", to: "/" as const, hash: undefined },
-  { label: "Plataforma", to: "/" as const, hash: "brujula" },
-  { label: "Comunidad", to: "/" as const, hash: "comunidad" },
+  { label: "Plataforma", to: "/plataforma" as const, hash: undefined },
+  { label: "Comunidad", to: "/comunidad" as const, hash: undefined },
   { label: "Recursos", to: "/" as const, hash: "recursos" },
   { label: "Nosotros", to: "/" as const, hash: "nosotros" },
 ];

@@ -9,12 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PlataformaRouteImport } from './routes/plataforma'
 import { Route as MisionJovenesRouteImport } from './routes/mision-jovenes'
 import { Route as MisionFamiliasRouteImport } from './routes/mision-familias'
 import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
 import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
+import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as IndexRouteImport } from './routes/index'
 
+const PlataformaRoute = PlataformaRouteImport.update({
+  id: '/plataforma',
+  path: '/plataforma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MisionJovenesRoute = MisionJovenesRouteImport.update({
   id: '/mision-jovenes',
   path: '/mision-jovenes',
@@ -35,6 +42,11 @@ const MisionAdultosRoute = MisionAdultosRouteImport.update({
   path: '/mision-adultos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ComunidadRoute = ComunidadRouteImport.update({
+  id: '/comunidad',
+  path: '/comunidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,60 +55,81 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/mision-jovenes': typeof MisionJovenesRoute
+  '/plataforma': typeof PlataformaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/mision-jovenes': typeof MisionJovenesRoute
+  '/plataforma': typeof PlataformaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/mision-jovenes': typeof MisionJovenesRoute
+  '/plataforma': typeof PlataformaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/comunidad'
     | '/mision-adultos'
     | '/mision-docentes'
     | '/mision-familias'
     | '/mision-jovenes'
+    | '/plataforma'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/comunidad'
     | '/mision-adultos'
     | '/mision-docentes'
     | '/mision-familias'
     | '/mision-jovenes'
+    | '/plataforma'
   id:
     | '__root__'
     | '/'
+    | '/comunidad'
     | '/mision-adultos'
     | '/mision-docentes'
     | '/mision-familias'
     | '/mision-jovenes'
+    | '/plataforma'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ComunidadRoute: typeof ComunidadRoute
   MisionAdultosRoute: typeof MisionAdultosRoute
   MisionDocentesRoute: typeof MisionDocentesRoute
   MisionFamiliasRoute: typeof MisionFamiliasRoute
   MisionJovenesRoute: typeof MisionJovenesRoute
+  PlataformaRoute: typeof PlataformaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/plataforma': {
+      id: '/plataforma'
+      path: '/plataforma'
+      fullPath: '/plataforma'
+      preLoaderRoute: typeof PlataformaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mision-jovenes': {
       id: '/mision-jovenes'
       path: '/mision-jovenes'
@@ -125,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MisionAdultosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/comunidad': {
+      id: '/comunidad'
+      path: '/comunidad'
+      fullPath: '/comunidad'
+      preLoaderRoute: typeof ComunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -137,10 +177,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ComunidadRoute: ComunidadRoute,
   MisionAdultosRoute: MisionAdultosRoute,
   MisionDocentesRoute: MisionDocentesRoute,
   MisionFamiliasRoute: MisionFamiliasRoute,
   MisionJovenesRoute: MisionJovenesRoute,
+  PlataformaRoute: PlataformaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
