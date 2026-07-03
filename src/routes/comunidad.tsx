@@ -122,7 +122,7 @@ function Comunidad() {
       </section>
 
       {/* WALL */}
-      <section className="border-t border-[--color-brand-mist] bg-white">
+      <section className="border-t border-[--color-brand-mist] bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6 [&>*]:break-inside-avoid">
             {TESTIMONIOS.map((t) => {
