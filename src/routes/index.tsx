@@ -221,14 +221,16 @@ function Home() {
       </section>
 
       {/* MISIONES */}
-      <section id="misiones" className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+      <section id="misiones" className="relative overflow-hidden bg-sky-50/30">
+        <div className="pointer-events-none absolute -top-24 right-1/4 -z-0 h-72 w-72 rounded-full bg-emerald-100 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-0 -z-0 h-80 w-80 rounded-full bg-sky-100 opacity-40 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[--color-brand-violet]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-600">
               Misiones
             </p>
             <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+              className="mt-3 font-serif text-3xl tracking-tight text-slate-900 sm:text-4xl"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Un método para cada camino.
@@ -246,9 +248,9 @@ function Home() {
                 <Link
                   key={m.audience}
                   to={m.to}
-                  className="group flex flex-col rounded-2xl border border-[--color-brand-mist] bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[--color-brand-violet-soft]/50 hover:shadow-md"
+                  className="group flex flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-200 hover:shadow-md"
                 >
-                  <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--color-brand-mist] text-[--color-brand-indigo]">
+                  <div className={`mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl ${m.iconBg} ${m.iconColor}`}>
                     <Icon className="h-5 w-5" />
                   </div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
