@@ -1,15 +1,21 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Fragment, useState } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
 const NAV_LINKS = [
   { label: "Inicio", to: "/" as const, hash: undefined },
-  { label: "Productos", to: "/" as const, hash: "misiones" },
   { label: "Plataforma", to: "/" as const, hash: "brujula" },
   { label: "Comunidad", to: "/" as const, hash: "comunidad" },
   { label: "Recursos", to: "/" as const, hash: "recursos" },
   { label: "Nosotros", to: "/" as const, hash: "nosotros" },
+];
+
+const MISIONES = [
+  { label: "Misión Familias", sub: "Método PUENTE", to: "/mision-familias" as const },
+  { label: "Misión Docentes", sub: "Método FARO", to: "/mision-docentes" as const },
+  { label: "Misión Jóvenes", sub: "Método DECIDE", to: "/mision-jovenes" as const },
+  { label: "Misión Adultos", sub: "Método DECIDE", to: "/mision-adultos" as const },
 ];
 
 const LOGIN_URL = "https://app.familyhelp.com/login";
@@ -46,18 +52,45 @@ export function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.label}>
-              <Link
-                to={link.to}
-                hash={link.hash}
-                className="text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
-                activeOptions={{ exact: true }}
-                activeProps={{ className: "text-[--color-brand-ink]" }}
-              >
-                {link.label}
-              </Link>
-            </li>
+          {NAV_LINKS.map((link, i) => (
+            <Fragment key={link.label}>
+              <li>
+                <Link
+                  to={link.to}
+                  hash={link.hash}
+                  className="text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
+                  activeOptions={{ exact: true }}
+                  activeProps={{ className: "text-[--color-brand-ink]" }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+              {i === 0 ? (
+                <li className="group relative">
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
+                  >
+                    Misiones
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  </button>
+                  <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-72 -translate-x-1/2 rounded-2xl border border-[--color-brand-mist] bg-white p-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100">
+                    {MISIONES.map((m) => (
+                      <Link
+                        key={m.to}
+                        to={m.to}
+                        className="block rounded-lg px-3 py-2 hover:bg-[--color-brand-mist]"
+                      >
+                        <p className="text-sm font-semibold text-[--color-brand-ink]">
+                          {m.label}
+                        </p>
+                        <p className="text-xs text-slate-500">{m.sub}</p>
+                      </Link>
+                    ))}
+                  </div>
+                </li>
+              ) : null}
+            </Fragment>
           ))}
         </ul>
 
@@ -100,6 +133,24 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="mt-3 border-t border-[--color-brand-mist] pt-3">
+              <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                Misiones
+              </p>
+              {MISIONES.map((m) => (
+                <Link
+                  key={m.to}
+                  to={m.to}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-[--color-brand-mist]"
+                >
+                  <span className="block text-sm font-semibold text-[--color-brand-ink]">
+                    {m.label}
+                  </span>
+                  <span className="block text-xs text-slate-500">{m.sub}</span>
+                </Link>
+              ))}
+            </div>
             <div className="mt-3 flex flex-col gap-2 border-t border-[--color-brand-mist] pt-3">
               <a
                 href={LOGIN_URL}

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Compass, Heart, Users, GraduationCap, Sparkles, UserRound } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
@@ -14,6 +14,7 @@ const MISIONES = [
     icon: Users,
     audience: "Misión Familias",
     method: "Método PUENTE",
+    to: "/mision-familias" as const,
     description:
       "Un camino para reconectar, sostener acuerdos y cuidar los vínculos que sostienen la vida familiar.",
   },
@@ -21,6 +22,7 @@ const MISIONES = [
     icon: GraduationCap,
     audience: "Misión Docentes",
     method: "Método FARO",
+    to: "/mision-docentes" as const,
     description:
       "Herramientas para acompañar el aula desde la claridad, el propósito y la presencia consciente.",
   },
@@ -28,6 +30,7 @@ const MISIONES = [
     icon: Sparkles,
     audience: "Misión Jóvenes",
     method: "Método DECIDE",
+    to: "/mision-jovenes" as const,
     description:
       "Un espacio para detenerse, elegir con intención y construir un camino propio, paso a paso.",
   },
@@ -35,6 +38,7 @@ const MISIONES = [
     icon: UserRound,
     audience: "Misión Adultos",
     method: "Método DECIDE",
+    to: "/mision-adultos" as const,
     description:
       "Pequeñas decisiones conscientes para cuidar lo importante y avanzar con serenidad y foco.",
   },
@@ -224,8 +228,9 @@ function Home() {
             {MISIONES.map((m) => {
               const Icon = m.icon;
               return (
-                <article
+                <Link
                   key={m.audience}
+                  to={m.to}
                   className="group flex flex-col rounded-2xl border border-[--color-brand-mist] bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[--color-brand-violet-soft]/50 hover:shadow-md"
                 >
                   <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--color-brand-mist] text-[--color-brand-indigo]">
@@ -241,10 +246,11 @@ function Home() {
                     {m.method}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">{m.description}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.18em] text-slate-400">
-                    Próximamente
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[--color-brand-violet] transition-colors group-hover:text-[--color-brand-indigo]">
+                    Conocer misión
+                    <ArrowRight className="h-3.5 w-3.5" />
                   </span>
-                </article>
+                </Link>
               );
             })}
           </div>
