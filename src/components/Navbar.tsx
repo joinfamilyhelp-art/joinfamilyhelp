@@ -18,7 +18,6 @@ const MISIONES = [
   { label: "Misión Adultos", sub: "Método DECIDE", to: "/mision-adultos" as const },
 ];
 
-const LOGIN_URL = "https://app.joinfamilyhelp.com/login";
 const BRUJULA_URL = "https://app.joinfamilyhelp.com/brujula";
 
 export function Navbar() {
@@ -96,14 +95,6 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href={LOGIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-slate-700 transition-colors hover:text-[--color-brand-ink]"
-          >
-            Iniciar sesión
-          </a>
-          <a
             href={BRUJULA_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -156,14 +147,6 @@ export function Navbar() {
               ))}
             </div>
             <div className="mt-3 flex flex-col gap-2 border-t border-[--color-brand-mist] pt-3">
-              <a
-                href={LOGIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-[--color-brand-mist]"
-              >
-                Iniciar sesión
-              </a>
               <a
                 href={BRUJULA_URL}
                 target="_blank"
