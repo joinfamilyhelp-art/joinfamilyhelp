@@ -7,8 +7,8 @@ const NAV_LINKS = [
   { label: "Inicio", to: "/" as const, hash: undefined },
   { label: "Plataforma", to: "/plataforma" as const, hash: undefined },
   { label: "Comunidad", to: "/comunidad" as const, hash: undefined },
-  { label: "Recursos", to: "/" as const, hash: "recursos" },
-  { label: "Nosotros", to: "/" as const, hash: "nosotros" },
+  { label: "Recursos", to: "/recursos" as const, hash: undefined },
+  { label: "Nosotros", to: "/nosotros" as const, hash: undefined },
 ];
 
 const MISIONES = [
