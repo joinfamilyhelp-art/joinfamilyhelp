@@ -98,7 +98,7 @@ export function Navbar() {
             href={BRUJULA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full bg-[--color-brand-ink] px-4 py-2 text-sm font-medium text-white shadow-sm transition-all hover:bg-[--color-brand-indigo] hover:shadow-md"
+            className="inline-flex items-center rounded-full bg-sky-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-700 hover:shadow-md"
           >
             Acceder a BRÚJULA®
           </a>
