@@ -52,18 +52,45 @@ export function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.label}>
-              <Link
-                to={link.to}
-                hash={link.hash}
-                className="text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
-                activeOptions={{ exact: true }}
-                activeProps={{ className: "text-[--color-brand-ink]" }}
-              >
-                {link.label}
-              </Link>
-            </li>
+          {NAV_LINKS.map((link, i) => (
+            <>
+              <li key={link.label}>
+                <Link
+                  to={link.to}
+                  hash={link.hash}
+                  className="text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
+                  activeOptions={{ exact: true }}
+                  activeProps={{ className: "text-[--color-brand-ink]" }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+              {i === 0 ? (
+                <li key="misiones-dropdown" className="group relative">
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
+                  >
+                    Misiones
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  </button>
+                  <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-72 -translate-x-1/2 rounded-2xl border border-[--color-brand-mist] bg-white p-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100">
+                    {MISIONES.map((m) => (
+                      <Link
+                        key={m.to}
+                        to={m.to}
+                        className="block rounded-lg px-3 py-2 hover:bg-[--color-brand-mist]"
+                      >
+                        <p className="text-sm font-semibold text-[--color-brand-ink]">
+                          {m.label}
+                        </p>
+                        <p className="text-xs text-slate-500">{m.sub}</p>
+                      </Link>
+                    ))}
+                  </div>
+                </li>
+              ) : null}
+            </>
           ))}
         </ul>
 
