@@ -167,7 +167,7 @@ export function MissionLayout(props: MissionLayoutProps) {
       ) : null}
 
       {/* INCLUDES */}
-      <section id="incluye" className="bg-white border-t border-slate-100">
+      <section id="incluye" className="bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${t.accent}`}>
