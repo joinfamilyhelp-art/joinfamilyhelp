@@ -16,6 +16,8 @@ const MISIONES = [
     audience: "Misión Familias",
     method: "Método PUENTE",
     to: "/mision-familias" as const,
+    iconBg: "bg-rose-50",
+    iconColor: "text-rose-600",
     description:
       "Un camino para reconectar, sostener acuerdos y cuidar los vínculos que sostienen la vida familiar.",
   },
@@ -24,6 +26,8 @@ const MISIONES = [
     audience: "Misión Docentes",
     method: "Método FARO",
     to: "/mision-docentes" as const,
+    iconBg: "bg-sky-50",
+    iconColor: "text-sky-600",
     description:
       "Herramientas para acompañar el aula desde la claridad, el propósito y la presencia consciente.",
   },
@@ -32,6 +36,8 @@ const MISIONES = [
     audience: "Misión Jóvenes",
     method: "Método DECIDE",
     to: "/mision-jovenes" as const,
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-600",
     description:
       "Un espacio para detenerse, elegir con intención y construir un camino propio, paso a paso.",
   },
@@ -40,6 +46,8 @@ const MISIONES = [
     audience: "Misión Adultos",
     method: "Método DECIDE",
     to: "/mision-adultos" as const,
+    iconBg: "bg-amber-50",
+    iconColor: "text-amber-600",
     description:
       "Pequeñas decisiones conscientes para cuidar lo importante y avanzar con serenidad y foco.",
   },
@@ -59,6 +67,10 @@ function Home() {
               "linear-gradient(180deg, var(--color-brand-mist) 0%, #ffffff 55%, #ffffff 100%)",
           }}
         />
+        {/* soft gradient blobs */}
+        <div className="pointer-events-none absolute -top-24 -left-24 -z-10 h-96 w-96 rounded-full bg-emerald-100 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-16 right-0 -z-10 h-[28rem] w-[28rem] rounded-full bg-sky-100 opacity-40 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/2 left-1/3 -z-10 h-72 w-72 rounded-full bg-rose-100 opacity-20 blur-3xl" />
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <img
@@ -109,7 +121,7 @@ function Home() {
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
                 href="#misiones"
-                className="inline-flex items-center gap-2 rounded-full bg-[--color-brand-ink] px-6 py-3 text-sm font-medium text-white shadow-sm transition-all hover:bg-[--color-brand-indigo] hover:shadow-md"
+                className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-sky-700 hover:shadow-md"
               >
                 Explorar misiones
                 <ArrowRight className="h-4 w-4" />
@@ -209,14 +221,16 @@ function Home() {
       </section>
 
       {/* MISIONES */}
-      <section id="misiones" className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+      <section id="misiones" className="relative overflow-hidden bg-sky-50/30">
+        <div className="pointer-events-none absolute -top-24 right-1/4 -z-0 h-72 w-72 rounded-full bg-emerald-100 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-0 -z-0 h-80 w-80 rounded-full bg-sky-100 opacity-40 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[--color-brand-violet]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-600">
               Misiones
             </p>
             <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+              className="mt-3 font-serif text-3xl tracking-tight text-slate-900 sm:text-4xl"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Un método para cada camino.
@@ -234,9 +248,9 @@ function Home() {
                 <Link
                   key={m.audience}
                   to={m.to}
-                  className="group flex flex-col rounded-2xl border border-[--color-brand-mist] bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[--color-brand-violet-soft]/50 hover:shadow-md"
+                  className="group flex flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-200 hover:shadow-md"
                 >
-                  <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--color-brand-mist] text-[--color-brand-indigo]">
+                  <div className={`mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl ${m.iconBg} ${m.iconColor}`}>
                     <Icon className="h-5 w-5" />
                   </div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
