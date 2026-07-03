@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Family Help — Tecnología al servicio del desarrollo humano" },
+      { name: "description", content: "Family Help Hub is an informative marketing website showcasing technology for human development." },
+      { property: "og:description", content: "Family Help Hub is an informative marketing website showcasing technology for human development." },
+      { name: "twitter:description", content: "Family Help Hub is an informative marketing website showcasing technology for human development." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dc278d1a-90ac-40b8-99ed-10109b18f3b0/id-preview-64efbe34--0151fb33-5b9a-40eb-b07c-eb2cf895da25.lovable.app-1783084765698.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dc278d1a-90ac-40b8-99ed-10109b18f3b0/id-preview-64efbe34--0151fb33-5b9a-40eb-b07c-eb2cf895da25.lovable.app-1783084765698.png" },
     ],
     links: [
       {
