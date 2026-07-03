@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Compass, Heart, Users, GraduationCap, Sparkles, UserRound } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({

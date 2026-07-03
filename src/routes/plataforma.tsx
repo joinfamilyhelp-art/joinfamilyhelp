@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/plataforma")({
   head: () => ({

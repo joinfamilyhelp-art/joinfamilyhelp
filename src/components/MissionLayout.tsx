@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, ShoppingBag } from "lucide-react";
 import type { ReactNode } from "react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const HOTMART_URL = "#hotmart-checkout-placeholder";
 
