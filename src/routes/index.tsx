@@ -127,7 +127,7 @@ function Home() {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="#brujula"
+                href="/plataforma"
                 className="inline-flex items-center gap-2 rounded-full border border-[--color-brand-mist] bg-white px-6 py-3 text-sm font-medium text-[--color-brand-ink] transition-colors hover:border-[--color-brand-violet-soft]"
               >
                 <Compass className="h-4 w-4 text-[--color-brand-violet]" />
