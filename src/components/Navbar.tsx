@@ -151,7 +151,7 @@ export function Navbar() {
                 href={BRUJULA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-[--color-brand-ink] px-4 py-2 text-center text-base font-medium text-white"
+                className="rounded-full bg-sky-600 px-4 py-2 text-center text-base font-semibold text-white"
               >
                 Acceder a BRÚJULA®
               </a>
