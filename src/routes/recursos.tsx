@@ -112,7 +112,7 @@ function Recursos() {
       </section>
 
       {/* GRID */}
-      <section className="border-t border-[--color-brand-mist] bg-white">
+      <section className="border-t border-[--color-brand-mist] bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-2">
             {ARTICULOS.map((a) => (

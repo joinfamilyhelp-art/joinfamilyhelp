@@ -76,6 +76,8 @@ export function MissionLayout(props: MissionLayoutProps) {
 
       {/* HERO */}
       <section className={`relative overflow-hidden ${t.bg}`}>
+        <div className="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rounded-full bg-emerald-100 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-16 right-0 h-96 w-96 rounded-full bg-sky-100 opacity-40 blur-3xl" />
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <Link
             to="/"
@@ -122,7 +124,7 @@ export function MissionLayout(props: MissionLayoutProps) {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-white">
+      <section className="bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
           <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${t.accent}`}>
             {props.problem.eyebrow}
@@ -165,7 +167,7 @@ export function MissionLayout(props: MissionLayoutProps) {
       ) : null}
 
       {/* INCLUDES */}
-      <section id="incluye" className="bg-white border-t border-slate-100">
+      <section id="incluye" className="bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${t.accent}`}>
@@ -182,7 +184,7 @@ export function MissionLayout(props: MissionLayoutProps) {
             {props.includes.map((it) => (
               <li
                 key={it.title}
-                className={`flex gap-3 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm ring-1 ${t.ring}`}
+                className={`flex gap-3 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm ring-1 ${t.ring} transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}
               >
                 <span
                   className={`mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${t.chip}`}

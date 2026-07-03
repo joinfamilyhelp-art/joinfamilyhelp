@@ -82,6 +82,8 @@ function Plataforma() {
               "linear-gradient(180deg, var(--color-brand-mist) 0%, #ffffff 60%, #ffffff 100%)",
           }}
         />
+        <div className="pointer-events-none absolute -top-24 -left-24 -z-10 h-96 w-96 rounded-full bg-emerald-100 opacity-30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-16 right-0 -z-10 h-[28rem] w-[28rem] rounded-full bg-sky-100 opacity-40 blur-3xl" />
         <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <Link
             to="/"
@@ -181,7 +183,7 @@ function Plataforma() {
       </section>
 
       {/* FEATURES */}
-      <section id="tour" className="border-t border-[--color-brand-mist] bg-white">
+      <section id="tour" className="relative overflow-hidden border-t border-[--color-brand-mist] bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[--color-brand-violet]">

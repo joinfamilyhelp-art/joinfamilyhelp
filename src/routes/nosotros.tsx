@@ -73,7 +73,7 @@ function Nosotros() {
       </section>
 
       {/* MANIFESTO */}
-      <section className="bg-white">
+      <section className="bg-slate-50">
         <article className="mx-auto max-w-2xl px-4 pb-24 sm:px-6 lg:px-8">
           <div className="space-y-7 text-lg leading-[1.85] text-slate-700 sm:text-[1.2rem]">
             <p className="first-letter:mr-2 first-letter:float-left first-letter:font-serif first-letter:text-6xl first-letter:leading-none first-letter:text-[--color-brand-ink]">
