@@ -95,14 +95,6 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href={LOGIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-slate-700 transition-colors hover:text-[--color-brand-ink]"
-          >
-            Iniciar sesión
-          </a>
-          <a
             href={BRUJULA_URL}
             target="_blank"
             rel="noopener noreferrer"
