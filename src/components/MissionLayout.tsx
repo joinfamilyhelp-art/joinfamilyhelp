@@ -184,7 +184,7 @@ export function MissionLayout(props: MissionLayoutProps) {
             {props.includes.map((it) => (
               <li
                 key={it.title}
-                className={`flex gap-3 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm ring-1 ${t.ring}`}
+                className={`flex gap-3 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm ring-1 ${t.ring} transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}
               >
                 <span
                   className={`mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${t.chip}`}
