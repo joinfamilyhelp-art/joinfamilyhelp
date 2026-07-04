@@ -108,7 +108,7 @@ function MisionAdultos() {
               Plan de acción diario
             </p>
             <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+              className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Micro-acciones para tu día, de mañana a noche
@@ -129,7 +129,7 @@ function MisionAdultos() {
                     {b.tag}
                   </p>
                   <h3
-                    className="mt-1 text-lg text-[--color-brand-ink]"
+                    className="mt-1 text-lg text-[var(--color-brand-ink)]"
                     style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
                   >
                     {b.title}

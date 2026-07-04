@@ -39,7 +39,7 @@ function Nosotros() {
         <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[--color-brand-ink]"
+            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[var(--color-brand-ink)]"
           >
             <ArrowLeft className="h-4 w-4" />
             Volver al inicio
@@ -53,17 +53,17 @@ function Nosotros() {
               height={96}
               className="h-20 w-20 object-contain"
             />
-            <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-[--color-brand-mist] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-[--color-brand-indigo]">
+            <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-[var(--color-brand-mist)] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-indigo)]">
               Manifiesto Family Help
             </span>
             <h1
-              className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-[--color-brand-ink] sm:text-5xl md:text-[3.5rem]"
+              className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.5rem]"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Nuestra Convicción
             </h1>
             <p
-              className="mt-6 text-xl text-[--color-brand-violet]"
+              className="mt-6 text-xl text-[var(--color-brand-violet)]"
               style={{ fontFamily: "Satisfy, cursive" }}
             >
               Tecnología al servicio del desarrollo humano.
@@ -76,7 +76,7 @@ function Nosotros() {
       <section className="bg-slate-50">
         <article className="mx-auto max-w-2xl px-4 pb-24 sm:px-6 lg:px-8">
           <div className="space-y-7 text-lg leading-[1.85] text-slate-700 sm:text-[1.2rem]">
-            <p className="first-letter:mr-2 first-letter:float-left first-letter:font-serif first-letter:text-6xl first-letter:leading-none first-letter:text-[--color-brand-ink]">
+            <p className="first-letter:mr-2 first-letter:float-left first-letter:font-serif first-letter:text-6xl first-letter:leading-none first-letter:text-[var(--color-brand-ink)]">
               Family Help es una empresa dedicada a crear tecnología al servicio del desarrollo
               humano.
             </p>
@@ -87,7 +87,7 @@ function Nosotros() {
             </p>
             <p>
               <span
-                className="font-serif text-[--color-brand-ink]"
+                className="font-serif text-[var(--color-brand-ink)]"
                 style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
               >
                 BRÚJULA®
@@ -104,17 +104,17 @@ function Nosotros() {
           </div>
 
           <blockquote
-            className="mt-14 border-l-4 border-[--color-brand-violet] pl-6 font-serif text-2xl leading-relaxed text-[--color-brand-ink] sm:text-3xl"
+            className="mt-14 border-l-4 border-[var(--color-brand-violet)] pl-6 font-serif text-2xl leading-relaxed text-[var(--color-brand-ink)] sm:text-3xl"
             style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 500 }}
           >
             "La tecnología debe fortalecer la capacidad de las personas para decidir y actuar
             conscientemente, nunca reemplazarla."
           </blockquote>
 
-          <div className="mt-16 flex flex-col items-center border-t border-[--color-brand-mist] pt-10 text-center">
+          <div className="mt-16 flex flex-col items-center border-t border-[var(--color-brand-mist)] pt-10 text-center">
             <p className="text-sm uppercase tracking-[0.22em] text-slate-500">— El equipo</p>
             <p
-              className="mt-3 text-3xl text-[--color-brand-violet]"
+              className="mt-3 text-3xl text-[var(--color-brand-violet)]"
               style={{ fontFamily: "Satisfy, cursive" }}
             >
               Family Help

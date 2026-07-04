@@ -85,12 +85,12 @@ function Home() {
             </span>
 
             <h1
-              className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-[--color-brand-ink] sm:text-5xl md:text-[3.5rem]"
+              className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.5rem]"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               La tecnología puede hacer{" "}
               <span
-                className="text-[--color-brand-violet]"
+                className="text-[var(--color-brand-violet)]"
                 style={{ fontFamily: "Satisfy, cursive", fontWeight: 400 }}
               >
                 mucho más
@@ -109,7 +109,7 @@ function Home() {
                 <span key={p} className="flex items-center gap-3">
                   <span>{p}</span>
                   {i < PILARES.length - 1 ? (
-                    <Heart className="h-3 w-3 fill-[--color-brand-coral] text-[--color-brand-coral]" />
+                    <Heart className="h-3 w-3 fill-[var(--color-brand-coral)] text-[var(--color-brand-coral)]" />
                   ) : null}
                 </span>
               ))}
@@ -125,9 +125,9 @@ function Home() {
               </a>
               <a
                 href="/plataforma"
-                className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white/80 px-6 py-3 text-sm font-medium text-[--color-brand-ink] backdrop-blur transition-colors hover:border-indigo-300 hover:bg-white"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white/80 px-6 py-3 text-sm font-medium text-[var(--color-brand-ink)] backdrop-blur transition-colors hover:border-indigo-300 hover:bg-white"
               >
-                <Compass className="h-4 w-4 text-[--color-brand-violet]" />
+                <Compass className="h-4 w-4 text-[var(--color-brand-violet)]" />
                 Conocer BRÚJULA®
               </a>
             </div>
@@ -217,7 +217,7 @@ function Home() {
                     {m.audience}
                   </p>
                   <h3
-                    className="mt-1 text-lg text-[--color-brand-ink]"
+                    className="mt-1 text-lg text-[var(--color-brand-ink)]"
                     style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
                   >
                     {m.method}
@@ -241,12 +241,12 @@ function Home() {
             Nuestro compromiso
           </p>
           <h2
-            className="mt-4 font-serif text-3xl leading-tight tracking-tight text-[--color-brand-ink] sm:text-4xl md:text-[2.75rem]"
+            className="mt-4 font-serif text-3xl leading-tight tracking-tight text-[var(--color-brand-ink)] sm:text-4xl md:text-[2.75rem]"
             style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
           >
             Antes de una pantalla,{" "}
             <span
-              className="text-[--color-brand-violet]"
+              className="text-[var(--color-brand-violet)]"
               style={{ fontFamily: "Satisfy, cursive", fontWeight: 400 }}
             >
               una mirada
@@ -261,7 +261,7 @@ function Home() {
           <div className="mt-10">
             <a
               href="/nosotros"
-              className="inline-flex items-center gap-2 rounded-full bg-[--color-brand-ink] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-brand-ink)] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
               Conocer nuestra historia
               <ArrowRight className="h-4 w-4" />

@@ -76,7 +76,7 @@ function MisionFamilias() {
               Dos pilares prácticos
             </p>
             <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+              className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Lo que se lleva del método a tu mesa
@@ -88,7 +88,7 @@ function MisionFamilias() {
                 <FileText className="h-5 w-5" />
               </div>
               <h3
-                className="text-xl text-[--color-brand-ink]"
+                className="text-xl text-[var(--color-brand-ink)]"
                 style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
               >
                 Acuerdo Familiar Imprimible
@@ -103,7 +103,7 @@ function MisionFamilias() {
                   Vista previa
                 </p>
                 <div className="mt-3 space-y-2 text-xs text-slate-600">
-                  <p className="font-semibold text-[--color-brand-ink]">
+                  <p className="font-semibold text-[var(--color-brand-ink)]">
                     Acuerdo Familiar · Familia ______
                   </p>
                   <p>· Lunes a viernes: sin pantallas hasta las 17:00.</p>
@@ -118,7 +118,7 @@ function MisionFamilias() {
                 <CalendarCheck className="h-5 w-5" />
               </div>
               <h3
-                className="text-xl text-[--color-brand-ink]"
+                className="text-xl text-[var(--color-brand-ink)]"
                 style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
               >
                 Planner Familiar de Atención

@@ -87,19 +87,19 @@ function Plataforma() {
         <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[--color-brand-ink]"
+            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[var(--color-brand-ink)]"
           >
             <ArrowLeft className="h-4 w-4" />
             Volver al inicio
           </Link>
 
           <div className="mt-8 flex flex-col items-center text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-brand-mist] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[--color-brand-indigo]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-brand-mist)] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-indigo)]">
               <Compass className="h-3.5 w-3.5" />
               Plataforma BRÚJULA®
             </span>
             <h1
-              className="mt-6 max-w-3xl font-serif text-3xl leading-[1.15] tracking-tight text-[--color-brand-ink] sm:text-5xl md:text-[3.25rem]"
+              className="mt-6 max-w-3xl font-serif text-3xl leading-[1.15] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.25rem]"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Mucho más que una aplicación.
@@ -107,7 +107,7 @@ function Plataforma() {
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl">
               Un sistema de acompañamiento diario para tu{" "}
               <span
-                className="text-[--color-brand-violet]"
+                className="text-[var(--color-brand-violet)]"
                 style={{ fontFamily: "Satisfy, cursive" }}
               >
                 atención y autonomía
@@ -120,14 +120,14 @@ function Plataforma() {
                 href={BRUJULA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[--color-brand-ink] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[--color-brand-indigo] hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-ink)] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--color-brand-indigo)] hover:shadow-lg"
               >
                 Acceder a la plataforma
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#tour"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-[--color-brand-ink] hover:border-slate-300"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-[var(--color-brand-ink)] hover:border-slate-300"
               >
                 Recorrer el ecosistema
               </a>
@@ -136,7 +136,7 @@ function Plataforma() {
 
           {/* Mock preview panel */}
           <div className="mx-auto mt-16 max-w-4xl">
-            <div className="relative rounded-3xl border border-[--color-brand-mist] bg-white p-2 shadow-xl">
+            <div className="relative rounded-3xl border border-[var(--color-brand-mist)] bg-white p-2 shadow-xl">
               <div className="rounded-[1.25rem] bg-gradient-to-br from-slate-50 to-white p-8 sm:p-12">
                 <div className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-rose-300" />
@@ -183,14 +183,14 @@ function Plataforma() {
       </section>
 
       {/* FEATURES */}
-      <section id="tour" className="relative overflow-hidden border-t border-[--color-brand-mist] bg-slate-50">
+      <section id="tour" className="relative overflow-hidden border-t border-[var(--color-brand-mist)] bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[--color-brand-violet]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-violet)]">
               Recorrido por el ecosistema
             </p>
             <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+              className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Cinco piezas, un mismo propósito.
@@ -211,7 +211,7 @@ function Plataforma() {
                   className={`group flex flex-col rounded-2xl border p-7 transition-all hover:-translate-y-0.5 hover:shadow-lg ${
                     featured
                       ? "border-transparent text-white shadow-md sm:col-span-2 lg:col-span-1"
-                      : "border-[--color-brand-mist] bg-white shadow-sm hover:border-[--color-brand-violet-soft]/60"
+                      : "border-[var(--color-brand-mist)] bg-white shadow-sm hover:border-[var(--color-brand-violet-soft)]/60"
                   }`}
                   style={
                     featured
@@ -226,20 +226,20 @@ function Plataforma() {
                     className={`mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl ${
                       featured
                         ? "bg-white/15 text-white backdrop-blur"
-                        : "bg-[--color-brand-mist] text-[--color-brand-indigo]"
+                        : "bg-[var(--color-brand-mist)] text-[var(--color-brand-indigo)]"
                     }`}
                   >
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3
-                    className={`text-xl ${featured ? "text-white" : "text-[--color-brand-ink]"}`}
+                    className={`text-xl ${featured ? "text-white" : "text-[var(--color-brand-ink)]"}`}
                     style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
                   >
                     {f.name}
                   </h3>
                   <p
                     className={`mt-1 text-sm italic ${
-                      featured ? "text-white/80" : "text-[--color-brand-violet]"
+                      featured ? "text-white/80" : "text-[var(--color-brand-violet)]"
                     }`}
                     style={{ fontFamily: "Satisfy, cursive", fontStyle: "normal" }}
                   >
@@ -260,7 +260,7 @@ function Plataforma() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="border-t border-[--color-brand-mist] bg-[--color-brand-mist]">
+      <section className="border-t border-[var(--color-brand-mist)] bg-[var(--color-brand-mist)]">
         <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
           <div
             className="relative overflow-hidden rounded-3xl px-8 py-14 text-center text-white shadow-xl sm:px-12 sm:py-16"
@@ -284,7 +284,7 @@ function Plataforma() {
               href={BRUJULA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[--color-brand-ink] shadow-lg transition-all hover:-translate-y-0.5"
+              className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--color-brand-ink)] shadow-lg transition-all hover:-translate-y-0.5"
             >
               Acceder a la Plataforma Real
               <ArrowRight className="h-4 w-4" />
