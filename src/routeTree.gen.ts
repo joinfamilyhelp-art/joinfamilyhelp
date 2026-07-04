@@ -14,10 +14,10 @@ import { Route as RecursosRouteImport } from './routes/recursos'
 import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as PlataformaRouteImport } from './routes/plataforma'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
-import { Route as MisionJovenesRouteImport } from './routes/mision-jovenes'
 import { Route as MisionFamiliasRouteImport } from './routes/mision-familias'
 import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
 import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
+import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -46,11 +46,6 @@ const NosotrosRoute = NosotrosRouteImport.update({
   path: '/nosotros',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MisionJovenesRoute = MisionJovenesRouteImport.update({
-  id: '/mision-jovenes',
-  path: '/mision-jovenes',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const MisionFamiliasRoute = MisionFamiliasRouteImport.update({
   id: '/mision-familias',
   path: '/mision-familias',
@@ -64,6 +59,11 @@ const MisionDocentesRoute = MisionDocentesRouteImport.update({
 const MisionAdultosRoute = MisionAdultosRouteImport.update({
   id: '/mision-adultos',
   path: '/mision-adultos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisionAdolescentesRoute = MisionAdolescentesRouteImport.update({
+  id: '/mision-adolescentes',
+  path: '/mision-adolescentes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ComunidadRoute = ComunidadRouteImport.update({
@@ -80,10 +80,10 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/comunidad': typeof ComunidadRoute
+  '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
-  '/mision-jovenes': typeof MisionJovenesRoute
   '/nosotros': typeof NosotrosRoute
   '/plataforma': typeof PlataformaRoute
   '/privacidad': typeof PrivacidadRoute
@@ -93,10 +93,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/comunidad': typeof ComunidadRoute
+  '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
-  '/mision-jovenes': typeof MisionJovenesRoute
   '/nosotros': typeof NosotrosRoute
   '/plataforma': typeof PlataformaRoute
   '/privacidad': typeof PrivacidadRoute
@@ -107,10 +107,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/comunidad': typeof ComunidadRoute
+  '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
-  '/mision-jovenes': typeof MisionJovenesRoute
   '/nosotros': typeof NosotrosRoute
   '/plataforma': typeof PlataformaRoute
   '/privacidad': typeof PrivacidadRoute
@@ -122,10 +122,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/comunidad'
+    | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-docentes'
     | '/mision-familias'
-    | '/mision-jovenes'
     | '/nosotros'
     | '/plataforma'
     | '/privacidad'
@@ -135,10 +135,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/comunidad'
+    | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-docentes'
     | '/mision-familias'
-    | '/mision-jovenes'
     | '/nosotros'
     | '/plataforma'
     | '/privacidad'
@@ -148,10 +148,10 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/comunidad'
+    | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-docentes'
     | '/mision-familias'
-    | '/mision-jovenes'
     | '/nosotros'
     | '/plataforma'
     | '/privacidad'
@@ -162,10 +162,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ComunidadRoute: typeof ComunidadRoute
+  MisionAdolescentesRoute: typeof MisionAdolescentesRoute
   MisionAdultosRoute: typeof MisionAdultosRoute
   MisionDocentesRoute: typeof MisionDocentesRoute
   MisionFamiliasRoute: typeof MisionFamiliasRoute
-  MisionJovenesRoute: typeof MisionJovenesRoute
   NosotrosRoute: typeof NosotrosRoute
   PlataformaRoute: typeof PlataformaRoute
   PrivacidadRoute: typeof PrivacidadRoute
@@ -210,13 +210,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NosotrosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mision-jovenes': {
-      id: '/mision-jovenes'
-      path: '/mision-jovenes'
-      fullPath: '/mision-jovenes'
-      preLoaderRoute: typeof MisionJovenesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/mision-familias': {
       id: '/mision-familias'
       path: '/mision-familias'
@@ -236,6 +229,13 @@ declare module '@tanstack/react-router' {
       path: '/mision-adultos'
       fullPath: '/mision-adultos'
       preLoaderRoute: typeof MisionAdultosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mision-adolescentes': {
+      id: '/mision-adolescentes'
+      path: '/mision-adolescentes'
+      fullPath: '/mision-adolescentes'
+      preLoaderRoute: typeof MisionAdolescentesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/comunidad': {
@@ -258,10 +258,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ComunidadRoute: ComunidadRoute,
+  MisionAdolescentesRoute: MisionAdolescentesRoute,
   MisionAdultosRoute: MisionAdultosRoute,
   MisionDocentesRoute: MisionDocentesRoute,
   MisionFamiliasRoute: MisionFamiliasRoute,
-  MisionJovenesRoute: MisionJovenesRoute,
   NosotrosRoute: NosotrosRoute,
   PlataformaRoute: PlataformaRoute,
   PrivacidadRoute: PrivacidadRoute,
