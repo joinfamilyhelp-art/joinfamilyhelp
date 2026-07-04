@@ -81,22 +81,22 @@ function Recursos() {
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[--color-brand-ink]"
+            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[var(--color-brand-ink)]"
           >
             <ArrowLeft className="h-4 w-4" />
             Volver al inicio
           </Link>
           <div className="mt-8 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-brand-mist] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[--color-brand-indigo]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-brand-mist)] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-indigo)]">
               Biblioteca abierta
             </span>
             <h1
-              className="mt-6 font-serif text-3xl leading-[1.15] tracking-tight text-[--color-brand-ink] sm:text-5xl md:text-[3.25rem]"
+              className="mt-6 font-serif text-3xl leading-[1.15] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.25rem]"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Ideas y herramientas para{" "}
               <span
-                className="text-[--color-brand-violet]"
+                className="text-[var(--color-brand-violet)]"
                 style={{ fontFamily: "Satisfy, cursive" }}
               >
                 construir tu propio camino
@@ -112,13 +112,13 @@ function Recursos() {
       </section>
 
       {/* GRID */}
-      <section className="border-t border-[--color-brand-mist] bg-slate-50">
+      <section className="border-t border-[var(--color-brand-mist)] bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-2">
             {ARTICULOS.map((a) => (
               <article
                 key={a.title}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-[--color-brand-mist] bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--color-brand-mist)] bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 <div className="aspect-[16/10] overflow-hidden bg-slate-100">
                   <img
@@ -137,7 +137,7 @@ function Recursos() {
                     {a.category}
                   </span>
                   <h2
-                    className="mt-4 text-xl leading-snug text-[--color-brand-ink]"
+                    className="mt-4 text-xl leading-snug text-[var(--color-brand-ink)]"
                     style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
                   >
                     {a.title}
@@ -147,7 +147,7 @@ function Recursos() {
                   </p>
                   <a
                     href="#"
-                    className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-[--color-brand-indigo] transition-colors hover:text-[--color-brand-ink]"
+                    className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-indigo)] transition-colors hover:text-[var(--color-brand-ink)]"
                   >
                     Leer artículo
                     <ArrowRight className="h-4 w-4" />

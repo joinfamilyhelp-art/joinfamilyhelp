@@ -25,13 +25,13 @@ function Terminos() {
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Link
           to="/"
-          className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[--color-brand-ink]"
+          className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[var(--color-brand-ink)]"
         >
           <ArrowLeft className="h-4 w-4" />
           Volver al inicio
         </Link>
         <h1
-          className="mt-10 font-serif text-4xl tracking-tight text-[--color-brand-ink] sm:text-5xl"
+          className="mt-10 font-serif text-4xl tracking-tight text-[var(--color-brand-ink)] sm:text-5xl"
           style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
         >
           Términos y condiciones
@@ -43,7 +43,7 @@ function Terminos() {
 
         <div className="mt-12 space-y-8 text-base leading-relaxed text-slate-700 sm:text-lg">
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               1. Naturaleza del servicio
             </h2>
             <p className="mt-3">
@@ -53,7 +53,7 @@ function Terminos() {
             </p>
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               2. Compra y distribución
             </h2>
             <p className="mt-3">
@@ -62,7 +62,7 @@ function Terminos() {
             </p>
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               3. Uso del contenido
             </h2>
             <p className="mt-3">
@@ -71,7 +71,7 @@ function Terminos() {
             </p>
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               4. Sin promesas de resultados
             </h2>
             <p className="mt-3">

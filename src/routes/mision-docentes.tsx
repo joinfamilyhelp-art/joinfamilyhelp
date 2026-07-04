@@ -93,7 +93,7 @@ function MisionDocentes() {
               Contenido central
             </p>
             <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+              className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Herramientas para el aula, listas para el lunes
@@ -111,7 +111,7 @@ function MisionDocentes() {
                     <I className="h-5 w-5" />
                   </div>
                   <h3
-                    className="text-lg text-[--color-brand-ink]"
+                    className="text-lg text-[var(--color-brand-ink)]"
                     style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
                   >
                     {c.title}

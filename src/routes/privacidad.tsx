@@ -25,13 +25,13 @@ function Privacidad() {
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Link
           to="/"
-          className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[--color-brand-ink]"
+          className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[var(--color-brand-ink)]"
         >
           <ArrowLeft className="h-4 w-4" />
           Volver al inicio
         </Link>
         <h1
-          className="mt-10 font-serif text-4xl tracking-tight text-[--color-brand-ink] sm:text-5xl"
+          className="mt-10 font-serif text-4xl tracking-tight text-[var(--color-brand-ink)] sm:text-5xl"
           style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
         >
           Política de privacidad
@@ -43,7 +43,7 @@ function Privacidad() {
 
         <div className="mt-12 space-y-8 text-base leading-relaxed text-slate-700 sm:text-lg">
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               1. Responsable del tratamiento
             </h2>
             <p className="mt-3">
@@ -52,7 +52,7 @@ function Privacidad() {
             </p>
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               2. Datos que recopilamos
             </h2>
             <p className="mt-3">
@@ -61,7 +61,7 @@ function Privacidad() {
             </p>
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               3. Pagos y distribución
             </h2>
             <p className="mt-3">
@@ -71,7 +71,7 @@ function Privacidad() {
             </p>
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-[--color-brand-ink]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
+            <h2 className="font-serif text-2xl text-[var(--color-brand-ink)]" style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}>
               4. Tus derechos
             </h2>
             <p className="mt-3">

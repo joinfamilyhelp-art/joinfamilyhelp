@@ -81,7 +81,7 @@ export function MissionLayout(props: MissionLayoutProps) {
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[--color-brand-ink]"
+            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[var(--color-brand-ink)]"
           >
             <ArrowLeft className="h-4 w-4" />
             Volver al inicio
@@ -94,7 +94,7 @@ export function MissionLayout(props: MissionLayoutProps) {
           </span>
 
           <h1
-            className="mt-6 font-serif text-3xl leading-[1.15] tracking-tight text-[--color-brand-ink] sm:text-5xl md:text-[3.25rem]"
+            className="mt-6 font-serif text-3xl leading-[1.15] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.25rem]"
             style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
           >
             {props.headline}
@@ -107,14 +107,14 @@ export function MissionLayout(props: MissionLayoutProps) {
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
               href={HOTMART_URL}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[--color-brand-ink] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[--color-brand-indigo] hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-ink)] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--color-brand-indigo)] hover:shadow-lg"
             >
               <ShoppingBag className="h-4 w-4" />
               {props.ctaLabel}
             </a>
             <a
               href="#incluye"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-[--color-brand-ink] hover:border-slate-300"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-[var(--color-brand-ink)] hover:border-slate-300"
             >
               Ver qué incluye
               <ArrowRight className="h-4 w-4" />
@@ -130,7 +130,7 @@ export function MissionLayout(props: MissionLayoutProps) {
             {props.problem.eyebrow}
           </p>
           <h2
-            className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+            className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
             style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
           >
             {props.problem.title}
@@ -148,7 +148,7 @@ export function MissionLayout(props: MissionLayoutProps) {
             {props.what.eyebrow}
           </p>
           <h2
-            className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+            className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
             style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
           >
             {props.what.title}
@@ -174,7 +174,7 @@ export function MissionLayout(props: MissionLayoutProps) {
               Qué incluye
             </p>
             <h2
-              className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+              className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Todo lo que recibes al unirte
@@ -192,7 +192,7 @@ export function MissionLayout(props: MissionLayoutProps) {
                   <Check className="h-3.5 w-3.5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-[--color-brand-ink]">{it.title}</p>
+                  <p className="text-sm font-semibold text-[var(--color-brand-ink)]">{it.title}</p>
                   <p className="mt-1 text-sm text-slate-600">{it.description}</p>
                 </div>
               </li>
@@ -217,7 +217,7 @@ export function MissionLayout(props: MissionLayoutProps) {
           </p>
           <a
             href={HOTMART_URL}
-            className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[--color-brand-ink] shadow-lg transition-all hover:-translate-y-0.5"
+            className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--color-brand-ink)] shadow-lg transition-all hover:-translate-y-0.5"
           >
             <ShoppingBag className="h-4 w-4" />
             {props.ctaLabel}

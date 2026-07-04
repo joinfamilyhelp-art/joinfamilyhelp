@@ -88,13 +88,13 @@ function MisionJovenes() {
               return (
                 <article
                   key={c.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[--color-brand-violet-soft] hover:shadow-md"
+                  className="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[var(--color-brand-violet-soft)] hover:shadow-md"
                 >
-                  <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[--color-brand-ink] text-white">
+                  <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-brand-ink)] text-white">
                     <I className="h-5 w-5" />
                   </div>
                   <h3
-                    className="text-lg text-[--color-brand-ink]"
+                    className="text-lg text-[var(--color-brand-ink)]"
                     style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
                   >
                     {c.title}
@@ -111,7 +111,7 @@ function MisionJovenes() {
                 Retos prácticos
               </p>
               <h2
-                className="mt-3 font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+                className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
                 style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
               >
                 5 movimientos para arrancar la semana
@@ -124,7 +124,7 @@ function MisionJovenes() {
                     {r.day.split(" ")[1]}
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-[--color-brand-ink]">{r.title}</p>
+                    <p className="text-sm font-semibold text-[var(--color-brand-ink)]">{r.title}</p>
                     <p className="mt-1 text-sm text-slate-600">{r.body}</p>
                   </div>
                 </li>
@@ -136,7 +136,7 @@ function MisionJovenes() {
                 <Brain className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-sm font-semibold text-[--color-brand-ink]">
+                <p className="text-sm font-semibold text-[var(--color-brand-ink)]">
                   Sistema de reflexión personal
                 </p>
                 <p className="mt-1 text-sm text-slate-600">

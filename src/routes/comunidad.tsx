@@ -88,24 +88,24 @@ function Comunidad() {
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[--color-brand-ink]"
+            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-[var(--color-brand-ink)]"
           >
             <ArrowLeft className="h-4 w-4" />
             Volver al inicio
           </Link>
 
           <div className="mt-8 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-brand-mist] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[--color-brand-indigo]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-brand-mist)] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-indigo)]">
               <Sparkles className="h-3.5 w-3.5" />
               Muro de transformación
             </span>
             <h1
-              className="mt-6 font-serif text-3xl leading-[1.15] tracking-tight text-[--color-brand-ink] sm:text-5xl md:text-[3.25rem]"
+              className="mt-6 font-serif text-3xl leading-[1.15] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.25rem]"
               style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
             >
               Historias reales,{" "}
               <span
-                className="text-[--color-brand-violet]"
+                className="text-[var(--color-brand-violet)]"
                 style={{ fontFamily: "Satisfy, cursive" }}
               >
                 sin ruido
@@ -122,7 +122,7 @@ function Comunidad() {
       </section>
 
       {/* WALL */}
-      <section className="border-t border-[--color-brand-mist] bg-slate-50">
+      <section className="border-t border-[var(--color-brand-mist)] bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6 [&>*]:break-inside-avoid">
             {TESTIMONIOS.map((t) => {
@@ -131,7 +131,7 @@ function Comunidad() {
               return (
                 <article
                   key={t.name}
-                  className={`rounded-2xl border border-[--color-brand-mist] ${tone.bg} p-7 shadow-sm`}
+                  className={`rounded-2xl border border-[var(--color-brand-mist)] ${tone.bg} p-7 shadow-sm`}
                 >
                   <Quote className={`h-6 w-6 ${tone.icon}`} />
                   <p className="mt-4 text-base leading-relaxed text-slate-800">"{t.quote}"</p>
@@ -140,7 +140,7 @@ function Comunidad() {
                       <Icon className={`h-5 w-5 ${tone.icon}`} />
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-[--color-brand-ink]">{t.name}</p>
+                      <p className="text-sm font-semibold text-[var(--color-brand-ink)]">{t.name}</p>
                       <p className="text-xs text-slate-500">{t.role}</p>
                     </div>
                   </div>
@@ -161,10 +161,10 @@ function Comunidad() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-[--color-brand-mist] bg-[--color-brand-mist]">
+      <section className="border-t border-[var(--color-brand-mist)] bg-[var(--color-brand-mist)]">
         <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 lg:px-8">
           <h2
-            className="font-serif text-3xl tracking-tight text-[--color-brand-ink] sm:text-4xl"
+            className="font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
             style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
           >
             ¿Y si la próxima historia fuera la tuya?
@@ -175,25 +175,25 @@ function Comunidad() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link
               to="/mision-familias"
-              className="rounded-full bg-[--color-brand-ink] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[--color-brand-indigo]"
+              className="rounded-full bg-[var(--color-brand-ink)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[var(--color-brand-indigo)]"
             >
               Misión Familias
             </Link>
             <Link
               to="/mision-docentes"
-              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[--color-brand-ink] shadow-sm transition-all hover:-translate-y-0.5"
+              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-brand-ink)] shadow-sm transition-all hover:-translate-y-0.5"
             >
               Misión Docentes
             </Link>
             <Link
               to="/mision-jovenes"
-              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[--color-brand-ink] shadow-sm transition-all hover:-translate-y-0.5"
+              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-brand-ink)] shadow-sm transition-all hover:-translate-y-0.5"
             >
               Misión Jóvenes
             </Link>
             <Link
               to="/mision-adultos"
-              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[--color-brand-ink] shadow-sm transition-all hover:-translate-y-0.5"
+              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-brand-ink)] shadow-sm transition-all hover:-translate-y-0.5"
             >
               Misión Adultos
             </Link>

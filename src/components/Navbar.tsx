@@ -24,7 +24,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-[--color-brand-mist] bg-white/85 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b border-[var(--color-brand-mist)] bg-white/85 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5">
           <img
@@ -36,13 +36,13 @@ export function Navbar() {
           />
           <span className="flex items-baseline gap-1 leading-none">
             <span
-              className="font-serif text-base font-semibold tracking-[0.14em] text-[--color-brand-ink]"
+              className="font-serif text-base font-semibold tracking-[0.14em] text-[var(--color-brand-ink)]"
               style={{ fontFamily: "Cinzel, serif" }}
             >
               FAMILY
             </span>
             <span
-              className="text-2xl text-[--color-brand-violet]"
+              className="text-2xl text-[var(--color-brand-violet)]"
               style={{ fontFamily: "Satisfy, cursive" }}
             >
               Help
@@ -57,9 +57,9 @@ export function Navbar() {
                 <Link
                   to={link.to}
                   hash={link.hash}
-                  className="text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
+                  className="text-sm font-medium text-slate-600 transition-colors hover:text-[var(--color-brand-ink)]"
                   activeOptions={{ exact: true }}
-                  activeProps={{ className: "text-[--color-brand-ink]" }}
+                  activeProps={{ className: "text-[var(--color-brand-ink)]" }}
                 >
                   {link.label}
                 </Link>
@@ -68,19 +68,19 @@ export function Navbar() {
                 <li className="group relative">
                   <button
                     type="button"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-slate-600 transition-colors hover:text-[--color-brand-ink]"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-slate-600 transition-colors hover:text-[var(--color-brand-ink)]"
                   >
                     Misiones
                     <ChevronDown className="h-3.5 w-3.5" />
                   </button>
-                  <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-72 -translate-x-1/2 rounded-2xl border border-[--color-brand-mist] bg-white p-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100">
+                  <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-72 -translate-x-1/2 rounded-2xl border border-[var(--color-brand-mist)] bg-white p-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100">
                     {MISIONES.map((m) => (
                       <Link
                         key={m.to}
                         to={m.to}
-                        className="block rounded-lg px-3 py-2 hover:bg-[--color-brand-mist]"
+                        className="block rounded-lg px-3 py-2 hover:bg-[var(--color-brand-mist)]"
                       >
-                        <p className="text-sm font-semibold text-[--color-brand-ink]">
+                        <p className="text-sm font-semibold text-[var(--color-brand-ink)]">
                           {m.label}
                         </p>
                         <p className="text-xs text-slate-500">{m.sub}</p>
@@ -115,7 +115,7 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div className="border-t border-[--color-brand-mist] bg-white lg:hidden">
+        <div className="border-t border-[var(--color-brand-mist)] bg-white lg:hidden">
           <div className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6">
             {NAV_LINKS.map((link) => (
               <Link
@@ -123,12 +123,12 @@ export function Navbar() {
                 to={link.to}
                 hash={link.hash}
                 onClick={() => setOpen(false)}
-                className="block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-[--color-brand-mist]"
+                className="block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-[var(--color-brand-mist)]"
               >
                 {link.label}
               </Link>
             ))}
-            <div className="mt-3 border-t border-[--color-brand-mist] pt-3">
+            <div className="mt-3 border-t border-[var(--color-brand-mist)] pt-3">
               <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                 Misiones
               </p>
@@ -137,16 +137,16 @@ export function Navbar() {
                   key={m.to}
                   to={m.to}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2 hover:bg-[--color-brand-mist]"
+                  className="block rounded-md px-3 py-2 hover:bg-[var(--color-brand-mist)]"
                 >
-                  <span className="block text-sm font-semibold text-[--color-brand-ink]">
+                  <span className="block text-sm font-semibold text-[var(--color-brand-ink)]">
                     {m.label}
                   </span>
                   <span className="block text-xs text-slate-500">{m.sub}</span>
                 </Link>
               ))}
             </div>
-            <div className="mt-3 flex flex-col gap-2 border-t border-[--color-brand-mist] pt-3">
+            <div className="mt-3 flex flex-col gap-2 border-t border-[var(--color-brand-mist)] pt-3">
               <a
                 href={BRUJULA_URL}
                 target="_blank"
