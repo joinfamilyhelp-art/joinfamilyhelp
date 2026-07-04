@@ -2,47 +2,49 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Cpu, Zap, Target, Brain } from "lucide-react";
 import { MissionLayout } from "@/components/MissionLayout";
 
-export const Route = createFileRoute("/mision-jovenes")({
+export const Route = createFileRoute("/mision-adolescentes")({
   head: () => ({
     meta: [
-      { title: "Misión Jóvenes — Método DECIDE | Family Help" },
+      { title: "Misión Adolescentes — Método HACKEA | Family Help" },
       {
         name: "description",
         content:
-          "Hackea el algoritmo: retoma el control de tu atención. Método DECIDE para adolescentes y jóvenes que quieren autonomía real.",
+          "Hackea el algoritmo: retoma el control de tu atención. Método HACKEA para adolescentes que quieren autonomía real frente a las pantallas.",
       },
-      { property: "og:title", content: "Misión Jóvenes — Método DECIDE" },
+      { property: "og:title", content: "Misión Adolescentes — Método HACKEA" },
       {
         property: "og:description",
         content: "Hackea el algoritmo: retoma el control de tu atención.",
       },
     ],
   }),
-  component: MisionJovenes,
+  component: MisionAdolescentes,
 });
 
 const RETOS = [
-  { day: "Día 01", title: "Auditoría de scroll", body: "Mide cuánto tiempo se lleva tu app favorita en 24 horas. Sin juicio, con datos." },
+  { day: "Día 01", title: "Observa tu día", body: "Mide cuánto tiempo pasas realmente en cada app. Sin juicio, con datos reales." },
   { day: "Día 02", title: "Notificaciones a dieta", body: "Apaga todo lo que no sea humano. Reactiva solo lo que decidas conscientemente." },
-  { day: "Día 03", title: "Home screen intencional", body: "Rediseña tu pantalla para que abras primero lo que tú eliges." },
+  { day: "Día 03", title: "Home screen intencional", body: "Rediseña tu pantalla para que abras primero lo que tú eliges, no lo que el diseño te empuja." },
   { day: "Día 04", title: "Modo enfoque · 90 min", body: "Un bloque diario para algo que te importe: crear, estudiar, entrenar." },
   { day: "Día 05", title: "Feed clean-up", body: "Deja de seguir lo que te hunde. Sigue lo que te sube el nivel." },
+  { day: "Día 06", title: "Haz algo que construya", body: "Dedica tiempo a una habilidad o proyecto que te acerque a quien quieres llegar a ser." },
+  { day: "Día 07", title: "Decide cómo quieres vivir", body: "Elige tres reglas propias para tu relación con las pantallas la próxima semana." },
 ];
 
-function MisionJovenes() {
+function MisionAdolescentes() {
   return (
     <MissionLayout
       tone="indigo"
-      audience="Misión Jóvenes"
-      method="Método DECIDE"
+      audience="Misión Adolescentes"
+      method="Método HACKEA"
       headline={
         <>
           Hackea el algoritmo: <br className="hidden sm:block" />
           retoma el control de tu atención.
         </>
       }
-      subheadline="No es magia, es diseño. Aprende cómo funcionan por dentro las apps que usas todos los días y toma decisiones que te devuelvan tu tiempo, tu foco y tu autonomía."
-      ctaLabel="Unirme a Misión Jóvenes"
+      subheadline="No es falta de voluntad. Es un sistema diseñado para ganarte. Aprende cómo funcionan por dentro las apps que usas todos los días y toma decisiones que te devuelvan tu tiempo, tu foco y tu autonomía."
+      ctaLabel="Unirme a Misión Adolescentes"
       problem={{
         eyebrow: "Lo que nadie te contó",
         title: "El feed no es tuyo. Está optimizado para ti, no por ti.",
@@ -50,24 +52,27 @@ function MisionJovenes() {
           <>
             <p>
               Cada scroll, cada notificación, cada auto-play está diseñado por equipos enteros
-              cuyo trabajo es mantenerte dentro. No eres débil. Estás jugando contra un sistema
-              entrenado para ganar.
+              cuyo trabajo es mantenerte dentro. Un adolescente promedio recibe cerca de 237
+              notificaciones al día. No eres débil: estás jugando contra un sistema entrenado
+              para ganar.
             </p>
             <p>
-              La buena noticia: cuando entiendes las reglas, dejas de ser el producto y pasas a
-              ser el jugador.
+              Tu córtex prefrontal —la parte del cerebro que regula el autocontrol— no termina
+              de desarrollarse hasta los 25 años. La buena noticia: cuando entiendes las reglas,
+              dejas de ser el producto y pasas a ser el jugador.
             </p>
           </>
         ),
       }}
       what={{
         eyebrow: "Qué es",
-        title: "Método DECIDE: elegir en un mundo diseñado para que no elijas.",
+        title: "Método HACKEA: elegir en un mundo diseñado para que no elijas.",
         body: (
           <>
             <p>
-              DECIDE es un sistema de 6 pasos para pasar del piloto automático a las decisiones
-              conscientes. No es un detox de una semana. Es un músculo que se entrena.
+              HACKEA es un sistema pensado para adolescentes que quieren pasar del piloto
+              automático a las decisiones conscientes. No es un detox de una semana. Es un
+              músculo que se entrena en 7 días y se sostiene toda la vida.
             </p>
             <p>
               Diseñado con lenguaje directo, ejercicios cortos y retos que puedes hacer con el
@@ -80,7 +85,7 @@ function MisionJovenes() {
         <>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { icon: Cpu, title: "Entiende el algoritmo", body: "Cómo se construye tu feed y por qué te muestra lo que te muestra." },
+              { icon: Cpu, title: "Entiende el algoritmo", body: "Cómo se construye tu feed y por qué te muestra exactamente lo que te muestra." },
               { icon: Zap, title: "Recupera el impulso", body: "Rediseña gatillos, hábitos y recompensas para que jueguen a tu favor." },
               { icon: Target, title: "Decide con intención", body: "Rutinas cortas para elegir a qué le das tu atención, cada día." },
             ].map((c) => {
@@ -114,7 +119,7 @@ function MisionJovenes() {
                 className="mt-3 font-serif text-3xl tracking-tight text-[var(--color-brand-ink)] sm:text-4xl"
                 style={{ fontFamily: "Cinzel, serif", fontWeight: 500 }}
               >
-                5 movimientos para arrancar la semana
+                7 días para hackear tu semana
               </h2>
             </div>
             <ul className="mx-auto mt-10 max-w-3xl divide-y divide-slate-100 rounded-2xl border border-slate-200 bg-white">
@@ -149,14 +154,14 @@ function MisionJovenes() {
         </>
       }
       includes={[
-        { title: "Método DECIDE (video + PDF)", description: "El sistema completo en formato joven." },
-        { title: "Retos semanales", description: "Movimientos cortos para hacer hoy." },
+        { title: "Método HACKEA (video + PDF)", description: "El sistema completo en formato adolescente." },
+        { title: "Reto de 7 días", description: "Un movimiento concreto para cada día de la semana." },
         { title: "Journal digital", description: "3 preguntas al día, 2 minutos." },
         { title: "Guía anti-algoritmo", description: "Cómo funciona por dentro cada app." },
         { title: "Playlist de foco", description: "Bandas sonoras para tu bloque de 90 min." },
-        { title: "Comunidad de jóvenes", description: "Un espacio para compartir avances." },
+        { title: "Comunidad de adolescentes", description: "Un espacio seguro para compartir avances." },
       ]}
-      closing="Deja de ser el producto. Sé el jugador."
+      closing="Tu tiempo, tu energía y tu mente valen demasiado como para regalárselos gratis a una app. Deja de ser el producto. Sé el jugador."
     />
   );
 }

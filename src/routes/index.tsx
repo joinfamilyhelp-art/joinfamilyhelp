@@ -35,14 +35,14 @@ const MISIONES = [
   },
   {
     icon: Sparkles,
-    audience: "Misión Jóvenes",
-    method: "Método DECIDE",
-    to: "/mision-jovenes" as const,
+    audience: "Misión Adolescentes",
+    method: "Método HACKEA",
+    to: "/mision-adolescentes" as const,
     iconBg: "bg-emerald-100",
     iconColor: "text-emerald-700",
     accent: "from-emerald-50 to-white",
     description:
-      "Un espacio para detenerse, elegir con intención y construir un camino propio, paso a paso.",
+      "Hackea el algoritmo: entiende cómo funcionan las apps por dentro y recupera tu atención, tu tiempo y tu autonomía.",
   },
   {
     icon: UserRound,

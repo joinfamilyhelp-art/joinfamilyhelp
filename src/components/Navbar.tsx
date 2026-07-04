@@ -14,7 +14,7 @@ const NAV_LINKS = [
 const MISIONES = [
   { label: "Misión Familias", sub: "Método PUENTE", to: "/mision-familias" as const },
   { label: "Misión Docentes", sub: "Método FARO", to: "/mision-docentes" as const },
-  { label: "Misión Jóvenes", sub: "Método DECIDE", to: "/mision-jovenes" as const },
+  { label: "Misión Adolescentes", sub: "Método HACKEA", to: "/mision-adolescentes" as const },
   { label: "Misión Adultos", sub: "Método DECIDE", to: "/mision-adultos" as const },
 ];
 

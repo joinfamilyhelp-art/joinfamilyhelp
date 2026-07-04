@@ -4,7 +4,7 @@ import logoAsset from "@/assets/family-help-logo.png.asset.json";
 const PRODUCTOS = [
   { label: "Misión Familias", to: "/mision-familias" as const },
   { label: "Misión Docentes", to: "/mision-docentes" as const },
-  { label: "Misión Jóvenes", to: "/mision-jovenes" as const },
+  { label: "Misión Adolescentes", to: "/mision-adolescentes" as const },
   { label: "Misión Adultos", to: "/mision-adultos" as const },
 ];
 

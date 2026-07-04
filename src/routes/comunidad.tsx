@@ -186,10 +186,10 @@ function Comunidad() {
               Misión Docentes
             </Link>
             <Link
-              to="/mision-jovenes"
+              to="/mision-adolescentes"
               className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-brand-ink)] shadow-sm transition-all hover:-translate-y-0.5"
             >
-              Misión Jóvenes
+              Misión Adolescentes
             </Link>
             <Link
               to="/mision-adultos"
