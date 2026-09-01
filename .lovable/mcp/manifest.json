@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "sdk_version": "1.0.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "family-help-hub",
+      "version": "0.1.0",
+      "title": "Family Help Hub"
+    },
+    "tools": [
+      {
+        "name": "list_missions",
+        "title": "List missions",
+        "description": "List the four BRÚJULA® missions published on the Family Help site, with their method, audience and page path.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_mission",
+        "title": "Get mission details",
+        "description": "Get the full public detail of one BRÚJULA® mission: headline, the problem it addresses, what it includes and its call to action.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Mission slug: familias, docentes, adolescentes or adultos."
+            }
+          },
+          "required": [
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_brujula_model",
+        "title": "Get the BRÚJULA® model",
+        "description": "Explain the Family Help philosophy and the BRÚJULA® system: the conceptual hierarchy, the decision cycle (Impulso → Microfricción Intencional® → Pausa Consciente® → Decisión consciente → Acción), its registered concepts and the ecosystem pieces.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_site_info",
+        "title": "Get site info and pages",
+        "description": "Get general public information about Family Help: tagline, website, platform URL, distribution notice and the full list of published pages.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

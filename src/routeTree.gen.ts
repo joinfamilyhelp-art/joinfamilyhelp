@@ -18,8 +18,10 @@ import { Route as MisionFamiliasRouteImport } from './routes/mision-familias'
 import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
 import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
 import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 
 const TerminosRoute = TerminosRouteImport.update({
   id: '/terminos',
@@ -66,6 +68,11 @@ const MisionAdolescentesRoute = MisionAdolescentesRouteImport.update({
   path: '/mision-adolescentes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ComunidadRoute = ComunidadRouteImport.update({
   id: '/comunidad',
   path: '/comunidad',
@@ -76,10 +83,17 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/comunidad': typeof ComunidadRoute
+  '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
@@ -89,10 +103,12 @@ export interface FileRoutesByFullPath {
   '/privacidad': typeof PrivacidadRoute
   '/recursos': typeof RecursosRoute
   '/terminos': typeof TerminosRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/comunidad': typeof ComunidadRoute
+  '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
@@ -102,11 +118,13 @@ export interface FileRoutesByTo {
   '/privacidad': typeof PrivacidadRoute
   '/recursos': typeof RecursosRoute
   '/terminos': typeof TerminosRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/comunidad': typeof ComunidadRoute
+  '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-docentes': typeof MisionDocentesRoute
@@ -116,12 +134,14 @@ export interface FileRoutesById {
   '/privacidad': typeof PrivacidadRoute
   '/recursos': typeof RecursosRoute
   '/terminos': typeof TerminosRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/comunidad'
+    | '/mcp'
     | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-docentes'
@@ -131,10 +151,12 @@ export interface FileRouteTypes {
     | '/privacidad'
     | '/recursos'
     | '/terminos'
+    | '/.well-known/oauth-protected-resource'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/comunidad'
+    | '/mcp'
     | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-docentes'
@@ -144,10 +166,12 @@ export interface FileRouteTypes {
     | '/privacidad'
     | '/recursos'
     | '/terminos'
+    | '/.well-known/oauth-protected-resource'
   id:
     | '__root__'
     | '/'
     | '/comunidad'
+    | '/mcp'
     | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-docentes'
@@ -157,11 +181,13 @@ export interface FileRouteTypes {
     | '/privacidad'
     | '/recursos'
     | '/terminos'
+    | '/.well-known/oauth-protected-resource'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ComunidadRoute: typeof ComunidadRoute
+  McpRoute: typeof McpRoute
   MisionAdolescentesRoute: typeof MisionAdolescentesRoute
   MisionAdultosRoute: typeof MisionAdultosRoute
   MisionDocentesRoute: typeof MisionDocentesRoute
@@ -171,6 +197,7 @@ export interface RootRouteChildren {
   PrivacidadRoute: typeof PrivacidadRoute
   RecursosRoute: typeof RecursosRoute
   TerminosRoute: typeof TerminosRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -238,6 +265,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MisionAdolescentesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/comunidad': {
       id: '/comunidad'
       path: '/comunidad'
@@ -252,12 +286,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ComunidadRoute: ComunidadRoute,
+  McpRoute: McpRoute,
   MisionAdolescentesRoute: MisionAdolescentesRoute,
   MisionAdultosRoute: MisionAdultosRoute,
   MisionDocentesRoute: MisionDocentesRoute,
@@ -267,6 +309,8 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacidadRoute: PrivacidadRoute,
   RecursosRoute: RecursosRoute,
   TerminosRoute: TerminosRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
