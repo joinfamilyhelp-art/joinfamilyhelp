@@ -18,6 +18,27 @@ export type Mission = {
 
 export const MISSIONS: Mission[] = [
   {
+    slug: "ninos",
+    name: "Misión Niños 3-11",
+    method: "AURA®",
+    audience: "Padres y madres de niños de 3 a 11 años",
+    path: "/mision-ninos",
+    headline: "Crea un ambiente de calma en casa y reduce las rabietas por pantallas sin caer en peleas ni gritos.",
+    summary:
+      "Un método para padres de niños pequeños basado en anticipación, juego real, entornos de calma y acompañamiento empático. Sin prohibiciones agresivas.",
+    problem:
+      "Las rabietas al apagar la pantalla, las negociaciones interminables y la culpa de los padres. Los niños pequeños necesitan estructura predecible y alternativas vivas, no gritos.",
+    includes: [
+      "Guía Método AURA® (PDF)",
+      "Audios de 60 segundos por WhatsApp",
+      "Guía visual de rutinas para niños",
+      "Plantilla de avisos visuales",
+      "Ideas de juego real por edades",
+      "Comunidad de padres",
+    ],
+    cta: "Sumarme a la Misión AURA por WhatsApp",
+  },
+  {
     slug: "familias",
     name: "Misión Familias",
     method: "PUENTE®",
@@ -112,7 +133,7 @@ export const BRUJULA = {
     "Filosofía",
     "Modelo de Desarrollo Humano",
     "Sistema BRÚJULA®",
-    "Métodos (DECIDE®, PUENTE®, FARO®, HACKEA®)",
+    "Métodos (AURA®, PUENTE®, HACKEA®, FARO®, DECIDE®)",
     "Experiencias (Misiones, App, Coach IA, Comunidad, Recursos)",
   ],
   cycle: [
@@ -136,7 +157,7 @@ export const BRUJULA = {
       "Family Help → BRÚJULA® → Misiones, App, Coach IA, Comunidad, Recursos y nuevas experiencias.",
   },
   ecosystem: [
-    { name: "Misiones", description: "Guías prácticas por público: familias, docentes, adolescentes y adultos." },
+    { name: "Misiones", description: "Guías prácticas por público: niños 3-11, familias, adolescentes, docentes y adultos." },
     { name: "App BRÚJULA®", description: "Bitácora, radar de atención y microfricciones intencionales en el día a día." },
     { name: "Coach IA", description: "Acompañamiento conversacional que ayuda a detenerse y decidir con intención." },
     { name: "Comunidad", description: "Familias, docentes y personas caminando el mismo proceso." },
@@ -156,6 +177,7 @@ export const SITE = {
     { path: "/mision-familias", title: "Misión Familias — Método PUENTE®" },
     { path: "/mision-docentes", title: "Misión Docentes — Método FARO®" },
     { path: "/mision-adolescentes", title: "Misión Adolescentes — Método HACKEA®" },
+    { path: "/mision-ninos", title: "Misión Niños 3-11 — Método AURA®" },
     { path: "/mision-adultos", title: "Misión Adultos — Método DECIDE®" },
     { path: "/plataforma", title: "Plataforma BRÚJULA®" },
     { path: "/comunidad", title: "Comunidad" },

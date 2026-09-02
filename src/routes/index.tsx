@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight,
+  Baby,
   Check,
   ChevronDown,
   Compass,
@@ -30,7 +31,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
+          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: AURA®, PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
       },
       {
         property: "og:title",
@@ -48,6 +49,21 @@ export const Route = createFileRoute("/")({
 });
 
 const METODOS = [
+  {
+    key: "aura",
+    icon: Baby,
+    audiencia: "Niños 3-11",
+    metodo: "AURA®",
+    eje: "Calma",
+    promesa: "Reduce las rabietas por pantallas sin peleas ni gritos.",
+    para: "Padres de niños pequeños que necesitan anticipación, juego real y entornos de calma.",
+    bullets: [
+      "Avisos visuales y rutinas que tu hijo puede predecir.",
+      "Alternativas de juego real antes de pedir que apague.",
+      "Zonas y tiempos de calma donde las pantallas simplemente no están.",
+    ],
+    to: "/mision-ninos" as const,
+  },
   {
     key: "puente",
     icon: Users,
@@ -285,7 +301,7 @@ function Home() {
               {[
                 { k: "3 días", v: "de misión práctica" },
                 { k: "60 seg", v: "por audio diario" },
-                { k: "4 métodos", v: "registrados" },
+                { k: "5 métodos", v: "registrados" },
               ].map((s) => (
                 <div key={s.k}>
                   <dt className="text-xl font-extrabold text-[var(--color-brand-terracotta)]">
@@ -339,7 +355,7 @@ function Home() {
               Un método para cada persona de la casa.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
-              Cuatro caminos distintos, la misma idea: cambiar el entorno, no a las personas.
+              Cinco caminos distintos, la misma idea: cambiar el entorno, no a las personas.
             </p>
           </div>
 
@@ -347,7 +363,7 @@ function Home() {
           <div
             role="tablist"
             aria-label="Métodos Family Help"
-            className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-5"
           >
             {METODOS.map((m) => {
               const Icon = m.icon;
@@ -461,7 +477,7 @@ function Home() {
               Comprender → Escuchar → Diseñar → Elegir
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
-              El mismo recorrido detrás de los cuatro métodos. Cuatro pasos, ninguno improvisado.
+              El mismo recorrido detrás de los cinco métodos. Cuatro pasos, ninguno improvisado.
             </p>
           </div>
 
