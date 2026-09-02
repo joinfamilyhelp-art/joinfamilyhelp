@@ -17,7 +17,7 @@ import {
   Users,
   X,
 } from "lucide-react";
-import { Navbar, MISION_URL } from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import heroConexion from "@/assets/hero-conexion.jpg";
 import conversacion from "@/assets/conversacion-adolescente.jpg";
