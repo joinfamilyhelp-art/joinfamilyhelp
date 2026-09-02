@@ -18,6 +18,27 @@ export type Mission = {
 
 export const MISSIONS: Mission[] = [
   {
+    slug: "ninos",
+    name: "Misión Niños 3-11",
+    method: "AURA®",
+    audience: "Padres y madres de niños de 3 a 11 años",
+    path: "/mision-ninos",
+    headline: "Crea un ambiente de calma en casa y reduce las rabietas por pantallas sin caer en peleas ni gritos.",
+    summary:
+      "Un método para padres de niños pequeños basado en anticipación, juego real, entornos de calma y acompañamiento empático. Sin prohibiciones agresivas.",
+    problem:
+      "Las rabietas al apagar la pantalla, las negociaciones interminables y la culpa de los padres. Los niños pequeños necesitan estructura predecible y alternativas vivas, no gritos.",
+    includes: [
+      "Guía Método AURA® (PDF)",
+      "Audios de 60 segundos por WhatsApp",
+      "Guía visual de rutinas para niños",
+      "Plantilla de avisos visuales",
+      "Ideas de juego real por edades",
+      "Comunidad de padres",
+    ],
+    cta: "Sumarme a la Misión AURA por WhatsApp",
+  },
+  {
     slug: "familias",
     name: "Misión Familias",
     method: "PUENTE®",
