@@ -16,6 +16,7 @@ import { Route as PlataformaRouteImport } from './routes/plataforma'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as MisionFamiliasRouteImport } from './routes/mision-familias'
 import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
+import { Route as MisionConexionRouteImport } from './routes/mision-conexion'
 import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
 import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
 import { Route as McpRouteImport } from './routes/mcp'
@@ -58,6 +59,11 @@ const MisionDocentesRoute = MisionDocentesRouteImport.update({
   path: '/mision-docentes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MisionConexionRoute = MisionConexionRouteImport.update({
+  id: '/mision-conexion',
+  path: '/mision-conexion',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MisionAdultosRoute = MisionAdultosRouteImport.update({
   id: '/mision-adultos',
   path: '/mision-adultos',
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
+  '/mision-conexion': typeof MisionConexionRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/nosotros': typeof NosotrosRoute
@@ -111,6 +118,7 @@ export interface FileRoutesByTo {
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
+  '/mision-conexion': typeof MisionConexionRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/nosotros': typeof NosotrosRoute
@@ -127,6 +135,7 @@ export interface FileRoutesById {
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
+  '/mision-conexion': typeof MisionConexionRoute
   '/mision-docentes': typeof MisionDocentesRoute
   '/mision-familias': typeof MisionFamiliasRoute
   '/nosotros': typeof NosotrosRoute
@@ -144,6 +153,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/mision-adolescentes'
     | '/mision-adultos'
+    | '/mision-conexion'
     | '/mision-docentes'
     | '/mision-familias'
     | '/nosotros'
@@ -159,6 +169,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/mision-adolescentes'
     | '/mision-adultos'
+    | '/mision-conexion'
     | '/mision-docentes'
     | '/mision-familias'
     | '/nosotros'
@@ -174,6 +185,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/mision-adolescentes'
     | '/mision-adultos'
+    | '/mision-conexion'
     | '/mision-docentes'
     | '/mision-familias'
     | '/nosotros'
@@ -190,6 +202,7 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRoute
   MisionAdolescentesRoute: typeof MisionAdolescentesRoute
   MisionAdultosRoute: typeof MisionAdultosRoute
+  MisionConexionRoute: typeof MisionConexionRoute
   MisionDocentesRoute: typeof MisionDocentesRoute
   MisionFamiliasRoute: typeof MisionFamiliasRoute
   NosotrosRoute: typeof NosotrosRoute
@@ -251,6 +264,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MisionDocentesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mision-conexion': {
+      id: '/mision-conexion'
+      path: '/mision-conexion'
+      fullPath: '/mision-conexion'
+      preLoaderRoute: typeof MisionConexionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mision-adultos': {
       id: '/mision-adultos'
       path: '/mision-adultos'
@@ -302,6 +322,7 @@ const rootRouteChildren: RootRouteChildren = {
   McpRoute: McpRoute,
   MisionAdolescentesRoute: MisionAdolescentesRoute,
   MisionAdultosRoute: MisionAdultosRoute,
+  MisionConexionRoute: MisionConexionRoute,
   MisionDocentesRoute: MisionDocentesRoute,
   MisionFamiliasRoute: MisionFamiliasRoute,
   NosotrosRoute: NosotrosRoute,
