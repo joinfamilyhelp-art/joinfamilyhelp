@@ -140,7 +140,7 @@ function Plataforma() {
               <div className="rounded-[1.25rem] bg-gradient-to-br from-slate-50 to-white p-8 sm:p-12">
                 <div className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-rose-300" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-brand-terracotta-soft" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
                   <span className="ml-3 font-mono text-[10px] uppercase tracking-widest text-slate-400">
                     app.joinfamilyhelp.com/brujula
