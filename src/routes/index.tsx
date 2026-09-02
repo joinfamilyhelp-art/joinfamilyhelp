@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
+          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: AURA®, PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
       },
       {
         property: "og:title",
@@ -477,7 +477,7 @@ function Home() {
               Comprender → Escuchar → Diseñar → Elegir
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
-              El mismo recorrido detrás de los cuatro métodos. Cuatro pasos, ninguno improvisado.
+              El mismo recorrido detrás de los cinco métodos. Cuatro pasos, ninguno improvisado.
             </p>
           </div>
 
