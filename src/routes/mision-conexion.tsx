@@ -15,6 +15,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import escuchandoAudio from "@/assets/escuchando-audio.jpg";
 
 export const Route = createFileRoute("/mision-conexion")({
   head: () => ({
@@ -280,7 +281,17 @@ function MisionConexionPage() {
               ¿Por qué funciona la Misión Conexión?
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-12 overflow-hidden rounded-[2rem]">
+            <img
+              src={escuchandoAudio}
+              alt="Mujer caminando por la calle mientras escucha una nota de voz con audífonos y toma un café"
+              loading="lazy"
+              width={1280}
+              height={960}
+              className="h-64 w-full object-cover object-center md:h-80"
+            />
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {VALORES.map((v) => (
               <div
                 key={v.titulo}
