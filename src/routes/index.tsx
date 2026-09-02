@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: AURA®, PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
+          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: AURA®, HACKEA®, DECIDE®, PUENTE® y FARO®. Sin culpa, sin prohibiciones inútiles.",
       },
       {
         property: "og:title",
@@ -65,21 +65,6 @@ const METODOS = [
     to: "/mision-ninos" as const,
   },
   {
-    key: "puente",
-    icon: Users,
-    audiencia: "Familias",
-    metodo: "PUENTE®",
-    eje: "Conexión",
-    promesa: "Conecta con tus hijos sin ser el policía de la casa.",
-    para: "Madres y padres que discuten cada día por las pantallas y quieren volver a hablar.",
-    bullets: [
-      "Acuerdos que se sostienen porque los construyen todos, no solo tú.",
-      "Frases listas para los momentos difíciles (la hora de la cena, el «cinco minutos más»).",
-      "Rutinas de reconexión de 10 minutos que caben en un día real.",
-    ],
-    to: "/mision-familias" as const,
-  },
-  {
     key: "hackea",
     icon: Sparkles,
     audiencia: "Adolescentes",
@@ -95,21 +80,6 @@ const METODOS = [
     to: "/mision-adolescentes" as const,
   },
   {
-    key: "faro",
-    icon: GraduationCap,
-    audiencia: "Docentes",
-    metodo: "FARO®",
-    eje: "Atención",
-    promesa: "Enseña con foco y sin frustración en el aula.",
-    para: "Equipos docentes que compiten cada clase contra una pantalla.",
-    bullets: [
-      "Protocolos de inicio de clase que recuperan la atención en 3 minutos.",
-      "Acuerdos de aula claros, sin sanciones ni desgaste.",
-      "Lenguaje común con las familias para no remar en direcciones opuestas.",
-    ],
-    to: "/mision-docentes" as const,
-  },
-  {
     key: "decide",
     icon: UserRound,
     audiencia: "Adultos",
@@ -123,6 +93,36 @@ const METODOS = [
       "Decisiones pequeñas y sostenibles, no promesas de fuerza de voluntad.",
     ],
     to: "/mision-adultos" as const,
+  },
+  {
+    key: "puente",
+    icon: Users,
+    audiencia: "Familias",
+    metodo: "PUENTE®",
+    eje: "Conexión",
+    promesa: "Conecta con tus hijos sin ser el policía de la casa.",
+    para: "Madres y padres que discuten cada día por las pantallas y quieren volver a hablar.",
+    bullets: [
+      "Acuerdos que se sostienen porque los construyen todos, no solo tú.",
+      "Frases listas para los momentos difíciles (la hora de la cena, el «cinco minutos más»).",
+      "Rutinas de reconexión de 10 minutos que caben en un día real.",
+    ],
+    to: "/mision-familias" as const,
+  },
+  {
+    key: "faro",
+    icon: GraduationCap,
+    audiencia: "Docentes",
+    metodo: "FARO®",
+    eje: "Atención",
+    promesa: "Enseña con foco y sin frustración en el aula.",
+    para: "Equipos docentes que compiten cada clase contra una pantalla.",
+    bullets: [
+      "Protocolos de inicio de clase que recuperan la atención en 3 minutos.",
+      "Acuerdos de aula claros, sin sanciones ni desgaste.",
+      "Lenguaje común con las familias para no remar en direcciones opuestas.",
+    ],
+    to: "/mision-docentes" as const,
   },
 ];
 
