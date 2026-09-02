@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: AURA®, PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
+          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: AURA®, HACKEA®, DECIDE®, PUENTE® y FARO®. Sin culpa, sin prohibiciones inútiles.",
       },
       {
         property: "og:title",
