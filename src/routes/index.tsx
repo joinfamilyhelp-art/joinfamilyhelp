@@ -355,7 +355,7 @@ function Home() {
               Un método para cada persona de la casa.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
-              Cinco caminos distintos, la misma idea: cambiar el entorno, no a las personas.
+              Caminos distintos, el mismo propósito: cambiar el entorno, no a las personas.
             </p>
           </div>
 
