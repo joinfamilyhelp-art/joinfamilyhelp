@@ -464,15 +464,21 @@ function Home() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="h-full overflow-hidden rounded-2xl border border-[var(--color-brand-sand)] shadow-sm">
-                <img
-                  src={conversacion}
-                  alt="Un adulto y un adolescente caminando y conversando al atardecer"
-                  width={1280}
-                  height={864}
-                  loading="lazy"
-                  className="h-full w-full object-cover"
-                />
+              <div className="relative h-full min-h-64 overflow-hidden rounded-2xl border border-[var(--color-brand-sand)] shadow-sm">
+                {METODOS.map((m) => (
+                  <img
+                    key={m.key}
+                    src={m.img}
+                    alt={m.imgAlt}
+                    width={1280}
+                    height={864}
+                    loading="lazy"
+                    aria-hidden={m.key !== metodo.key}
+                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                      m.key === metodo.key ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
