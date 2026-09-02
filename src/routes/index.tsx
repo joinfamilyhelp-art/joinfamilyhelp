@@ -22,6 +22,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import heroConexion from "@/assets/hero-conexion.jpg";
 import conversacion from "@/assets/conversacion-adolescente.jpg";
+import ninosJuego from "@/assets/ninos-juego-real.jpg";
+import adultoFoco from "@/assets/adulto-foco.jpg";
+import docenteAula from "@/assets/docente-aula.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -62,6 +65,8 @@ const METODOS = [
       "Alternativas de juego real antes de pedir que apague.",
       "Zonas y tiempos de calma donde las pantallas simplemente no están.",
     ],
+    img: ninosJuego,
+    imgAlt: "Un padre y su hijo pequeño jugando con bloques de madera en el suelo del salón",
     to: "/mision-ninos" as const,
   },
   {
@@ -77,6 +82,8 @@ const METODOS = [
       "Ajustes concretos para recuperar horas cada semana.",
       "Retos de 7 días para probar, medir y decidir por ti mismo.",
     ],
+    img: conversacion,
+    imgAlt: "Un adolescente sonriente tocando la guitarra y conversando con un amigo",
     to: "/mision-adolescentes" as const,
   },
   {
@@ -92,6 +99,8 @@ const METODOS = [
       "Un ritual de cierre de jornada de 5 minutos.",
       "Decisiones pequeñas y sostenibles, no promesas de fuerza de voluntad.",
     ],
+    img: adultoFoco,
+    imgAlt: "Una mujer escribiendo en su cuaderno en la mesa de la cocina, con el teléfono boca abajo",
     to: "/mision-adultos" as const,
   },
   {
@@ -107,6 +116,8 @@ const METODOS = [
       "Frases listas para los momentos difíciles (la hora de la cena, el «cinco minutos más»).",
       "Rutinas de reconexión de 10 minutos que caben en un día real.",
     ],
+    img: heroConexion,
+    imgAlt: "Una familia compartiendo un momento en la mesa sin dispositivos",
     to: "/mision-familias" as const,
   },
   {
@@ -122,6 +133,8 @@ const METODOS = [
       "Acuerdos de aula claros, sin sanciones ni desgaste.",
       "Lenguaje común con las familias para no remar en direcciones opuestas.",
     ],
+    img: docenteAula,
+    imgAlt: "Un docente conversando con sus estudiantes en un aula con luz natural",
     to: "/mision-docentes" as const,
   },
 ];
@@ -451,15 +464,21 @@ function Home() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="h-full overflow-hidden rounded-2xl border border-[var(--color-brand-sand)] shadow-sm">
-                <img
-                  src={conversacion}
-                  alt="Un adulto y un adolescente caminando y conversando al atardecer"
-                  width={1280}
-                  height={864}
-                  loading="lazy"
-                  className="h-full w-full object-cover"
-                />
+              <div className="relative h-full min-h-64 overflow-hidden rounded-2xl border border-[var(--color-brand-sand)] shadow-sm">
+                {METODOS.map((m) => (
+                  <img
+                    key={m.key}
+                    src={m.img}
+                    alt={m.imgAlt}
+                    width={1280}
+                    height={864}
+                    loading="lazy"
+                    aria-hidden={m.key !== metodo.key}
+                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                      m.key === metodo.key ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
