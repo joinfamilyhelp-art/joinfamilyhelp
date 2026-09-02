@@ -15,6 +15,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import escuchandoAudio from "@/assets/escuchando-audio.jpg";
 
 export const Route = createFileRoute("/mision-conexion")({
   head: () => ({
