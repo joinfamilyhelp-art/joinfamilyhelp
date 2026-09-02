@@ -22,6 +22,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import heroConexion from "@/assets/hero-conexion.jpg";
 import conversacion from "@/assets/conversacion-adolescente.jpg";
+import ninosJuego from "@/assets/ninos-juego-real.jpg";
+import adultoFoco from "@/assets/adulto-foco.jpg";
+import docenteAula from "@/assets/docente-aula.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
