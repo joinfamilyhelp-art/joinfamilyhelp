@@ -352,7 +352,7 @@ function Home() {
               Elige tu punto de partida
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Un método para cada persona de la casa.
+              Un método justo para ti!
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
               Caminos distintos, el mismo propósito: cambiar el entorno, no a las personas.
