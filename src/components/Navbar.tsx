@@ -58,14 +58,12 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={MISION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/mision-conexion"
             className="inline-flex items-center rounded-full bg-[var(--color-brand-terracotta)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)] hover:shadow-md"
           >
             Únete a la Misión
-          </a>
+          </Link>
         </div>
 
         <button
@@ -93,14 +91,13 @@ export function Navbar() {
               </Link>
             ))}
             <div className="mt-3 border-t border-[var(--color-brand-sand)] pt-3">
-              <a
-                href={MISION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/mision-conexion"
+                onClick={() => setOpen(false)}
                 className="block rounded-full bg-[var(--color-brand-terracotta)] px-4 py-2.5 text-center text-base font-semibold text-white"
               >
                 Únete a la Misión
-              </a>
+              </Link>
             </div>
           </div>
         </div>
