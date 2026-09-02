@@ -10,7 +10,6 @@ import {
   HandHeart,
   ChevronDown,
   MessageCircle,
-  Mic,
   Sparkles,
   ArrowRight,
   CheckCircle2,
