@@ -265,15 +265,13 @@ function Home() {
             </p>
 
             <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-              <a
-                href={MISION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/mision-conexion"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)] hover:shadow-lg"
               >
                 <MessageCircle className="h-4 w-4" />
                 Únete gratis a la Misión Conexión en WhatsApp
-              </a>
+              </Link>
               <a
                 href="#metodos"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-brand-terracotta-soft)] bg-white px-6 py-3.5 text-sm font-semibold text-[var(--color-brand-ink)] transition-colors hover:border-[var(--color-brand-terracotta)]"
@@ -419,15 +417,13 @@ function Home() {
               </ul>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={MISION_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/mision-conexion"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)]"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Únete gratis en WhatsApp
-                </a>
+                </Link>
                 <Link
                   to={metodo.to}
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-brand-terracotta-soft)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-brand-ink)] transition-colors hover:border-[var(--color-brand-terracotta)]"
@@ -632,15 +628,13 @@ function Home() {
             noche. Gratis y sin instalar nada.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
-              href={MISION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/mision-conexion"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-terracotta-soft)] hover:text-[var(--color-brand-ink)]"
             >
               <MessageCircle className="h-4 w-4" />
               Únete gratis a la Misión Conexión en WhatsApp
-            </a>
+            </Link>
             <Link
               to="/recursos"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
