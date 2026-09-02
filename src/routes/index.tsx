@@ -253,15 +253,15 @@ function Home() {
             </span>
 
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.4rem]">
-              Recupera la conexión y la paz en tu hogar{" "}
+              Recupera la conexión y la paz en tu hogar o en tu aula{" "}
               <span className="text-[var(--color-brand-terracotta)]">
                 sin peleas, culpas ni prohibiciones inútiles.
               </span>
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-brand-clay)]">
-              Aprende a rediseñar el entorno digital de tu familia con micro-acciones diarias y
-              metodologías probadas.
+              Aprende a rediseñar el entorno digital de tu familia o tu aula con micro-acciones
+              diarias y metodologías probadas.
             </p>
 
             <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
