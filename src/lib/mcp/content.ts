@@ -30,7 +30,7 @@ export const MISSIONS: Mission[] = [
       "Las rabietas al apagar la pantalla, las negociaciones interminables y la culpa de los padres. Los niños pequeños necesitan estructura predecible y alternativas vivas, no gritos.",
     includes: [
       "Guía Método AURA® (PDF)",
-      "Audios de 60 segundos por WhatsApp",
+      "Píldoras de audio breves y al grano por WhatsApp",
       "Guía visual de rutinas para niños",
       "Plantilla de avisos visuales",
       "Ideas de juego real por edades",

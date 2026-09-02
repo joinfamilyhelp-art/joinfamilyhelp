@@ -23,13 +23,13 @@ export const Route = createFileRoute("/mision-conexion")({
       {
         name: "description",
         content:
-          "Misión gratuita por WhatsApp: 3 días para recuperar la paz y la conexión en casa sin quitar pantallas ni entrar en peleas. Audios de 60 segundos y micro-acciones diarias.",
+          "Misión gratuita por WhatsApp: 3 días para recuperar la paz y la conexión en casa sin quitar pantallas ni entrar en peleas. Píldoras de audio breves y al grano, micro-acciones diarias.",
       },
       { property: "og:title", content: "Misión Conexión — 3 Días para Transformar la Dinámica Digital en Casa" },
       {
         property: "og:description",
         content:
-          "Una experiencia práctica por WhatsApp con audios de 60 segundos y micro-acciones diarias diseñadas para la vida real. Sin culpas, sin prohibiciones.",
+          "Una experiencia práctica por WhatsApp con píldoras de audio breves y al grano y micro-acciones diarias diseñadas para la vida real. Sin culpas, sin prohibiciones.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -73,7 +73,7 @@ const VALORES = [
     icono: Zap,
     titulo: "100% Adaptado a tu tiempo",
     texto:
-      "Formato WhatsApp con notas de voz de 1 minuto que puedes escuchar mientras vas al trabajo.",
+      "Formato WhatsApp con píldoras de audio breves y al grano que puedes escuchar mientras vas al trabajo.",
   },
   {
     icono: ShieldCheck,
@@ -95,7 +95,7 @@ const VALORES = [
 const FAQS = [
   {
     q: "¿Tengo que conectarme a una hora específica?",
-    a: "No, recibes los audios y recursos en tu WhatsApp para escucharlos cuando tengas 1 minuto libre.",
+    a: "No, recibes píldoras de audio y recursos en tu WhatsApp para escucharlos cuando tengas un par de minutos libres.",
   },
   {
     q: "¿Tengo que quitarle el celular a mi hijo?",
@@ -192,12 +192,12 @@ function MisionConexionPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-slate-600">
-              Una experiencia práctica por WhatsApp con audios de 60 segundos y micro-acciones
-              diarias diseñadas para la vida real.
+              Una experiencia práctica por WhatsApp con píldoras de audio breves y al grano y
+              micro-acciones diarias diseñadas para la vida real.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-slate-600">
               {[
-                "Audios de 60 segundos directo en tu WhatsApp",
+                "Píldoras de audio breves y al grano directo en tu WhatsApp",
                 "Micro-acciones aplicables desde el día 1",
                 "Sin culpas, sin sermones, sin prohibiciones inútiles",
               ].map((item) => (
@@ -249,7 +249,7 @@ function MisionConexionPage() {
                 <div className="mt-4 space-y-3">
                   <div className="rounded-xl bg-[var(--color-brand-cream)] p-4">
                     <p className="flex items-center gap-1.5 text-xs font-bold tracking-wide text-[var(--color-brand-clay)] uppercase">
-                      <Mic className="h-3.5 w-3.5" /> Audio de 60s
+                      <Mic className="h-3.5 w-3.5" /> Píldora de audio
                     </p>
                     <p className="mt-1.5 text-sm text-slate-600">{d.audio}</p>
                   </div>
