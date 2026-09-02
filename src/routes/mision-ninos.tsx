@@ -177,7 +177,7 @@ function MisionNinos() {
 
             <ul className="mt-6 space-y-2 text-sm text-slate-600">
               {[
-                "Píldoras de audio breves y al grano directo en tu WhatsApp",
+                "Acciones específicas para el día a día directo en tu WhatsApp",
                 "Guía visual de rutinas para niños de 3 a 11 años",
                 "Sin culpas, sin gritos, sin quitar pantallas a la fuerza",
               ].map((item) => (
@@ -229,7 +229,7 @@ function MisionNinos() {
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
                   { t: "3 días", d: "de micro-acciones por WhatsApp" },
-                  { t: "Audio breve", d: "claro y al grano, escuchable a cualquier hora" },
+                  { t: "Acciones", d: "específicas para el día a día, aplicables a cualquier hora" },
                 ].map((s) => (
                   <div
                     key={s.t}
@@ -298,7 +298,7 @@ function MisionNinos() {
                 Misión AURA: 3 Días para Reducir las Rabietas y Recuperar la Calma en Casa
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Píldoras de audio breves y al grano por WhatsApp + Guía visual de rutinas para niños.
+                Acciones específicas para el día a día por WhatsApp + Guía visual de rutinas para niños.
                 Cada día un pilar del método aplicado a una situación real de tu hogar.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-slate-600">
@@ -334,7 +334,7 @@ function MisionNinos() {
             La calma de tu hogar empieza con una anticipación, no con un grito.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/75">
-            Tres días, una píldora de audio cada mañana y una micro-acción para probar con tu
+            Tres días, una acción específica cada mañana y una micro-acción para probar con tu
             hijo esa misma tarde.
           </p>
           <a

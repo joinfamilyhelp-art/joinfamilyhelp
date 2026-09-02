@@ -160,7 +160,7 @@ const CONTRASTE = [
   },
   {
     no: "Cursos largos que nadie termina",
-    si: "Misiones de 3 días con audios ágiles diseñados para la vida real",
+    si: "Misiones de 3 días con acciones específicas para el día a día",
   },
   {
     no: "Reglas impuestas desde arriba",
@@ -226,7 +226,7 @@ const TESTIMONIOS = [
 const FAQS = [
   {
     q: "No tengo tiempo para cursos largos.",
-    a: "No hay cursos largos. Son misiones prácticas de 3 días por WhatsApp, con píldoras de audio breves y una micro-acción por día. Si tienes un par de minutos mientras preparas el café, tienes tiempo.",
+    a: "No hay cursos largos. Son misiones prácticas de 3 días por WhatsApp, con acciones específicas para el día a día. Si tienes un par de minutos mientras preparas el café, tienes tiempo.",
   },
   {
     q: "Ya intenté quitarles el celular y terminamos peleando.",
@@ -300,7 +300,7 @@ function Home() {
             <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-[var(--color-brand-sand)] pt-6">
               {[
                 { k: "3 días", v: "de misión práctica" },
-                { k: "Audio breve", v: "claro y al grano" },
+                { k: "Acciones", v: "específicas para el día a día" },
                 { k: "5 métodos", v: "registrados" },
               ].map((s) => (
                 <div key={s.k}>
@@ -640,7 +640,7 @@ function Home() {
             Empieza esta semana con una sola micro-acción.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/75">
-            Tres días, una píldora de audio cada mañana y una acción concreta para esa misma
+            Tres días, una acción específica cada mañana y una acción concreta para esa misma
             noche. Gratis y sin instalar nada.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
