@@ -65,6 +65,8 @@ const METODOS = [
       "Alternativas de juego real antes de pedir que apague.",
       "Zonas y tiempos de calma donde las pantallas simplemente no están.",
     ],
+    img: ninosJuego,
+    imgAlt: "Un padre y su hijo pequeño jugando con bloques de madera en el suelo del salón",
     to: "/mision-ninos" as const,
   },
   {
@@ -80,6 +82,8 @@ const METODOS = [
       "Ajustes concretos para recuperar horas cada semana.",
       "Retos de 7 días para probar, medir y decidir por ti mismo.",
     ],
+    img: conversacion,
+    imgAlt: "Un adolescente sonriente tocando la guitarra y conversando con un amigo",
     to: "/mision-adolescentes" as const,
   },
   {
@@ -95,6 +99,8 @@ const METODOS = [
       "Un ritual de cierre de jornada de 5 minutos.",
       "Decisiones pequeñas y sostenibles, no promesas de fuerza de voluntad.",
     ],
+    img: adultoFoco,
+    imgAlt: "Una mujer escribiendo en su cuaderno en la mesa de la cocina, con el teléfono boca abajo",
     to: "/mision-adultos" as const,
   },
   {
@@ -110,6 +116,8 @@ const METODOS = [
       "Frases listas para los momentos difíciles (la hora de la cena, el «cinco minutos más»).",
       "Rutinas de reconexión de 10 minutos que caben en un día real.",
     ],
+    img: heroConexion,
+    imgAlt: "Una familia compartiendo un momento en la mesa sin dispositivos",
     to: "/mision-familias" as const,
   },
   {
@@ -125,6 +133,8 @@ const METODOS = [
       "Acuerdos de aula claros, sin sanciones ni desgaste.",
       "Lenguaje común con las familias para no remar en direcciones opuestas.",
     ],
+    img: docenteAula,
+    imgAlt: "Un docente conversando con sus estudiantes en un aula con luz natural",
     to: "/mision-docentes" as const,
   },
 ];
