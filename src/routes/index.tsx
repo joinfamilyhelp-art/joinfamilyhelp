@@ -26,15 +26,15 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Family Help — Conexión familiar sin peleas ni prohibiciones" },
+      { title: "Family Help — Conexión en casa y en el aula sin peleas ni prohibiciones" },
       {
         name: "description",
         content:
-          "Rediseña el entorno digital de tu familia con micro-acciones diarias y métodos probados: PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
+          "Rediseña el entorno digital de tu familia o tu aula con micro-acciones diarias y métodos probados: PUENTE®, HACKEA®, FARO® y DECIDE®. Sin culpa, sin prohibiciones inútiles.",
       },
       {
         property: "og:title",
-        content: "Family Help — Conexión familiar sin peleas ni prohibiciones",
+        content: "Family Help — Conexión en casa y en el aula sin peleas ni prohibiciones",
       },
       {
         property: "og:description",
