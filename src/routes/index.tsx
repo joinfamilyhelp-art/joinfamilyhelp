@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight,
+  Baby,
   Check,
   ChevronDown,
   Compass,
@@ -16,7 +17,7 @@ import {
   UserRound,
   Users,
   X,
-} from "lucide-react";
+} from "lucide-react";"
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import heroConexion from "@/assets/hero-conexion.jpg";
