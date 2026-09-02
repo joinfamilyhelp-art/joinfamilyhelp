@@ -133,7 +133,7 @@ export const BRUJULA = {
     "Filosofía",
     "Modelo de Desarrollo Humano",
     "Sistema BRÚJULA®",
-    "Métodos (DECIDE®, PUENTE®, FARO®, HACKEA®)",
+    "Métodos (AURA®, PUENTE®, HACKEA®, FARO®, DECIDE®)",
     "Experiencias (Misiones, App, Coach IA, Comunidad, Recursos)",
   ],
   cycle: [
@@ -157,7 +157,7 @@ export const BRUJULA = {
       "Family Help → BRÚJULA® → Misiones, App, Coach IA, Comunidad, Recursos y nuevas experiencias.",
   },
   ecosystem: [
-    { name: "Misiones", description: "Guías prácticas por público: familias, docentes, adolescentes y adultos." },
+    { name: "Misiones", description: "Guías prácticas por público: niños 3-11, familias, adolescentes, docentes y adultos." },
     { name: "App BRÚJULA®", description: "Bitácora, radar de atención y microfricciones intencionales en el día a día." },
     { name: "Coach IA", description: "Acompañamiento conversacional que ayuda a detenerse y decidir con intención." },
     { name: "Comunidad", description: "Familias, docentes y personas caminando el mismo proceso." },
@@ -177,6 +177,7 @@ export const SITE = {
     { path: "/mision-familias", title: "Misión Familias — Método PUENTE®" },
     { path: "/mision-docentes", title: "Misión Docentes — Método FARO®" },
     { path: "/mision-adolescentes", title: "Misión Adolescentes — Método HACKEA®" },
+    { path: "/mision-ninos", title: "Misión Niños 3-11 — Método AURA®" },
     { path: "/mision-adultos", title: "Misión Adultos — Método DECIDE®" },
     { path: "/plataforma", title: "Plataforma BRÚJULA®" },
     { path: "/comunidad", title: "Comunidad" },
