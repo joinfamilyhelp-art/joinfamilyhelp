@@ -365,11 +365,12 @@ function Home() {
                   <Heart className="h-4 w-4 fill-current" />
                 </span>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-clay)]">
-                  Principio de presencia
+                  PRINCIPIO DE FRICCIÓN
                 </p>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-[var(--color-brand-clay)]">
-                Antes de una pantalla, una mirada. Antes de una regla, un vínculo.
+                Antes de una pelea, una charla. 
+                Antes de una regla, un acuerdo.
               </p>
             </div>
           </div>
@@ -384,10 +385,10 @@ function Home() {
               Elige tu punto de partida
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Un método justo para ti!
+              Un método que se ajuste a ti!
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
-              Caminos distintos, el mismo propósito: cambiar el entorno, no a las personas.
+              Caminos distintos, mismo propósito: cambiar el entorno, no a las personas.
             </p>
           </div>
 
