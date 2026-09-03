@@ -15,8 +15,10 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import escuchandoAudio from "@/assets/escuchando-audio.jpg";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/mision-conexion")({
+
   head: () => ({
     meta: [
       { title: "Misión Conexión — 3 Días para Transformar la Dinámica Digital en Casa | Family Help" },
@@ -38,7 +40,7 @@ export const Route = createFileRoute("/mision-conexion")({
   component: MisionConexionPage,
 });
 
-const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
+const MISI_MESSAGE = "Hola, quiero unirme a la Misión Conexión de Family Help.";
 
 const DIAS = [
   {
@@ -110,24 +112,24 @@ function CapturaForm({ compact = false }: { compact?: boolean }) {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const params = new URLSearchParams();
-    if (nombre.trim()) params.set("nombre", nombre.trim());
-    if (whats.trim()) params.set("whatsapp", whats.trim());
-    const url = params.size ? `${MISION_URL}?${params.toString()}` : MISION_URL;
-    window.open(url, "_blank", "noopener,noreferrer");
+    const parts = [MISI_MESSAGE];
+    if (nombre.trim()) parts.push(`Soy ${nombre.trim()}.`);
+    if (whats.trim()) parts.push(`Mi WhatsApp es ${whats.trim()}.`);
+    window.open(buildWhatsAppUrl(parts.join(" ")), "_blank", "noopener,noreferrer");
     setEnviado(true);
   };
+
 
   if (enviado) {
     return (
       <div className="rounded-2xl border border-[var(--color-brand-moss)]/30 bg-[var(--color-brand-moss-soft)] p-5 text-left">
         <p className="flex items-center gap-2 font-semibold text-[var(--color-brand-moss)]">
-          <CheckCircle2 className="h-5 w-5" /> ¡Listo! Te estamos redirigiendo a la Misión Conexión.
+          <CheckCircle2 className="h-5 w-5" /> ¡Listo! Te estamos redirigiendo a WhatsApp.
         </p>
         <p className="mt-1 text-sm text-slate-600">
           Si no se abrió automáticamente,{" "}
           <a
-            href={MISION_URL}
+            href={buildWhatsAppUrl(MISI_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-[var(--color-brand-clay)] underline"
@@ -139,6 +141,7 @@ function CapturaForm({ compact = false }: { compact?: boolean }) {
       </div>
     );
   }
+
 
   return (
     <form onSubmit={onSubmit} className={compact ? "space-y-3" : "space-y-4"}>
@@ -350,7 +353,7 @@ function MisionConexionPage() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--color-brand-sand)] bg-white/95 p-3 backdrop-blur md:p-4">
         <div className="mx-auto flex max-w-3xl items-center justify-center gap-3">
           <a
-            href={MISION_URL}
+            href={buildWhatsAppUrl(MISI_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--color-brand-terracotta)] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[var(--color-brand-terracotta)]/30 transition hover:bg-[var(--color-brand-clay)] md:text-base"
@@ -362,6 +365,7 @@ function MisionConexionPage() {
       </div>
       {/* Espaciador para que el sticky no tape el footer */}
       <div className="h-20" aria-hidden="true" />
+
     </div>
   );
 }

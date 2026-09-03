@@ -68,6 +68,8 @@ function MisionAdultos() {
       }
       subheadline="Un plan de micro-acciones diarias para salir de la infoxicación, recuperar el foco profundo y volver a sentir que tu día lo diriges tú."
       ctaLabel="Comenzar Misión Adultos"
+      ctaMessage="Hola, quiero comenzar la Misión Adultos con el Método DECIDE®."
+
       problem={{
         eyebrow: "El problema",
         title: "Trabajas todo el día. Y sientes que no hiciste nada.",

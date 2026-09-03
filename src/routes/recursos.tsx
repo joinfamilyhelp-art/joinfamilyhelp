@@ -7,12 +7,15 @@ import {
   FileText,
   GraduationCap,
   LayoutTemplate,
+  MessageCircle,
   Palette,
   Wrench,
   X,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
+
 
 export const Route = createFileRoute("/recursos")({
   head: () => ({
@@ -36,7 +39,9 @@ export const Route = createFileRoute("/recursos")({
   component: Recursos,
 });
 
-const RECURSOS_URL = "https://app.joinfamilyhelp.com/recursos";
+const RECURSOS_MESSAGE =
+  "Hola, quiero descargar un recurso gratuito de Family Help.";
+
 
 const FILTROS = [
   { key: "todos", label: "Todos" },
@@ -347,13 +352,15 @@ function DownloadForm({
     }
     setError(null);
 
-    const url = new URL(RECURSOS_URL);
-    url.searchParams.set("recurso", recurso.id);
-    url.searchParams.set("nombre", nombre.trim());
-    url.searchParams.set("email", email.trim());
-
-    window.open(url.toString(), "_blank", "noopener,noreferrer");
+    const message = [
+      `Hola, quiero descargar el recurso: "${recurso.title}".`,
+      `Soy ${nombre.trim()}.`,
+      `Mi correo es ${email.trim()}.`,
+      "Agradezco me indiquen cómo recibirlo.",
+    ].join("\n");
+    window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
     onClose();
+
   };
 
   return (
@@ -391,14 +398,16 @@ function DownloadForm({
 
       <button
         type="submit"
-        className="w-full rounded-full bg-[var(--color-brand-ink)] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-indigo)]"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--color-brand-ink)] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-indigo)]"
       >
-        Obtener Recurso en mi Correo
+        <MessageCircle className="h-4 w-4" />
+        Solicitar Recurso por WhatsApp
       </button>
 
       <p className="text-center text-xs leading-relaxed text-[var(--color-brand-clay)]">
-        Cero spam. Solo herramientas útiles para tu familia.
+        Cero spam. Te responderemos por WhatsApp con el recurso.
       </p>
+
     </form>
   );
 }

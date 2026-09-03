@@ -45,6 +45,8 @@ function MisionAdolescentes() {
       }
       subheadline="No es falta de voluntad. Es un sistema diseñado para ganarte. Aprende cómo funcionan por dentro las apps que usas todos los días y toma decisiones que te devuelvan tu tiempo, tu foco y tu autonomía."
       ctaLabel="Unirme a Misión Adolescentes"
+      ctaMessage="Hola, quiero unirme a la Misión Adolescentes con el Método HACKEA®."
+
       problem={{
         eyebrow: "Lo que nadie te contó",
         title: "El feed no es tuyo. Está optimizado para ti, no por ti.",
