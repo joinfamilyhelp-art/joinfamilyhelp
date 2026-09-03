@@ -55,34 +55,13 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li className="relative" ref={dropRef}>
-            <button
-              type="button"
-              onClick={() => setDropOpen((v) => !v)}
-              aria-expanded={dropOpen}
-              aria-haspopup="true"
-              className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
+          <li>
+            <Link
+              to="/acompanamiento-profesional"
+              className="text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
             >
               Acompañamiento
-              <ChevronDown
-                className={`h-4 w-4 transition-transform ${dropOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {dropOpen ? (
-              <ul className="absolute left-1/2 top-full z-50 mt-3 w-64 -translate-x-1/2 rounded-2xl border border-[var(--color-brand-sand)] bg-[var(--color-brand-cream)] p-2 shadow-xl">
-                {ACOMPANAMIENTO_LINKS.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      to={item.to}
-                      onClick={() => setDropOpen(false)}
-                      className="block rounded-xl px-4 py-2.5 text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:bg-[var(--color-brand-sand)] hover:text-[var(--color-brand-ink)]"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+            </Link>
           </li>
           <li>
             <Link
