@@ -22,6 +22,7 @@ import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
 import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
+import { Route as AcompanamientoProfesionalRouteImport } from './routes/acompanamiento-profesional'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 
@@ -90,6 +91,12 @@ const ComunidadRoute = ComunidadRouteImport.update({
   path: '/comunidad',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcompanamientoProfesionalRoute =
+  AcompanamientoProfesionalRouteImport.update({
+    id: '/acompanamiento-profesional',
+    path: '/acompanamiento-profesional',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -104,6 +111,7 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
@@ -121,6 +129,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
@@ -139,6 +148,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
@@ -158,6 +168,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/acompanamiento-profesional'
     | '/comunidad'
     | '/mcp'
     | '/mision-adolescentes'
@@ -175,6 +186,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/acompanamiento-profesional'
     | '/comunidad'
     | '/mcp'
     | '/mision-adolescentes'
@@ -192,6 +204,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/acompanamiento-profesional'
     | '/comunidad'
     | '/mcp'
     | '/mision-adolescentes'
@@ -210,6 +223,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcompanamientoProfesionalRoute: typeof AcompanamientoProfesionalRoute
   ComunidadRoute: typeof ComunidadRoute
   McpRoute: typeof McpRoute
   MisionAdolescentesRoute: typeof MisionAdolescentesRoute
@@ -319,6 +333,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComunidadRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acompanamiento-profesional': {
+      id: '/acompanamiento-profesional'
+      path: '/acompanamiento-profesional'
+      fullPath: '/acompanamiento-profesional'
+      preLoaderRoute: typeof AcompanamientoProfesionalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -338,6 +359,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcompanamientoProfesionalRoute: AcompanamientoProfesionalRoute,
   ComunidadRoute: ComunidadRoute,
   McpRoute: McpRoute,
   MisionAdolescentesRoute: MisionAdolescentesRoute,
