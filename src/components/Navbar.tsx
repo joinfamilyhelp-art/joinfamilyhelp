@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
 const NAV_LINKS = [
@@ -11,10 +11,42 @@ const NAV_LINKS = [
   { label: "Nosotros", to: "/nosotros" as const, hash: undefined },
 ];
 
+const ACOMPANAMIENTO_LINKS = [
+  { label: "Orientación Familiar", to: "/acompanamiento-profesional" as const },
+  { label: "Psicología", to: "/acompanamiento-profesional" as const },
+  { label: "Trabajo Social", to: "/acompanamiento-profesional" as const },
+  { label: "Psiquiatría", to: "/acompanamiento-profesional" as const },
+  {
+    label: "Comités e Instituciones",
+    to: "/acompanamiento-profesional" as const,
+  },
+];
+
 export const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [dropOpen, setDropOpen] = useState(false);
+  const [mobileDropOpen, setMobileDropOpen] = useState(false);
+  const dropRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    if (!dropOpen) return;
+    const onClickOutside = (e: MouseEvent) => {
+      if (dropRef.current && !dropRef.current.contains(e.target as Node)) {
+        setDropOpen(false);
+      }
+    };
+    const onEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setDropOpen(false);
+    };
+    document.addEventListener("mousedown", onClickOutside);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("mousedown", onClickOutside);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, [dropOpen]);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[var(--color-brand-sand)] bg-[var(--color-brand-cream)]/90 backdrop-blur">
