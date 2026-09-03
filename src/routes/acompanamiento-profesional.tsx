@@ -17,8 +17,9 @@ import {
 } from "lucide-react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-export const RESERVA_URL =
-  "https://app.joinfamilyhelp.com/acompanamiento-profesional";
+const RESERVA_MESSAGE =
+  "Hola, quiero agendar una sesión de acompañamiento profesional con Family Help.";
+
 
 
 export const Route = createFileRoute("/acompanamiento-profesional")({

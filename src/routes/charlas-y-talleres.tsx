@@ -13,8 +13,9 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import tallerPadres from "@/assets/taller-padres.jpg";
 import charlaAuditorio from "@/assets/charla-auditorio.jpg";
 
-export const PROPUESTA_URL =
-  "https://app.joinfamilyhelp.com/charlas-y-talleres";
+const PROPUESTA_MESSAGE =
+  "Hola, quiero solicitar una propuesta de Charlas y Talleres de Family Help.";
+
 
 
 export const Route = createFileRoute("/charlas-y-talleres")({
