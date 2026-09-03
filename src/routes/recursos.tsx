@@ -41,7 +41,7 @@ const RECURSOS_URL = "https://app.joinfamilyhelp.com/recursos";
 const FILTROS = [
   { key: "todos", label: "Todos" },
   { key: "aura", label: "Para Padres (PUENTE®)" },
-  { key: "hackea", label: "Para Adolescentes (HACKEA®)" },
+  { key: "decide", label: "Para Adultos (DECIDE®)" },
   { key: "faro", label: "Para Docentes (FARO®)" },
   { key: "imprimibles", label: "Plantillas e Imprimibles" },
 ] as const;
@@ -87,7 +87,7 @@ const RECURSOS = [
       "Descubre en 3 minutos qué método necesita tu hogar para recuperar la paz y el foco.",
     icon: BarChart3,
     cta: "Realizar Test Gratis",
-    category: "hackea",
+    category: "decide",
     color: "bg-amber-50 text-amber-700 border-amber-100",
     iconBg: "bg-amber-100 text-amber-700",
   },
@@ -120,7 +120,7 @@ const RECURSOS = [
       "Ajustes concretos y retos de 7 días para adolescentes que quieren recuperar su tiempo sin que nadie les quite nada.",
     icon: BookOpen,
     cta: "Descargar Guía",
-    category: "hackea",
+    category: "imprimibles",
     color: "bg-indigo-50 text-indigo-700 border-indigo-100",
     iconBg: "bg-indigo-100 text-indigo-700",
   },
