@@ -17,8 +17,6 @@ import {
 } from "lucide-react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-const RESERVA_MESSAGE =
-  "Hola, quiero agendar una sesión de acompañamiento profesional con Family Help.";
 
 
 

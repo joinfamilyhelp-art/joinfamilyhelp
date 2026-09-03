@@ -13,8 +13,6 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import tallerPadres from "@/assets/taller-padres.jpg";
 import charlaAuditorio from "@/assets/charla-auditorio.jpg";
 
-const PROPUESTA_MESSAGE =
-  "Hola, quiero solicitar una propuesta de Charlas y Talleres de Family Help.";
 
 
 
