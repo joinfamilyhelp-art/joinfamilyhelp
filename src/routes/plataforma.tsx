@@ -123,14 +123,15 @@ function Plataforma() {
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                href={BRUJULA_URL}
+                href={BRUJULA_CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-ink)] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--color-brand-indigo)] hover:shadow-lg"
               >
-                Acceder a la plataforma
-                <ArrowRight className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" />
+                Escribir por WhatsApp
               </a>
+
               <a
                 href="#tour"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-[var(--color-brand-ink)] hover:border-slate-300"
@@ -287,14 +288,15 @@ function Plataforma() {
               tuya.
             </p>
             <a
-              href={BRUJULA_URL}
+              href={BRUJULA_CTA_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--color-brand-ink)] shadow-lg transition-all hover:-translate-y-0.5"
             >
-              Acceder a la Plataforma Real
-              <ArrowRight className="h-4 w-4" />
+              <MessageCircle className="h-4 w-4" />
+              Escribir por WhatsApp
             </a>
+
           </div>
         </div>
       </section>
