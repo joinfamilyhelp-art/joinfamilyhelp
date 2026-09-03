@@ -192,6 +192,13 @@ export function Navbar() {
                 ))}
               </div>
             ) : null}
+            <Link
+              to="/charlas-y-talleres"
+              onClick={() => setOpen(false)}
+              className="block rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
+            >
+              Charlas y Talleres
+            </Link>
             <div className="mt-3 border-t border-[var(--color-brand-sand)] pt-3">
               <Link
                 to="/mision-conexion"

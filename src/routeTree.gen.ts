@@ -22,6 +22,7 @@ import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
 import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
+import { Route as CharlasYTalleresRouteImport } from './routes/charlas-y-talleres'
 import { Route as AcompanamientoProfesionalRouteImport } from './routes/acompanamiento-profesional'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
@@ -91,6 +92,11 @@ const ComunidadRoute = ComunidadRouteImport.update({
   path: '/comunidad',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CharlasYTalleresRoute = CharlasYTalleresRouteImport.update({
+  id: '/charlas-y-talleres',
+  path: '/charlas-y-talleres',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AcompanamientoProfesionalRoute =
   AcompanamientoProfesionalRouteImport.update({
     id: '/acompanamiento-profesional',
@@ -112,6 +118,7 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
+  '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
@@ -130,6 +137,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
+  '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
@@ -149,6 +157,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
+  '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
@@ -169,6 +178,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/acompanamiento-profesional'
+    | '/charlas-y-talleres'
     | '/comunidad'
     | '/mcp'
     | '/mision-adolescentes'
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/acompanamiento-profesional'
+    | '/charlas-y-talleres'
     | '/comunidad'
     | '/mcp'
     | '/mision-adolescentes'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/acompanamiento-profesional'
+    | '/charlas-y-talleres'
     | '/comunidad'
     | '/mcp'
     | '/mision-adolescentes'
@@ -224,6 +236,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcompanamientoProfesionalRoute: typeof AcompanamientoProfesionalRoute
+  CharlasYTalleresRoute: typeof CharlasYTalleresRoute
   ComunidadRoute: typeof ComunidadRoute
   McpRoute: typeof McpRoute
   MisionAdolescentesRoute: typeof MisionAdolescentesRoute
@@ -333,6 +346,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComunidadRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/charlas-y-talleres': {
+      id: '/charlas-y-talleres'
+      path: '/charlas-y-talleres'
+      fullPath: '/charlas-y-talleres'
+      preLoaderRoute: typeof CharlasYTalleresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/acompanamiento-profesional': {
       id: '/acompanamiento-profesional'
       path: '/acompanamiento-profesional'
@@ -360,6 +380,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcompanamientoProfesionalRoute: AcompanamientoProfesionalRoute,
+  CharlasYTalleresRoute: CharlasYTalleresRoute,
   ComunidadRoute: ComunidadRoute,
   McpRoute: McpRoute,
   MisionAdolescentesRoute: MisionAdolescentesRoute,
