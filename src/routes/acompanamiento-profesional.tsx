@@ -443,7 +443,7 @@ function AcompanamientoPage() {
               <button
                 type="button"
                 onClick={() => setSeleccionado(s)}
-                className="mt-6 inline-flex items-center justify-center gap-1.5 self-stretch rounded-full bg-[var(--color-brand-terracotta)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-[var(--color-brand-clay)] hover:shadow-md"
+                className="mt-auto inline-flex items-center justify-center gap-1.5 self-stretch rounded-full bg-[var(--color-brand-terracotta)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-[var(--color-brand-clay)] hover:shadow-md"
               >
                 {s.cta}
                 <ChevronRight className="h-4 w-4" />
