@@ -92,7 +92,7 @@ export function Navbar() {
               aria-haspopup="true"
               className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
             >
-              Acompañamiento Profesional
+              Acompañamiento
               <ChevronDown
                 className={`h-4 w-4 transition-transform ${dropOpen ? "rotate-180" : ""}`}
               />
@@ -112,6 +112,14 @@ export function Navbar() {
                 ))}
               </ul>
             ) : null}
+          </li>
+          <li>
+            <Link
+              to="/charlas-y-talleres"
+              className="text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
+            >
+              Charlas y Talleres
+            </Link>
           </li>
           {NAV_LINKS.slice(2).map((link) => (
             <li key={link.label}>
@@ -165,7 +173,7 @@ export function Navbar() {
               aria-expanded={mobileDropOpen}
               className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
             >
-              Acompañamiento Profesional
+              Acompañamiento
               <ChevronDown
                 className={`h-4 w-4 transition-transform ${mobileDropOpen ? "rotate-180" : ""}`}
               />
