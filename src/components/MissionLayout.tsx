@@ -1,10 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Check, ShoppingBag } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import type { ReactNode } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-export const HOTMART_URL = "#hotmart-checkout-placeholder";
+const DEFAULT_CTA_MESSAGE = "Hola, quiero conocer más sobre Family Help.";
+
 
 type Tone = "sky" | "emerald" | "indigo" | "rose";
 
@@ -61,6 +63,7 @@ export type MissionLayoutProps = {
   headline: ReactNode;
   subheadline: string;
   ctaLabel: string;
+  ctaMessage?: string;
   problem: MissionSection;
   what: MissionSection;
   includes: MissionInclude[];
@@ -68,8 +71,11 @@ export type MissionLayoutProps = {
   closing?: string;
 };
 
+
 export function MissionLayout(props: MissionLayoutProps) {
   const t = TONE[props.tone];
+  const ctaUrl = buildWhatsAppUrl(props.ctaMessage ?? DEFAULT_CTA_MESSAGE);
+
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Navbar />
@@ -106,12 +112,15 @@ export function MissionLayout(props: MissionLayoutProps) {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href={HOTMART_URL}
+              href={ctaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-ink)] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--color-brand-indigo)] hover:shadow-lg"
             >
-              <ShoppingBag className="h-4 w-4" />
+              <MessageCircle className="h-4 w-4" />
               {props.ctaLabel}
             </a>
+
             <a
               href="#incluye"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-[var(--color-brand-ink)] hover:border-slate-300"
@@ -216,15 +225,18 @@ export function MissionLayout(props: MissionLayoutProps) {
             avances con calma y foco.
           </p>
           <a
-            href={HOTMART_URL}
+            href={ctaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--color-brand-ink)] shadow-lg transition-all hover:-translate-y-0.5"
           >
-            <ShoppingBag className="h-4 w-4" />
+            <MessageCircle className="h-4 w-4" />
             {props.ctaLabel}
           </a>
           <p className="mt-4 text-xs text-white/70">
-            Pago seguro procesado por Hotmart · Garantía de 7 días
+            Te responderemos por WhatsApp lo antes posible.
           </p>
+
         </div>
       </section>
 

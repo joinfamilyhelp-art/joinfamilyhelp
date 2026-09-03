@@ -1,9 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 const NAV_LINKS = [
+
   { label: "Nosotros", to: "/nosotros" as const, hash: undefined },
   { label: "Métodos", to: "/" as const, hash: "metodos" },
   { label: "Cómo funciona", to: "/" as const, hash: "proceso" },
@@ -12,7 +14,10 @@ const NAV_LINKS = [
   { label: "Recursos", to: "/recursos" as const, hash: undefined },
 ] as const;
 
-export const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
+const MISION_CTA_URL = buildWhatsAppUrl(
+  "Hola, quiero unirme a la Misión Conexión de Family Help.",
+);
+
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -59,13 +64,17 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            to="/mision-conexion"
-            className="inline-flex items-center rounded-full bg-[var(--color-brand-terracotta)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)] hover:shadow-md"
+          <a
+            href={MISION_CTA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)] hover:shadow-md"
           >
+            <MessageCircle className="h-4 w-4" />
             Únete a la Misión
-          </Link>
+          </a>
         </div>
+
 
         <button
           type="button"
@@ -92,14 +101,18 @@ export function Navbar() {
               </Link>
             ))}
             <div className="mt-3 border-t border-[var(--color-brand-sand)] pt-3">
-              <Link
-                to="/mision-conexion"
+              <a
+                href={MISION_CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="block rounded-full bg-[var(--color-brand-terracotta)] px-4 py-2.5 text-center text-base font-semibold text-white"
+                className="flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-4 py-2.5 text-center text-base font-semibold text-white"
               >
+                <MessageCircle className="h-4 w-4" />
                 Únete a la Misión
-              </Link>
+              </a>
             </div>
+
           </div>
         </div>
       ) : null}

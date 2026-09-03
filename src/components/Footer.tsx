@@ -1,7 +1,14 @@
 import { Link } from "@tanstack/react-router";
+import { MessageCircle } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
+
+const WHATSAPP_CTA_URL = buildWhatsAppUrl(
+  "Hola, quiero conocer más sobre Family Help.",
+);
 
 const PRODUCTOS = [
+
   { label: "Misión Familias", to: "/mision-familias" as const },
   { label: "Misión Docentes", to: "/mision-docentes" as const },
   { label: "Misión Adolescentes", to: "/mision-adolescentes" as const },
@@ -57,22 +64,16 @@ export function Footer() {
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
-                href="https://app.joinfamilyhelp.com/login"
+                href={WHATSAPP_CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-[var(--color-brand-mist)] bg-white px-4 py-2 text-xs font-semibold text-[var(--color-brand-ink)] transition-colors hover:border-[var(--color-brand-violet-soft)]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-brand-ink)] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-brand-indigo)]"
               >
-                Iniciar sesión ↗
-              </a>
-              <a
-                href="https://app.joinfamilyhelp.com/brujula"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full bg-[var(--color-brand-ink)] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-brand-indigo)]"
-              >
-                Acceder a BRÚJULA® ↗
+                <MessageCircle className="h-3.5 w-3.5" />
+                Escríbenos por WhatsApp
               </a>
             </div>
+
           </div>
 
           {/* Productos */}

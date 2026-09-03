@@ -34,7 +34,9 @@ function MisionFamilias() {
         </>
       }
       subheadline="Un método práctico para bajar la tensión por pantallas en casa, acordar límites sin gritos y volver a mirarse a los ojos, sin culpa y sin sermones."
-      ctaLabel="Adquirir Misión Familias en Hotmart"
+      ctaLabel="Quiero la Misión Familias"
+      ctaMessage="Hola, quiero conocer la Misión Familias con el Método PUENTE®."
+
       problem={{
         eyebrow: "El problema",
         title: "El teléfono se sentó en la mesa. Y la conversación se fue.",

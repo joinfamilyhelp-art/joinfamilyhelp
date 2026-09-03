@@ -52,7 +52,9 @@ function MisionDocentes() {
         </>
       }
       subheadline="Un método para docentes que ya no quieren competir con las notificaciones. Recupera la atención del grupo con protocolos claros, acuerdos vivos y una nueva forma de estar frente a la clase."
-      ctaLabel="Adquirir Misión Docentes en Hotmart"
+      ctaLabel="Quiero la Misión Docentes"
+      ctaMessage="Hola, quiero conocer la Misión Docentes con el Método FARO®."
+
       problem={{
         eyebrow: "El problema",
         title: "El aula perdió el foco. Y tú lo notas cada día.",

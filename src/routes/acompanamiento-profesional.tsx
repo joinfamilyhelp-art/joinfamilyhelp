@@ -15,9 +15,11 @@ import {
   Users,
   X,
 } from "lucide-react";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const RESERVA_URL =
   "https://app.joinfamilyhelp.com/acompanamiento-profesional";
+
 
 export const Route = createFileRoute("/acompanamiento-profesional")({
   head: () => ({
@@ -182,21 +184,19 @@ function ReservaModal({
       setError("El motivo de consulta es demasiado largo (máx. 1000 caracteres).");
       return;
     }
-    const params = new URLSearchParams({
-      servicio: servicio.titulo,
-      modalidad: reserva.modalidad,
-      fecha: reserva.fecha,
-      hora: reserva.hora,
-      nombre,
-      contacto,
-      motivo: reserva.motivo.trim(),
-    });
-    window.open(
-      `${RESERVA_URL}?${params.toString()}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
+    const message = [
+      `Hola, quiero agendar una sesión de ${servicio.titulo}.`,
+      `Modalidad: ${reserva.modalidad}.`,
+      `Fecha: ${reserva.fecha} a las ${reserva.hora}.`,
+      `Nombre: ${nombre}.`,
+      `Contacto: ${contacto}.`,
+      reserva.motivo.trim() && `Motivo: ${reserva.motivo.trim()}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
     onClose();
+
   };
 
   const hoy = new Date().toISOString().split("T")[0];

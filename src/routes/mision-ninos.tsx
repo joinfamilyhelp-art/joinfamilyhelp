@@ -13,7 +13,9 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import ninosJuegoReal from "@/assets/ninos-juego-real.jpg";
+
 
 export const Route = createFileRoute("/mision-ninos")({
   head: () => ({
@@ -37,7 +39,7 @@ export const Route = createFileRoute("/mision-ninos")({
   component: MisionNinos,
 });
 
-const AURA_URL = "https://app.joinfamilyhelp.com/mision-aura";
+const AURA_MESSAGE = "Hola, quiero unirme a la Misión AURA para niños de 3 a 11 años.";
 
 const AURA_PILARES = [
   {
@@ -77,24 +79,24 @@ function CapturaAura({ compact = false }: { compact?: boolean }) {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const params = new URLSearchParams();
-    if (nombre.trim()) params.set("nombre", nombre.trim());
-    if (whats.trim()) params.set("whatsapp", whats.trim());
-    const url = params.size ? `${AURA_URL}?${params.toString()}` : AURA_URL;
-    window.open(url, "_blank", "noopener,noreferrer");
+    const parts = [AURA_MESSAGE];
+    if (nombre.trim()) parts.push(`Soy ${nombre.trim()}.`);
+    if (whats.trim()) parts.push(`Mi WhatsApp es ${whats.trim()}.`);
+    window.open(buildWhatsAppUrl(parts.join(" ")), "_blank", "noopener,noreferrer");
     setEnviado(true);
   };
+
 
   if (enviado) {
     return (
       <div className="rounded-2xl border border-[var(--color-brand-moss)]/30 bg-[var(--color-brand-moss-soft)] p-5 text-left">
         <p className="flex items-center gap-2 font-semibold text-[var(--color-brand-moss)]">
-          <CheckCircle2 className="h-5 w-5" /> ¡Listo! Te estamos redirigiendo a la Misión AURA.
+          <CheckCircle2 className="h-5 w-5" /> ¡Listo! Te estamos redirigiendo a WhatsApp.
         </p>
         <p className="mt-1 text-sm text-slate-600">
           Si no se abrió automáticamente,{" "}
           <a
-            href={AURA_URL}
+            href={buildWhatsAppUrl(AURA_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-[var(--color-brand-clay)] underline"
@@ -106,6 +108,7 @@ function CapturaAura({ compact = false }: { compact?: boolean }) {
       </div>
     );
   }
+
 
   return (
     <form onSubmit={onSubmit} className={compact ? "space-y-3" : "space-y-4"}>
@@ -338,7 +341,7 @@ function MisionNinos() {
             hijo esa misma tarde.
           </p>
           <a
-            href={AURA_URL}
+            href={buildWhatsAppUrl(AURA_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-moss)] px-8 py-4 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-sage)]"
@@ -346,6 +349,7 @@ function MisionNinos() {
             <MessageCircle className="h-5 w-5" />
             Sumarme a la Misión AURA por WhatsApp
           </a>
+
         </div>
       </section>
 

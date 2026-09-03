@@ -9,9 +9,12 @@ import {
   Compass,
   ArrowLeft,
   Sparkles,
+  MessageCircle,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
+
 
 export const Route = createFileRoute("/plataforma")({
   head: () => ({
@@ -33,7 +36,10 @@ export const Route = createFileRoute("/plataforma")({
   component: Plataforma,
 });
 
-const BRUJULA_URL = "https://app.joinfamilyhelp.com/brujula";
+const BRUJULA_CTA_URL = buildWhatsAppUrl(
+  "Hola, quiero conocer más sobre la Plataforma BRÚJULA® de Family Help.",
+);
+
 
 const FEATURES = [
   {

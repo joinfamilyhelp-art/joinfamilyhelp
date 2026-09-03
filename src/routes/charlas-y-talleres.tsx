@@ -9,11 +9,13 @@ import {
   Send,
   Users,
 } from "lucide-react";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import tallerPadres from "@/assets/taller-padres.jpg";
 import charlaAuditorio from "@/assets/charla-auditorio.jpg";
 
 export const PROPUESTA_URL =
   "https://app.joinfamilyhelp.com/charlas-y-talleres";
+
 
 export const Route = createFileRoute("/charlas-y-talleres")({
   head: () => ({
@@ -142,20 +144,20 @@ function FormularioPropuesta() {
       setError("El mensaje es demasiado largo (máx. 1000 caracteres).");
       return;
     }
-    const params = new URLSearchParams({
-      institucion: form.institucion.trim(),
-      contacto: form.contacto.trim(),
-      correo: form.correo.trim(),
-      telefono: form.telefono.trim(),
-      audiencia: form.audiencia,
-      asistentes: form.asistentes.trim(),
-      mensaje: form.mensaje.trim(),
-    });
-    window.open(
-      `${PROPUESTA_URL}?${params.toString()}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
+    const message = [
+      "Hola, quiero solicitar una propuesta de Charlas y Talleres de Family Help.",
+      `Institución / Empresa: ${form.institucion.trim()}.`,
+      `Persona de contacto: ${form.contacto.trim()}.`,
+      `Correo: ${form.correo.trim()}.`,
+      `Teléfono: ${form.telefono.trim()}.`,
+      `Audiencia: ${form.audiencia}.`,
+      form.asistentes.trim() && `Asistentes estimados: ${form.asistentes.trim()}.`,
+      form.mensaje.trim() && `Detalles: ${form.mensaje.trim()}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
+
   };
 
   const inputCls =

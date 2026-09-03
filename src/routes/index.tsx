@@ -20,7 +20,9 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import heroConexion from "@/assets/hero-conexion.jpg";
+
 import conversacion from "@/assets/conversacion-adolescente.jpg";
 import ninosJuego from "@/assets/ninos-juego-real.jpg";
 import adultoFoco from "@/assets/adulto-foco.jpg";
@@ -68,7 +70,9 @@ const METODOS = [
     img: ninosJuego,
     imgAlt: "Un padre y su hijo pequeño jugando con bloques de madera en el suelo del salón",
     to: "/mision-ninos" as const,
+    message: "Hola, quiero unirme a la Misión AURA® para niños de 3 a 11 años.",
   },
+
   {
     key: "hackea",
     icon: Sparkles,
@@ -85,7 +89,9 @@ const METODOS = [
     img: conversacion,
     imgAlt: "Un adolescente sonriente tocando la guitarra y conversando con un amigo",
     to: "/mision-adolescentes" as const,
+    message: "Hola, quiero conocer la Misión Adolescentes con el Método HACKEA®.",
   },
+
   {
     key: "decide",
     icon: UserRound,
@@ -102,7 +108,9 @@ const METODOS = [
     img: adultoFoco,
     imgAlt: "Una mujer escribiendo en su cuaderno en la mesa de la cocina, con el teléfono boca abajo",
     to: "/mision-adultos" as const,
+    message: "Hola, quiero comenzar la Misión Adultos con el Método DECIDE®.",
   },
+
   {
     key: "puente",
     icon: Users,
@@ -119,7 +127,9 @@ const METODOS = [
     img: heroConexion,
     imgAlt: "Una familia compartiendo un momento en la mesa sin dispositivos",
     to: "/mision-familias" as const,
+    message: "Hola, quiero conocer la Misión Familias con el Método PUENTE®.",
   },
+
   {
     key: "faro",
     icon: GraduationCap,
@@ -136,8 +146,10 @@ const METODOS = [
     img: docenteAula,
     imgAlt: "Un docente conversando con sus estudiantes en un aula con luz natural",
     to: "/mision-docentes" as const,
+    message: "Hola, quiero conocer la Misión Docentes con el Método FARO®.",
   },
 ];
+
 
 const PROCESO = [
   {
@@ -264,6 +276,10 @@ function Home() {
   const [faqAbierta, setFaqAbierta] = useState<number | null>(0);
   const metodo = METODOS.find((m) => m.key === activo) ?? METODOS[0]!;
   const MetodoIcon = metodo.icon;
+  const missionCtaUrl = buildWhatsAppUrl(
+    "Hola, quiero unirme a la Misión Conexión de Family Help.",
+  );
+
 
   return (
     <div className="min-h-screen bg-[var(--color-brand-cream)] text-[var(--color-brand-ink)]">
@@ -294,14 +310,17 @@ function Home() {
             </p>
 
             <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-              <Link
-                to="/mision-conexion"
+              <a
+                href={missionCtaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)] hover:shadow-lg"
               >
                 <MessageCircle className="h-4 w-4" />
                 Únete gratis a la Misión Conexión en WhatsApp
-              </Link>
+              </a>
               <a
+
                 href="#metodos"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-brand-terracotta-soft)] bg-white px-6 py-3.5 text-sm font-semibold text-[var(--color-brand-ink)] transition-colors hover:border-[var(--color-brand-terracotta)]"
               >
@@ -446,13 +465,15 @@ function Home() {
               </ul>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  to="/mision-conexion"
+                <a
+                  href={buildWhatsAppUrl(metodo.message)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)]"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Únete gratis en WhatsApp
-                </Link>
+                </a>
                 <Link
                   to={metodo.to}
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-brand-terracotta-soft)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-brand-ink)] transition-colors hover:border-[var(--color-brand-terracotta)]"
@@ -461,6 +482,7 @@ function Home() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
+
             </div>
 
             <div className="lg:col-span-5">
@@ -663,13 +685,15 @@ function Home() {
             noche. Gratis y sin instalar nada.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
-              to="/mision-conexion"
+            <a
+              href={missionCtaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-terracotta-soft)] hover:text-[var(--color-brand-ink)]"
             >
               <MessageCircle className="h-4 w-4" />
               Únete gratis a la Misión Conexión en WhatsApp
-            </Link>
+            </a>
             <Link
               to="/recursos"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
@@ -678,6 +702,7 @@ function Home() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+
         </div>
       </section>
 
