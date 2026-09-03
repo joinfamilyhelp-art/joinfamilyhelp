@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
 const NAV_LINKS = [
@@ -11,39 +11,10 @@ const NAV_LINKS = [
   { label: "Nosotros", to: "/nosotros" as const, hash: undefined },
 ];
 
-const ACOMPANAMIENTO_LINKS = [
-  { label: "Orientación Familiar", to: "/acompanamiento-profesional" as const },
-  { label: "Psicología", to: "/acompanamiento-profesional" as const },
-  { label: "Trabajo Social", to: "/acompanamiento-profesional" as const },
-  { label: "Psiquiatría", to: "/acompanamiento-profesional" as const },
-  { label: "Casos / Comités", to: "/acompanamiento-profesional" as const },
-];
-
 export const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const [dropOpen, setDropOpen] = useState(false);
-  const [mobileDropOpen, setMobileDropOpen] = useState(false);
-  const dropRef = useRef<HTMLLIElement>(null);
-
-  useEffect(() => {
-    if (!dropOpen) return;
-    const onClickOutside = (e: MouseEvent) => {
-      if (dropRef.current && !dropRef.current.contains(e.target as Node)) {
-        setDropOpen(false);
-      }
-    };
-    const onEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setDropOpen(false);
-    };
-    document.addEventListener("mousedown", onClickOutside);
-    document.addEventListener("keydown", onEscape);
-    return () => {
-      document.removeEventListener("mousedown", onClickOutside);
-      document.removeEventListener("keydown", onEscape);
-    };
-  }, [dropOpen]);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[var(--color-brand-sand)] bg-[var(--color-brand-cream)]/90 backdrop-blur">
@@ -84,34 +55,13 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li className="relative" ref={dropRef}>
-            <button
-              type="button"
-              onClick={() => setDropOpen((v) => !v)}
-              aria-expanded={dropOpen}
-              aria-haspopup="true"
-              className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
+          <li>
+            <Link
+              to="/acompanamiento-profesional"
+              className="text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
             >
               Acompañamiento
-              <ChevronDown
-                className={`h-4 w-4 transition-transform ${dropOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {dropOpen ? (
-              <ul className="absolute left-1/2 top-full z-50 mt-3 w-64 -translate-x-1/2 rounded-2xl border border-[var(--color-brand-sand)] bg-[var(--color-brand-cream)] p-2 shadow-xl">
-                {ACOMPANAMIENTO_LINKS.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      to={item.to}
-                      onClick={() => setDropOpen(false)}
-                      className="block rounded-xl px-4 py-2.5 text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:bg-[var(--color-brand-sand)] hover:text-[var(--color-brand-ink)]"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+            </Link>
           </li>
           <li>
             <Link
@@ -167,31 +117,13 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <button
-              type="button"
-              onClick={() => setMobileDropOpen((v) => !v)}
-              aria-expanded={mobileDropOpen}
-              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
+            <Link
+              to="/acompanamiento-profesional"
+              onClick={() => setOpen(false)}
+              className="block rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
             >
               Acompañamiento
-              <ChevronDown
-                className={`h-4 w-4 transition-transform ${mobileDropOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {mobileDropOpen ? (
-              <div className="space-y-1 pb-1 pl-4">
-                {ACOMPANAMIENTO_LINKS.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.to}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-md px-3 py-2 text-sm font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            ) : null}
+            </Link>
             <Link
               to="/charlas-y-talleres"
               onClick={() => setOpen(false)}
