@@ -568,11 +568,11 @@ function Home() {
       </section>
 
       {/* TESTIMONIOS */}
-      <section id="historias" className="scroll-mt-20 bg-[var(--color-brand-cream)]">
+      <section id="testimonios" className="scroll-mt-20 bg-[var(--color-brand-cream)]">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-terracotta)]">
-              Historias reales
+              Testimonios
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
               Casas más tranquilas, aulas más enfocadas.
