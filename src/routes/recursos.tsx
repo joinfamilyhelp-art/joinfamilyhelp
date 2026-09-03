@@ -41,7 +41,7 @@ const RECURSOS_URL = "https://app.joinfamilyhelp.com/recursos";
 const FILTROS = [
   { key: "todos", label: "Todos" },
   { key: "aura", label: "Para Padres (PUENTE®)" },
-  { key: "hackea", label: "Para Adolescentes (HACKEA®)" },
+  { key: "decide", label: "Para Adultos (DECIDE®)" },
   { key: "faro", label: "Para Docentes (FARO®)" },
   { key: "imprimibles", label: "Plantillas e Imprimibles" },
 ] as const;
