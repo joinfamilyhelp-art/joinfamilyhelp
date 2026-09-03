@@ -117,31 +117,13 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <button
-              type="button"
-              onClick={() => setMobileDropOpen((v) => !v)}
-              aria-expanded={mobileDropOpen}
-              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
+            <Link
+              to="/acompanamiento-profesional"
+              onClick={() => setOpen(false)}
+              className="block rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
             >
               Acompañamiento
-              <ChevronDown
-                className={`h-4 w-4 transition-transform ${mobileDropOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {mobileDropOpen ? (
-              <div className="space-y-1 pb-1 pl-4">
-                {ACOMPANAMIENTO_LINKS.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.to}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-md px-3 py-2 text-sm font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            ) : null}
+            </Link>
             <Link
               to="/charlas-y-talleres"
               onClick={() => setOpen(false)}
