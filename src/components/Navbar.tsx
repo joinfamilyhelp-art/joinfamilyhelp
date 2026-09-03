@@ -16,10 +16,7 @@ const ACOMPANAMIENTO_LINKS = [
   { label: "Psicología", to: "/acompanamiento-profesional" as const },
   { label: "Trabajo Social", to: "/acompanamiento-profesional" as const },
   { label: "Psiquiatría", to: "/acompanamiento-profesional" as const },
-  {
-    label: "Comités e Instituciones",
-    to: "/acompanamiento-profesional" as const,
-  },
+  { label: "Casos / Comités", to: "/acompanamiento-profesional" as const },
 ];
 
 export const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
