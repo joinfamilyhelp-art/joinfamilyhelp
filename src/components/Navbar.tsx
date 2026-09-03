@@ -15,27 +15,6 @@ export const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const [dropOpen, setDropOpen] = useState(false);
-  const [mobileDropOpen, setMobileDropOpen] = useState(false);
-  const dropRef = useRef<HTMLLIElement>(null);
-
-  useEffect(() => {
-    if (!dropOpen) return;
-    const onClickOutside = (e: MouseEvent) => {
-      if (dropRef.current && !dropRef.current.contains(e.target as Node)) {
-        setDropOpen(false);
-      }
-    };
-    const onEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setDropOpen(false);
-    };
-    document.addEventListener("mousedown", onClickOutside);
-    document.addEventListener("keydown", onEscape);
-    return () => {
-      document.removeEventListener("mousedown", onClickOutside);
-      document.removeEventListener("keydown", onEscape);
-    };
-  }, [dropOpen]);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[var(--color-brand-sand)] bg-[var(--color-brand-cream)]/90 backdrop-blur">
