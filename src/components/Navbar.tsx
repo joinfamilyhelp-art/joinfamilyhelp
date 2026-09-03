@@ -4,12 +4,12 @@ import { Menu, X } from "lucide-react";
 import logoAsset from "@/assets/family-help-logo.png.asset.json";
 
 const NAV_LINKS = [
+  { label: "Nosotros", to: "/nosotros" as const, hash: undefined },
   { label: "Métodos", to: "/" as const, hash: "metodos" },
   { label: "Cómo funciona", to: "/" as const, hash: "proceso" },
-  { label: "Historias", to: "/" as const, hash: "historias" },
-  { label: "Preguntas", to: "/" as const, hash: "faqs" },
-  { label: "Nosotros", to: "/nosotros" as const, hash: undefined },
-];
+  { label: "Charlas y Talleres", to: "/charlas-y-talleres" as const, hash: undefined },
+  { label: "Acompañamiento", to: "/acompanamiento-profesional" as const, hash: undefined },
+] as const;
 
 export const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
 
@@ -44,34 +44,7 @@ export function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
-          {NAV_LINKS.slice(0, 2).map((link) => (
-            <li key={link.label}>
-              <Link
-                to={link.to}
-                hash={link.hash}
-                className="text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <Link
-              to="/acompanamiento-profesional"
-              className="text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
-            >
-              Acompañamiento
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/charlas-y-talleres"
-              className="text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
-            >
-              Charlas y Talleres
-            </Link>
-          </li>
-          {NAV_LINKS.slice(2).map((link) => (
+          {NAV_LINKS.map((link) => (
             <li key={link.label}>
               <Link
                 to={link.to}
@@ -117,20 +90,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/acompanamiento-profesional"
-              onClick={() => setOpen(false)}
-              className="block rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
-            >
-              Acompañamiento
-            </Link>
-            <Link
-              to="/charlas-y-talleres"
-              onClick={() => setOpen(false)}
-              className="block rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
-            >
-              Charlas y Talleres
-            </Link>
             <div className="mt-3 border-t border-[var(--color-brand-sand)] pt-3">
               <Link
                 to="/mision-conexion"
