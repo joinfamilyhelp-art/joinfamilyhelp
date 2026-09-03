@@ -11,14 +11,6 @@ const NAV_LINKS = [
   { label: "Nosotros", to: "/nosotros" as const, hash: undefined },
 ];
 
-const ACOMPANAMIENTO_LINKS = [
-  { label: "Orientación Familiar", to: "/acompanamiento-profesional" as const },
-  { label: "Psicología", to: "/acompanamiento-profesional" as const },
-  { label: "Trabajo Social", to: "/acompanamiento-profesional" as const },
-  { label: "Psiquiatría", to: "/acompanamiento-profesional" as const },
-  { label: "Casos / Comités", to: "/acompanamiento-profesional" as const },
-];
-
 export const MISION_URL = "https://app.joinfamilyhelp.com/mision-conexion";
 
 export function Navbar() {
