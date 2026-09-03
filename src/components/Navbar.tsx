@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "Métodos", to: "/" as const, hash: "metodos" },
   { label: "Cómo funciona", to: "/" as const, hash: "proceso" },
   { label: "Charlas y Talleres", to: "/charlas-y-talleres" as const, hash: undefined },
+  { label: "Recursos", to: "/recursos" as const, hash: undefined },
   { label: "Acompañamiento", to: "/acompanamiento-profesional" as const, hash: undefined },
 ] as const;
 
