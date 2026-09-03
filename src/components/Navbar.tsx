@@ -76,7 +76,47 @@ export function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.slice(0, 2).map((link) => (
+            <li key={link.label}>
+              <Link
+                to={link.to}
+                hash={link.hash}
+                className="text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+          <li className="relative" ref={dropRef}>
+            <button
+              type="button"
+              onClick={() => setDropOpen((v) => !v)}
+              aria-expanded={dropOpen}
+              aria-haspopup="true"
+              className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:text-[var(--color-brand-ink)]"
+            >
+              Acompañamiento Profesional
+              <ChevronDown
+                className={`h-4 w-4 transition-transform ${dropOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {dropOpen ? (
+              <ul className="absolute left-1/2 top-full z-50 mt-3 w-64 -translate-x-1/2 rounded-2xl border border-[var(--color-brand-sand)] bg-[var(--color-brand-cream)] p-2 shadow-xl">
+                {ACOMPANAMIENTO_LINKS.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      to={item.to}
+                      onClick={() => setDropOpen(false)}
+                      className="block rounded-xl px-4 py-2.5 text-sm font-medium text-[var(--color-brand-clay)] transition-colors hover:bg-[var(--color-brand-sand)] hover:text-[var(--color-brand-ink)]"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </li>
+          {NAV_LINKS.slice(2).map((link) => (
             <li key={link.label}>
               <Link
                 to={link.to}
@@ -122,6 +162,31 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <button
+              type="button"
+              onClick={() => setMobileDropOpen((v) => !v)}
+              aria-expanded={mobileDropOpen}
+              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
+            >
+              Acompañamiento Profesional
+              <ChevronDown
+                className={`h-4 w-4 transition-transform ${mobileDropOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {mobileDropOpen ? (
+              <div className="space-y-1 pb-1 pl-4">
+                {ACOMPANAMIENTO_LINKS.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className="block rounded-md px-3 py-2 text-sm font-medium text-[var(--color-brand-clay)] hover:bg-[var(--color-brand-sand)]"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
             <div className="mt-3 border-t border-[var(--color-brand-sand)] pt-3">
               <Link
                 to="/mision-conexion"
