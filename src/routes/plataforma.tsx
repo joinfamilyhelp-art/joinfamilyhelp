@@ -150,8 +150,9 @@ function Plataforma() {
                   <span className="h-2.5 w-2.5 rounded-full bg-brand-terracotta-soft" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
                   <span className="ml-3 font-mono text-[10px] uppercase tracking-widest text-slate-400">
-                    app.joinfamilyhelp.com/brujula
+                    wa.me/573243654332
                   </span>
+
                 </div>
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   {[
