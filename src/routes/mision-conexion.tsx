@@ -15,7 +15,6 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import escuchandoAudio from "@/assets/escuchando-audio.jpg";
-import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/mision-conexion")({
 
@@ -41,6 +40,8 @@ export const Route = createFileRoute("/mision-conexion")({
 });
 
 const MISI_MESSAGE = "Hola, quiero unirme a la Misión Conexión de Family Help.";
+const MISION_CONEXION_URL =
+  "https://chat.whatsapp.com/EgwK1YoIVq89DwrbffEcia?s=cl&p=a&mlu=4&ilr=4";
 
 const DIAS = [
   {
