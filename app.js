@@ -19,7 +19,7 @@ app.use(async (req, res) => {
   });
 
   try {
-    const response = await nitro.fetch(request);
+    const response = await nitro.fetch(request, {}, {});
     res.status(response.status);
     response.headers.forEach((value, key) => res.setHeader(key, value));
     res.send(await response.text());
