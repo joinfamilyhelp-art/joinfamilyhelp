@@ -39,7 +39,6 @@ export const Route = createFileRoute("/mision-conexion")({
   component: MisionConexionPage,
 });
 
-const MISI_MESSAGE = "Hola, quiero unirme a la Misión Conexión de Family Help.";
 const MISION_CONEXION_URL =
   "https://chat.whatsapp.com/EgwK1YoIVq89DwrbffEcia?s=cl&p=a&mlu=4&ilr=4";
 
