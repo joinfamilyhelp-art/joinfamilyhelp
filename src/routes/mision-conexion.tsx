@@ -113,10 +113,7 @@ function CapturaForm({ compact = false }: { compact?: boolean }) {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const parts = [MISI_MESSAGE];
-    if (nombre.trim()) parts.push(`Soy ${nombre.trim()}.`);
-    if (whats.trim()) parts.push(`Mi WhatsApp es ${whats.trim()}.`);
-    window.open(buildWhatsAppUrl(parts.join(" ")), "_blank", "noopener,noreferrer");
+    window.open(MISION_CONEXION_URL, "_blank", "noopener,noreferrer");
     setEnviado(true);
   };
 
@@ -130,7 +127,7 @@ function CapturaForm({ compact = false }: { compact?: boolean }) {
         <p className="mt-1 text-sm text-slate-600">
           Si no se abrió automáticamente,{" "}
           <a
-            href={buildWhatsAppUrl(MISI_MESSAGE)}
+            href={MISION_CONEXION_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-[var(--color-brand-clay)] underline"
@@ -354,7 +351,7 @@ function MisionConexionPage() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--color-brand-sand)] bg-white/95 p-3 backdrop-blur md:p-4">
         <div className="mx-auto flex max-w-3xl items-center justify-center gap-3">
           <a
-            href={buildWhatsAppUrl(MISI_MESSAGE)}
+            href={MISION_CONEXION_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--color-brand-terracotta)] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[var(--color-brand-terracotta)]/30 transition hover:bg-[var(--color-brand-clay)] md:text-base"
