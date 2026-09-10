@@ -31,8 +31,12 @@ export default defineConfig({
     ],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
+  // Preset de nitro para servidor Node (cPanel + Passenger).
+  // Debe ir en el nivel superior: el wrapper de Lovable lee `nitro`, no `vite.nitro`.
+  // Dentro del entorno de Lovable el preset se fuerza a cloudflare-module para
+  // el preview; en un build fuera de Lovable genera .output/server/index.mjs.
+  nitro: { preset: "node-server" },
   vite: {
     plugins: [mcpPlugin()],
-    nitro: { preset: "node-server" },
   },
 });
