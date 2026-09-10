@@ -12,7 +12,7 @@ const DIST_DIR = path.join(__dirname, "dist", "client");
 
 app.use(express.static(DIST_DIR));
 
-app.get("*", (req, res) => {
+app.use((req, res) => {
   const routeIndex = path.join(DIST_DIR, req.path, "index.html");
   if (fs.existsSync(routeIndex)) {
     res.sendFile(routeIndex);
