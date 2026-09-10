@@ -12,9 +12,24 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-  },
-  server: {
-    preset: "node-server",
+    pages: [
+      { path: "/" },
+      { path: "/nosotros" },
+      { path: "/mision-familias" },
+      { path: "/mision-docentes" },
+      { path: "/mision-adultos" },
+      { path: "/mision-adolescentes" },
+      { path: "/mision-ninos" },
+      { path: "/mision-conexion" },
+      { path: "/plataforma" },
+      { path: "/comunidad" },
+      { path: "/recursos" },
+      { path: "/acompanamiento-profesional" },
+      { path: "/charlas-y-talleres" },
+      { path: "/privacidad" },
+      { path: "/terminos" },
+    ],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   vite: {
     plugins: [mcpPlugin()],
