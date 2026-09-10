@@ -10,10 +10,11 @@ const app = express();
 const PORT = process.env.PORT;
 const DIST_DIR = path.join(__dirname, "dist", "client");
 
-app.use(express.static(DIST_DIR));
+app.use(express.static(DIST_DIR, { redirect: false }));
 
 app.use((req, res) => {
-  const routeIndex = path.join(DIST_DIR, req.path, "index.html");
+  const cleanPath = req.path.replace(/\/$/, "") || "/";
+  const routeIndex = path.join(DIST_DIR, cleanPath, "index.html");
   if (fs.existsSync(routeIndex)) {
     res.sendFile(routeIndex);
     return;
