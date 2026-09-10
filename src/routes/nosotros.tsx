@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import logoAsset from "@/assets/family-help-logo.png.asset.json";
+const logoAsset = { url: "/family-help-logo.png" };
 
 export const Route = createFileRoute("/nosotros")({
   head: () => ({
