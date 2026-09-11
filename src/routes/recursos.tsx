@@ -15,6 +15,7 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { guardarContacto } from "@/lib/contactos";
 
 
 export const Route = createFileRoute("/recursos")({
@@ -358,6 +359,12 @@ function DownloadForm({
       `Mi correo es ${email.trim()}.`,
       "Agradezco me indiquen cómo recibirlo.",
     ].join("\n");
+    void guardarContacto({
+      origen: "Recursos gratuitos",
+      nombre,
+      correo: email,
+      interes: recurso.title,
+    });
     window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
     onClose();
 

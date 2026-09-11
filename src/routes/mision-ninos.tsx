@@ -14,6 +14,7 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { guardarContacto } from "@/lib/contactos";
 import ninosJuegoReal from "@/assets/ninos-juego-real.jpg";
 
 
@@ -82,6 +83,12 @@ function CapturaAura({ compact = false }: { compact?: boolean }) {
     const parts = [AURA_MESSAGE];
     if (nombre.trim()) parts.push(`Soy ${nombre.trim()}.`);
     if (whats.trim()) parts.push(`Mi WhatsApp es ${whats.trim()}.`);
+    void guardarContacto({
+      origen: "Misión Niños (AURA®)",
+      nombre,
+      telefono: whats,
+      interes: "Método AURA®",
+    });
     window.open(buildWhatsAppUrl(parts.join(" ")), "_blank", "noopener,noreferrer");
     setEnviado(true);
   };

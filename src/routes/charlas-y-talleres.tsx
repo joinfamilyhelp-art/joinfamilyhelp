@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { guardarContacto } from "@/lib/contactos";
 import tallerPadres from "@/assets/taller-padres.jpg";
 import charlaAuditorio from "@/assets/charla-auditorio.jpg";
 
@@ -155,6 +156,16 @@ function FormularioPropuesta() {
     ]
       .filter(Boolean)
       .join("\n");
+    void guardarContacto({
+      origen: "Charlas y talleres",
+      nombre: form.contacto,
+      correo: form.correo,
+      telefono: form.telefono,
+      organizacion: form.institucion,
+      audiencia: form.audiencia,
+      asistentes: form.asistentes ? Number(form.asistentes) : null,
+      mensaje: form.mensaje,
+    });
     window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
 
   };
