@@ -15,6 +15,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import escuchandoAudio from "@/assets/escuchando-audio.jpg";
+import { guardarContacto } from "@/lib/contactos";
 
 export const Route = createFileRoute("/mision-conexion")({
 
@@ -112,6 +113,12 @@ function CapturaForm({ compact = false }: { compact?: boolean }) {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    void guardarContacto({
+      origen: "Misión Conexión",
+      nombre,
+      telefono: whats,
+      interes: "Misión Conexión: 3 días",
+    });
     window.open(MISION_CONEXION_URL, "_blank", "noopener,noreferrer");
     setEnviado(true);
   };

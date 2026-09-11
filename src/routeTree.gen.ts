@@ -24,7 +24,10 @@ import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as CharlasYTalleresRouteImport } from './routes/charlas-y-talleres'
 import { Route as AcompanamientoProfesionalRouteImport } from './routes/acompanamiento-profesional'
+import { Route as AccesoRouteImport } from './routes/acceso'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedPanelRouteImport } from './routes/_authenticated/panel'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 
 const TerminosRoute = TerminosRouteImport.update({
@@ -103,10 +106,24 @@ const AcompanamientoProfesionalRoute =
     path: '/acompanamiento-profesional',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AccesoRoute = AccesoRouteImport.update({
+  id: '/acceso',
+  path: '/acceso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedPanelRoute = AuthenticatedPanelRouteImport.update({
+  id: '/panel',
+  path: '/panel',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const Char91DotwellKnownChar93OauthProtectedResourceRoute =
   Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
@@ -117,6 +134,7 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acceso': typeof AccesoRoute
   '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
   '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
@@ -133,9 +151,11 @@ export interface FileRoutesByFullPath {
   '/recursos': typeof RecursosRoute
   '/terminos': typeof TerminosRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/panel': typeof AuthenticatedPanelRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acceso': typeof AccesoRoute
   '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
   '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
@@ -152,10 +172,13 @@ export interface FileRoutesByTo {
   '/recursos': typeof RecursosRoute
   '/terminos': typeof TerminosRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/panel': typeof AuthenticatedPanelRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/acceso': typeof AccesoRoute
   '/acompanamiento-profesional': typeof AcompanamientoProfesionalRoute
   '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
@@ -172,11 +195,13 @@ export interface FileRoutesById {
   '/recursos': typeof RecursosRoute
   '/terminos': typeof TerminosRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/_authenticated/panel': typeof AuthenticatedPanelRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/acceso'
     | '/acompanamiento-profesional'
     | '/charlas-y-talleres'
     | '/comunidad'
@@ -193,9 +218,11 @@ export interface FileRouteTypes {
     | '/recursos'
     | '/terminos'
     | '/.well-known/oauth-protected-resource'
+    | '/panel'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/acceso'
     | '/acompanamiento-profesional'
     | '/charlas-y-talleres'
     | '/comunidad'
@@ -212,9 +239,12 @@ export interface FileRouteTypes {
     | '/recursos'
     | '/terminos'
     | '/.well-known/oauth-protected-resource'
+    | '/panel'
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
+    | '/acceso'
     | '/acompanamiento-profesional'
     | '/charlas-y-talleres'
     | '/comunidad'
@@ -231,10 +261,13 @@ export interface FileRouteTypes {
     | '/recursos'
     | '/terminos'
     | '/.well-known/oauth-protected-resource'
+    | '/_authenticated/panel'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AccesoRoute: typeof AccesoRoute
   AcompanamientoProfesionalRoute: typeof AcompanamientoProfesionalRoute
   CharlasYTalleresRoute: typeof CharlasYTalleresRoute
   ComunidadRoute: typeof ComunidadRoute
@@ -360,12 +393,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AcompanamientoProfesionalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acceso': {
+      id: '/acceso'
+      path: '/acceso'
+      fullPath: '/acceso'
+      preLoaderRoute: typeof AccesoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/panel': {
+      id: '/_authenticated/panel'
+      path: '/panel'
+      fullPath: '/panel'
+      preLoaderRoute: typeof AuthenticatedPanelRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
     '/.well-known/oauth-protected-resource': {
       id: '/.well-known/oauth-protected-resource'
@@ -377,8 +431,21 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedPanelRoute: typeof AuthenticatedPanelRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedPanelRoute: AuthenticatedPanelRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AccesoRoute: AccesoRoute,
   AcompanamientoProfesionalRoute: AcompanamientoProfesionalRoute,
   CharlasYTalleresRoute: CharlasYTalleresRoute,
   ComunidadRoute: ComunidadRoute,

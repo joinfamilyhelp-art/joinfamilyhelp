@@ -16,6 +16,7 @@ import {
   X,
 } from "lucide-react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { guardarContacto } from "@/lib/contactos";
 
 
 
@@ -193,6 +194,14 @@ function ReservaModal({
     ]
       .filter(Boolean)
       .join("\n");
+    void guardarContacto({
+      origen: "Acompañamiento profesional",
+      nombre,
+      correo: contacto.includes("@") ? contacto : null,
+      telefono: contacto.includes("@") ? null : contacto,
+      interes: `${servicio.titulo} · ${reserva.modalidad} · ${reserva.fecha} ${reserva.hora}`,
+      mensaje: reserva.motivo,
+    });
     window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
     onClose();
 
