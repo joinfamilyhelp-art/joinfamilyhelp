@@ -10,7 +10,7 @@ import {
   ShieldAlert,
   Trash2,
 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { db as supabase } from "@/lib/db";
 import { ESTADOS } from "@/lib/contactos";
 
 export const Route = createFileRoute("/_authenticated/panel")({
