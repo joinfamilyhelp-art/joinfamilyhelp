@@ -47,3 +47,17 @@ select id, 'admin' from auth.users where email = 'TU-CORREO@ejemplo.com';
 ```
 
 Desde ahí ya puedes dar acceso al resto del equipo repitiendo la consulta con `'staff'`.
+
+## 6. Cómo queda conectado el sitio
+
+El sitio ya está preparado: usa tu proyecto en cuanto existan estas dos variables.
+
+- Local: copia `.env.local.ejemplo` como `.env.local` y completa la clave anon.
+- Cloudflare Pages: Settings → Environment variables, agrega las mismas dos.
+
+```
+VITE_SUPABASE_EXTERNAL_URL=https://ujxxoagfdrkgbssutjnn.supabase.co
+VITE_SUPABASE_EXTERNAL_ANON_KEY=<tu clave anon>
+```
+
+Sin esas variables el sitio sigue usando la base de Lovable Cloud, así que no hay riesgo de quedarse sin servicio durante el cambio.
