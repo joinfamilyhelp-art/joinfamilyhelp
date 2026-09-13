@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { db as supabase } from "@/lib/db";
 import { ESTADOS } from "@/lib/contactos";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/_authenticated/panel")({
   head: () => ({
@@ -64,6 +65,7 @@ function PanelPage() {
   const [cargando, setCargando] = useState(true);
   const [esAdmin, setEsAdmin] = useState(false);
   const [tieneAcceso, setTieneAcceso] = useState<boolean | null>(null);
+  const [errorAcceso, setErrorAcceso] = useState<string | null>(null);
   const [contactos, setContactos] = useState<Contacto[]>([]);
   const [busqueda, setBusqueda] = useState("");
   const [filtroEstado, setFiltroEstado] = useState("todos");
@@ -72,18 +74,28 @@ function PanelPage() {
 
   const cargar = useCallback(async () => {
     setCargando(true);
-    const { data: userData } = await supabase.auth.getUser();
+    setErrorAcceso(null);
+    const { data: userData, error: userError } = await supabase.auth.getUser();
     const user = userData.user;
     setCorreoUsuario(user?.email ?? "");
-    if (!user) {
+    if (userError || !user) {
       setTieneAcceso(false);
       setCargando(false);
       return;
     }
-    const { data: roles } = await supabase
+    const { data: roles, error: rolesError } = await supabase
       .from("user_roles")
       .select("role")
       .eq("user_id", user.id);
+    if (rolesError) {
+      console.error("No se pudieron consultar los permisos del equipo", rolesError);
+      setErrorAcceso(
+        "No fue posible consultar tus permisos. Revisa que las reglas de acceso estén completas en tu base de datos.",
+      );
+      setTieneAcceso(false);
+      setCargando(false);
+      return;
+    }
     const listaRoles = (roles ?? []).map((r) => r.role as string);
     setEsAdmin(listaRoles.includes("admin"));
     if (listaRoles.length === 0) {
@@ -92,10 +104,18 @@ function PanelPage() {
       return;
     }
     setTieneAcceso(true);
-    const { data } = await supabase
+    const { data, error: contactosError } = await supabase
       .from("contactos")
       .select("*")
       .order("created_at", { ascending: false });
+    if (contactosError) {
+      console.error("No se pudieron cargar los contactos", contactosError);
+      setErrorAcceso(
+        "Tu cuenta está autorizada, pero no fue posible cargar los contactos. Revisa los permisos de la tabla contactos.",
+      );
+      setCargando(false);
+      return;
+    }
     setContactos((data ?? []) as Contacto[]);
     setCargando(false);
   }, []);
@@ -189,15 +209,22 @@ function PanelPage() {
             Tu cuenta aún no tiene acceso
           </h1>
           <p className="mt-2 text-sm text-[var(--color-brand-clay)]">
-            Creaste la cuenta <strong>{correoUsuario}</strong>, pero un
-            administrador debe habilitarte antes de ver los contactos.
+            {errorAcceso ? (
+              errorAcceso
+            ) : (
+              <>
+                Creaste la cuenta <strong>{correoUsuario}</strong>, pero un
+                administrador debe habilitarte antes de ver los contactos.
+              </>
+            )}
           </p>
-          <button
+          <Button
             onClick={salir}
-            className="mt-6 inline-flex items-center gap-2 rounded-full border border-[var(--color-brand-sand)] px-5 py-2.5 text-sm font-semibold text-[var(--color-brand-clay)]"
+            variant="outline"
+            className="mt-6 rounded-full"
           >
             <LogOut className="h-4 w-4" /> Cerrar sesión
-          </button>
+          </Button>
         </div>
       </div>
     );
