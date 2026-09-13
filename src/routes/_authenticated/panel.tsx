@@ -71,6 +71,7 @@ function PanelPage() {
   const [filtroEstado, setFiltroEstado] = useState("todos");
   const [filtroOrigen, setFiltroOrigen] = useState("todos");
   const [correoUsuario, setCorreoUsuario] = useState("");
+  const [idUsuario, setIdUsuario] = useState("");
 
   const cargar = useCallback(async () => {
     setCargando(true);
@@ -78,6 +79,7 @@ function PanelPage() {
     const { data: userData, error: userError } = await supabase.auth.getUser();
     const user = userData.user;
     setCorreoUsuario(user?.email ?? "");
+    setIdUsuario(user?.id ?? "");
     if (userError || !user) {
       setTieneAcceso(false);
       setCargando(false);
@@ -218,6 +220,16 @@ function PanelPage() {
               </>
             )}
           </p>
+          {idUsuario ? (
+            <div className="mt-4 rounded-xl bg-[var(--color-brand-mist)] p-3 text-left">
+              <p className="text-xs font-semibold text-[var(--color-brand-ink)]">
+                ID de esta cuenta en tu Supabase
+              </p>
+              <code className="mt-1 block break-all text-xs text-[var(--color-brand-clay)]">
+                {idUsuario}
+              </code>
+            </div>
+          ) : null}
           <Button
             onClick={salir}
             variant="outline"
