@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "start": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy": "wrangler deploy --autoconfig=false"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
