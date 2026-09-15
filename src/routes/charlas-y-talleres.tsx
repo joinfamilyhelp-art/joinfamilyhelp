@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { guardarContacto } from "@/lib/contactos";
-import tallerPadres from "@/assets/taller-padres.jpg";
-import charlaAuditorio from "@/assets/charla-auditorio.jpg";
+import dianaCharlaAsset from "@/assets/diana-charla.jpeg.asset.json";
+import auditorioRealAsset from "@/assets/auditorio-real.jpeg.asset.json";
 
 
 
@@ -330,15 +330,15 @@ function CharlasPage() {
           </div>
           <div className="relative">
             <img
-              src={charlaAuditorio}
-              alt="Facilitador dinamizando una conferencia con un auditorio participativo"
+              src={auditorioRealAsset.url}
+              alt="Participantes de un taller de Family Help desarrollando una actividad grupal"
               width={1024}
               height={1024}
               className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl"
             />
             <img
-              src={tallerPadres}
-              alt="Taller vivencial con un círculo de padres en una biblioteca escolar"
+              src={dianaCharlaAsset.url}
+              alt="Diana facilitando una charla de Family Help ante un grupo de participantes"
               width={1024}
               height={1024}
               loading="lazy"
