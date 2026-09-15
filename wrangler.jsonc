@@ -1,14 +1,14 @@
 {
   // Configuración de despliegue en Cloudflare Workers.
-  // Build: `bun run build` -> genera dist/client (estáticos) y dist/server (SSR).
-  // Deploy: `npm run deploy` (equivale a `vite build && wrangler deploy --autoconfig=false`).
+  // Build: `bun run build`  ->  genera .output/public (estáticos) y .output/server (SSR).
+  // Deploy: `npx wrangler deploy`
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "joinfamilyhelp",
-  "main": "./dist/server/index.mjs",
+  "main": "./.output/server/index.mjs",
   "compatibility_date": "2025-09-01",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "directory": "./dist/client",
+    "directory": ".output/public",
     "not_found_handling": "none"
   },
   "observability": {
