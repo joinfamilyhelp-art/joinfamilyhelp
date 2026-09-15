@@ -330,15 +330,15 @@ function CharlasPage() {
           </div>
           <div className="relative">
             <img
-              src={auditorioRealAsset.url}
-              alt="Participantes de un taller de Family Help desarrollando una actividad grupal"
+              src={dianaCharlaAsset.url}
+              alt="Diana facilitando una charla de Family Help ante un grupo de participantes"
               width={1024}
               height={1024}
               className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl"
             />
             <img
-              src={dianaCharlaAsset.url}
-              alt="Diana facilitando una charla de Family Help ante un grupo de participantes"
+              src={auditorioRealAsset.url}
+              alt="Participantes de un taller de Family Help desarrollando una actividad grupal"
               width={1024}
               height={1024}
               loading="lazy"
