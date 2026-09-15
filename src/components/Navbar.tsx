@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { label: "Acompañamiento", to: "/acompanamiento-profesional" as const, hash: undefined },
   { label: "Charlas y Talleres", to: "/charlas-y-talleres" as const, hash: undefined },
   { label: "Recursos", to: "/recursos" as const, hash: undefined },
+  { label: "Membresía VIP", to: "/membresia-vip" as const, hash: undefined },
 ] as const;
 
 const MISION_CTA_URL = buildWhatsAppUrl(

@@ -20,6 +20,7 @@ import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
 import { Route as MisionConexionRouteImport } from './routes/mision-conexion'
 import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
 import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
+import { Route as MembresiaVipRouteImport } from './routes/membresia-vip'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as CharlasYTalleresRouteImport } from './routes/charlas-y-talleres'
@@ -85,6 +86,11 @@ const MisionAdolescentesRoute = MisionAdolescentesRouteImport.update({
   path: '/mision-adolescentes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MembresiaVipRoute = MembresiaVipRouteImport.update({
+  id: '/membresia-vip',
+  path: '/membresia-vip',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
@@ -139,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
+  '/membresia-vip': typeof MembresiaVipRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-conexion': typeof MisionConexionRoute
@@ -160,6 +167,7 @@ export interface FileRoutesByTo {
   '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
+  '/membresia-vip': typeof MembresiaVipRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-conexion': typeof MisionConexionRoute
@@ -183,6 +191,7 @@ export interface FileRoutesById {
   '/charlas-y-talleres': typeof CharlasYTalleresRoute
   '/comunidad': typeof ComunidadRoute
   '/mcp': typeof McpRoute
+  '/membresia-vip': typeof MembresiaVipRoute
   '/mision-adolescentes': typeof MisionAdolescentesRoute
   '/mision-adultos': typeof MisionAdultosRoute
   '/mision-conexion': typeof MisionConexionRoute
@@ -206,6 +215,7 @@ export interface FileRouteTypes {
     | '/charlas-y-talleres'
     | '/comunidad'
     | '/mcp'
+    | '/membresia-vip'
     | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-conexion'
@@ -227,6 +237,7 @@ export interface FileRouteTypes {
     | '/charlas-y-talleres'
     | '/comunidad'
     | '/mcp'
+    | '/membresia-vip'
     | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-conexion'
@@ -249,6 +260,7 @@ export interface FileRouteTypes {
     | '/charlas-y-talleres'
     | '/comunidad'
     | '/mcp'
+    | '/membresia-vip'
     | '/mision-adolescentes'
     | '/mision-adultos'
     | '/mision-conexion'
@@ -272,6 +284,7 @@ export interface RootRouteChildren {
   CharlasYTalleresRoute: typeof CharlasYTalleresRoute
   ComunidadRoute: typeof ComunidadRoute
   McpRoute: typeof McpRoute
+  MembresiaVipRoute: typeof MembresiaVipRoute
   MisionAdolescentesRoute: typeof MisionAdolescentesRoute
   MisionAdultosRoute: typeof MisionAdultosRoute
   MisionConexionRoute: typeof MisionConexionRoute
@@ -365,6 +378,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MisionAdolescentesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/membresia-vip': {
+      id: '/membresia-vip'
+      path: '/membresia-vip'
+      fullPath: '/membresia-vip'
+      preLoaderRoute: typeof MembresiaVipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mcp': {
       id: '/mcp'
       path: '/mcp'
@@ -450,6 +470,7 @@ const rootRouteChildren: RootRouteChildren = {
   CharlasYTalleresRoute: CharlasYTalleresRoute,
   ComunidadRoute: ComunidadRoute,
   McpRoute: McpRoute,
+  MembresiaVipRoute: MembresiaVipRoute,
   MisionAdolescentesRoute: MisionAdolescentesRoute,
   MisionAdultosRoute: MisionAdultosRoute,
   MisionConexionRoute: MisionConexionRoute,
