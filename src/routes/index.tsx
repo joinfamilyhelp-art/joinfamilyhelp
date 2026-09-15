@@ -611,10 +611,12 @@ function Home() {
               </p>
               <ul className="mt-6 grid gap-2 sm:grid-cols-2">
                 {[
-                  "Recursos nuevos cada semana",
+                  "Primer acompañamiento personalizado incluido",
+                  "Recursos y herramientas premium",
                   "Sala de escucha semanal en vivo",
                   "Acompañamiento grupal permanente",
                   "Descuentos en sesiones 1 a 1",
+                  "Cupo prioritario en misiones y talleres",
                 ].map((b) => (
                   <li key={b} className="flex items-start gap-2 text-sm text-white/85">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-brand-terracotta)]" />
