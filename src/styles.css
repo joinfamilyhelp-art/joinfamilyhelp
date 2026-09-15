@@ -8,22 +8,22 @@
   --font-serif: "Cinzel", "Cormorant Garamond", ui-serif, Georgia, serif;
   --font-script: "Satisfy", "Dancing Script", cursive;
 
-  /* Family Help brand palette (from brand brief) */
-  --color-brand-ink: oklch(0.24 0.09 275);        /* deep navy indigo */
-  --color-brand-indigo: oklch(0.42 0.15 285);     /* profound indigo */
-  --color-brand-violet: oklch(0.58 0.16 295);     /* sober violet */
-  --color-brand-violet-soft: oklch(0.74 0.09 295);
-  --color-brand-mist: oklch(0.96 0.015 285);      /* soft support tint */
+  /* Family Help azure palette */
+  --color-brand-ink: oklch(0.25 0.09 255);        /* deep navy blue */
+  --color-brand-indigo: oklch(0.47 0.16 250);     /* confident blue */
+  --color-brand-violet: oklch(0.58 0.18 248);     /* vivid azure */
+  --color-brand-violet-soft: oklch(0.8 0.075 245);
+  --color-brand-mist: oklch(0.95 0.025 245);      /* soft sky tint */
   --color-brand-coral: oklch(0.72 0.17 25);       /* coral accent (heart) */
   --color-brand-salmon: oklch(0.82 0.11 30);      /* discreet salmon */
   --color-brand-sage: oklch(0.65 0.09 165);       /* subtle mint accent */
 
-  /* Accent layer: brand violet / lavender (from the real logo palette) */
-  --color-brand-terracotta: oklch(0.56 0.11 295);      /* logo violet #746EAE */
-  --color-brand-terracotta-soft: oklch(0.82 0.05 295); /* soft lavender */
-  --color-brand-clay: oklch(0.32 0.09 285);            /* deep indigo #27296C */
-  --color-brand-sand: oklch(0.96 0.015 295);           /* lavender mist */
-  --color-brand-cream: oklch(0.985 0.008 295);         /* near-white lilac */
+  /* Accent aliases kept for compatibility, now mapped to the azure system */
+  --color-brand-terracotta: oklch(0.56 0.16 248);      /* primary azure */
+  --color-brand-terracotta-soft: oklch(0.83 0.065 245); /* soft sky blue */
+  --color-brand-clay: oklch(0.32 0.085 255);           /* deep navy */
+  --color-brand-sand: oklch(0.955 0.025 245);          /* blue mist */
+  --color-brand-cream: oklch(0.985 0.008 245);         /* near-white blue */
   --color-brand-moss: oklch(0.52 0.06 155);
   --color-brand-moss-soft: oklch(0.9 0.035 155);
 }

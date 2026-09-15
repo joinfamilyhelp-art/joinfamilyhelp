@@ -156,7 +156,7 @@ function Plataforma() {
                 </div>
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   {[
-                    { label: "Radar del día", value: "Foco 72%", tone: "bg-indigo-50 text-indigo-700" },
+                    { label: "Radar del día", value: "Foco 72%", tone: "bg-blue-50 text-blue-700" },
                     { label: "Bitácora", value: "3 entradas esta semana", tone: "bg-emerald-50 text-emerald-700" },
                     { label: "Reto activo", value: "Cargador fuera del cuarto", tone: "bg-rose-50 text-rose-700" },
                   ].map((s) => (

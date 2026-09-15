@@ -72,8 +72,8 @@ const RECURSOS = [
     icon: Palette,
     cta: "Descargar Imprimible",
     category: "aura",
-    color: "bg-violet-50 text-violet-700 border-violet-100",
-    iconBg: "bg-violet-100 text-violet-700",
+    color: "bg-blue-50 text-blue-700 border-blue-100",
+    iconBg: "bg-blue-100 text-blue-700",
   },
   {
     id: "checklist-entorno",
@@ -127,8 +127,8 @@ const RECURSOS = [
     icon: BookOpen,
     cta: "Descargar Guía",
     category: "imprimibles",
-    color: "bg-indigo-50 text-indigo-700 border-indigo-100",
-    iconBg: "bg-indigo-100 text-indigo-700",
+    color: "bg-cyan-50 text-cyan-700 border-cyan-100",
+    iconBg: "bg-cyan-100 text-cyan-700",
   },
 ] as const;
 
