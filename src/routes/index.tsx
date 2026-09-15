@@ -300,7 +300,7 @@ function Home() {
             </span>
 
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-[var(--color-brand-ink)] sm:text-5xl md:text-[3.4rem]">
-              Recupera la conexión y la paz en tu hogar o en tu aula{" "}
+              PRUEBARecupera la conexión y la paz en tu hogar o en tu aula{" "}
               <span className="text-[var(--color-brand-terracotta)]">
                 sin peleas, culpas ni prohibiciones inútiles.
               </span>
