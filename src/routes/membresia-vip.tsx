@@ -5,10 +5,12 @@ import {
   Check,
   Crown,
   Ear,
+  Gift,
   HeartHandshake,
   Percent,
   Sparkles,
   Users,
+  Wrench,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -38,10 +40,16 @@ export const Route = createFileRoute("/membresia-vip")({
 
 const BENEFICIOS = [
   {
-    icono: BookOpenCheck,
-    titulo: "Recursos nuevos cada semana",
+    icono: Gift,
+    titulo: "Primer acompañamiento personalizado incluido",
     texto:
-      "Guías, acuerdos listos para imprimir, guiones de conversación y microrretos según la edad de tus hijos o de tu grupo.",
+      "Tu primera sesión 1 a 1 con un profesional de Family Help está incluida al iniciar. Conoces tu caso, defines prioridades y sales con un plan concreto.",
+  },
+  {
+    icono: Wrench,
+    titulo: "Recursos y herramientas premium",
+    texto:
+      "Biblioteca completa de guías, acuerdos listos para imprimir, guiones de conversación y microrretos según la edad de tus hijos o de tu grupo.",
   },
   {
     icono: Ear,
@@ -50,16 +58,16 @@ const BENEFICIOS = [
       "Un encuentro por videollamada para contar lo que está pasando en casa o en el aula y salir con un siguiente paso concreto.",
   },
   {
-    icono: Percent,
-    titulo: "Descuentos en acompañamiento personalizado",
-    texto:
-      "Tarifa preferencial en las sesiones 1 a 1 con nuestros profesionales, mientras tu membresía esté activa.",
-  },
-  {
     icono: HeartHandshake,
     titulo: "Acompañamiento grupal permanente",
     texto:
       "Comunidad privada moderada por el equipo: preguntas entre semana, casos reales y respuestas del equipo Family Help.",
+  },
+  {
+    icono: Percent,
+    titulo: "Descuentos en acompañamiento personalizado",
+    texto:
+      "Después de tu primera sesión incluida, accedes a tarifa preferencial en sesiones 1 a 1 con nuestros profesionales mientras tu membresía esté activa.",
   },
   {
     icono: Users,
@@ -72,6 +80,12 @@ const BENEFICIOS = [
     titulo: "Biblioteca y grabaciones",
     texto:
       "Acceso a todas las salas grabadas y al archivo completo de recursos de meses anteriores.",
+  },
+  {
+    icono: BookOpenCheck,
+    titulo: "Recursos nuevos cada semana",
+    texto:
+      "Cada semana sumamos guías, retos y contenido fresco adaptado a lo que la comunidad necesita.",
   },
 ];
 
