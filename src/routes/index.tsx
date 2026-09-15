@@ -22,6 +22,7 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { VIP_PRECIO } from "@/lib/membresia";
 import heroConexion from "@/assets/hero-conexion.jpg";
 
 import conversacion from "@/assets/conversacion-adolescente.jpg";
