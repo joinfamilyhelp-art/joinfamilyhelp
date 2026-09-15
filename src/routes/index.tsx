@@ -590,6 +590,59 @@ function Home() {
         </div>
       </section>
 
+      {/* MEMBRESÍA VIP */}
+      <section className="bg-[var(--color-brand-ink)]">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div className="text-white">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white/90">
+                <Crown className="h-4 w-4" />
+                Membresía VIP
+              </span>
+              <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Acompañamiento continuo, todas las semanas
+              </h2>
+              <p className="mt-4 max-w-xl text-white/80">
+                Por {VIP_PRECIO} al mes recibes recursos nuevos cada semana, una
+                sala de escucha en vivo, comunidad acompañada y descuentos en
+                las sesiones personalizadas.
+              </p>
+              <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+                {[
+                  "Recursos nuevos cada semana",
+                  "Sala de escucha semanal en vivo",
+                  "Acompañamiento grupal permanente",
+                  "Descuentos en sesiones 1 a 1",
+                ].map((b) => (
+                  <li key={b} className="flex items-start gap-2 text-sm text-white/85">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-brand-terracotta)]" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-white/15 bg-white/95 p-8 text-center shadow-xl">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-brand-terracotta)]">
+                Plan mensual
+              </p>
+              <p className="mt-3 text-5xl font-extrabold text-[var(--color-brand-ink)]">
+                {VIP_PRECIO}
+              </p>
+              <p className="mt-1 text-sm text-[var(--color-brand-clay)]">
+                al mes · cancela cuando quieras
+              </p>
+              <Link
+                to="/membresia-vip"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--color-brand-terracotta)] px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-clay)]"
+              >
+                Ver la membresía
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIOS */}
       <section id="testimonios" className="scroll-mt-20 bg-[var(--color-brand-cream)]">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
