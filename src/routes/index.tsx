@@ -6,6 +6,7 @@ import {
   Check,
   ChevronDown,
   Compass,
+  Crown,
   Ear,
   Eye,
   GraduationCap,
