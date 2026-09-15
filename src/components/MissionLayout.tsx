@@ -29,10 +29,10 @@ const TONE: Record<
     grad: "linear-gradient(135deg,#064e3b 0%,#047857 55%,#059669 100%)",
   },
   indigo: {
-    bg: "bg-indigo-50",
-    chip: "bg-indigo-100 text-indigo-800",
-    accent: "text-indigo-700",
-    ring: "ring-indigo-200",
+    bg: "bg-blue-50",
+    chip: "bg-blue-100 text-blue-800",
+    accent: "text-blue-700",
+    ring: "ring-blue-200",
     grad:
       "linear-gradient(135deg, var(--color-brand-ink) 0%, var(--color-brand-indigo) 55%, var(--color-brand-violet) 100%)",
   },

@@ -114,7 +114,7 @@ function MisionAdolescentes() {
 
           <div className="mt-16">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-indigo-700">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
                 Retos prácticos
               </p>
               <h2
@@ -127,7 +127,7 @@ function MisionAdolescentes() {
             <ul className="mx-auto mt-10 max-w-3xl divide-y divide-slate-100 rounded-2xl border border-slate-200 bg-white">
               {RETOS.map((r) => (
                 <li key={r.day} className="flex gap-5 p-5">
-                  <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-indigo-50 text-xs font-mono font-semibold text-indigo-700">
+                  <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-xs font-mono font-semibold text-blue-700">
                     {r.day.split(" ")[1]}
                   </span>
                   <div>
@@ -139,7 +139,7 @@ function MisionAdolescentes() {
             </ul>
 
             <div className="mt-10 flex items-start gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-indigo-700 shadow-sm">
+              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-blue-700 shadow-sm">
                 <Brain className="h-5 w-5" />
               </span>
               <div>
