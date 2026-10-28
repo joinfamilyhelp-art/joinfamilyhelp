@@ -9,101 +9,40 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TerminosRouteImport } from './routes/terminos'
-import { Route as RecursosRouteImport } from './routes/recursos'
-import { Route as PrivacidadRouteImport } from './routes/privacidad'
-import { Route as PlataformaRouteImport } from './routes/plataforma'
-import { Route as NosotrosRouteImport } from './routes/nosotros'
-import { Route as MisionNinosRouteImport } from './routes/mision-ninos'
-import { Route as MisionFamiliasRouteImport } from './routes/mision-familias'
-import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
-import { Route as MisionConexionRouteImport } from './routes/mision-conexion'
-import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
-import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
-import { Route as MembresiaVipRouteImport } from './routes/membresia-vip'
-import { Route as McpRouteImport } from './routes/mcp'
-import { Route as ComunidadRouteImport } from './routes/comunidad'
-import { Route as CharlasYTalleresRouteImport } from './routes/charlas-y-talleres'
-import { Route as AcompanamientoProfesionalRouteImport } from './routes/acompanamiento-profesional'
-import { Route as AccesoRouteImport } from './routes/acceso'
-import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AuthenticatedPanelRouteImport } from './routes/_authenticated/panel'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AccesoRouteImport } from './routes/acceso'
+import { Route as AcompanamientoProfesionalRouteImport } from './routes/acompanamiento-profesional'
+import { Route as CharlasYTalleresRouteImport } from './routes/charlas-y-talleres'
+import { Route as ComunidadRouteImport } from './routes/comunidad'
+import { Route as McpRouteImport } from './routes/mcp'
+import { Route as MembresiaVipRouteImport } from './routes/membresia-vip'
+import { Route as MisionAdolescentesRouteImport } from './routes/mision-adolescentes'
+import { Route as MisionAdultosRouteImport } from './routes/mision-adultos'
+import { Route as MisionConexionRouteImport } from './routes/mision-conexion'
+import { Route as MisionDocentesRouteImport } from './routes/mision-docentes'
+import { Route as MisionFamiliasRouteImport } from './routes/mision-familias'
+import { Route as MisionNinosRouteImport } from './routes/mision-ninos'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as PlataformaRouteImport } from './routes/plataforma'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as RecursosRouteImport } from './routes/recursos'
+import { Route as TerminosRouteImport } from './routes/terminos'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as AuthenticatedPanelRouteImport } from './routes/_authenticated/panel'
 
-const TerminosRoute = TerminosRouteImport.update({
-  id: '/terminos',
-  path: '/terminos',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RecursosRoute = RecursosRouteImport.update({
-  id: '/recursos',
-  path: '/recursos',
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PrivacidadRoute = PrivacidadRouteImport.update({
-  id: '/privacidad',
-  path: '/privacidad',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlataformaRoute = PlataformaRouteImport.update({
-  id: '/plataforma',
-  path: '/plataforma',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NosotrosRoute = NosotrosRouteImport.update({
-  id: '/nosotros',
-  path: '/nosotros',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MisionNinosRoute = MisionNinosRouteImport.update({
-  id: '/mision-ninos',
-  path: '/mision-ninos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MisionFamiliasRoute = MisionFamiliasRouteImport.update({
-  id: '/mision-familias',
-  path: '/mision-familias',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MisionDocentesRoute = MisionDocentesRouteImport.update({
-  id: '/mision-docentes',
-  path: '/mision-docentes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MisionConexionRoute = MisionConexionRouteImport.update({
-  id: '/mision-conexion',
-  path: '/mision-conexion',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MisionAdultosRoute = MisionAdultosRouteImport.update({
-  id: '/mision-adultos',
-  path: '/mision-adultos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MisionAdolescentesRoute = MisionAdolescentesRouteImport.update({
-  id: '/mision-adolescentes',
-  path: '/mision-adolescentes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MembresiaVipRoute = MembresiaVipRouteImport.update({
-  id: '/membresia-vip',
-  path: '/membresia-vip',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ComunidadRoute = ComunidadRouteImport.update({
-  id: '/comunidad',
-  path: '/comunidad',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CharlasYTalleresRoute = CharlasYTalleresRouteImport.update({
-  id: '/charlas-y-talleres',
-  path: '/charlas-y-talleres',
+const AccesoRoute = AccesoRouteImport.update({
+  id: '/acceso',
+  path: '/acceso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcompanamientoProfesionalRoute =
@@ -112,24 +51,80 @@ const AcompanamientoProfesionalRoute =
     path: '/acompanamiento-profesional',
     getParentRoute: () => rootRouteImport,
   } as any)
-const AccesoRoute = AccesoRouteImport.update({
-  id: '/acceso',
-  path: '/acceso',
+const CharlasYTalleresRoute = CharlasYTalleresRouteImport.update({
+  id: '/charlas-y-talleres',
+  path: '/charlas-y-talleres',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
-  id: '/_authenticated',
+const ComunidadRoute = ComunidadRouteImport.update({
+  id: '/comunidad',
+  path: '/comunidad',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedPanelRoute = AuthenticatedPanelRouteImport.update({
-  id: '/panel',
-  path: '/panel',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const MembresiaVipRoute = MembresiaVipRouteImport.update({
+  id: '/membresia-vip',
+  path: '/membresia-vip',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisionAdolescentesRoute = MisionAdolescentesRouteImport.update({
+  id: '/mision-adolescentes',
+  path: '/mision-adolescentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisionAdultosRoute = MisionAdultosRouteImport.update({
+  id: '/mision-adultos',
+  path: '/mision-adultos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisionConexionRoute = MisionConexionRouteImport.update({
+  id: '/mision-conexion',
+  path: '/mision-conexion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisionDocentesRoute = MisionDocentesRouteImport.update({
+  id: '/mision-docentes',
+  path: '/mision-docentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisionFamiliasRoute = MisionFamiliasRouteImport.update({
+  id: '/mision-familias',
+  path: '/mision-familias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisionNinosRoute = MisionNinosRouteImport.update({
+  id: '/mision-ninos',
+  path: '/mision-ninos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlataformaRoute = PlataformaRouteImport.update({
+  id: '/plataforma',
+  path: '/plataforma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosRoute = RecursosRouteImport.update({
+  id: '/recursos',
+  path: '/recursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TerminosRoute = TerminosRouteImport.update({
+  id: '/terminos',
+  path: '/terminos',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const Char91DotwellKnownChar93OauthProtectedResourceRoute =
   Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
@@ -137,6 +132,11 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
     path: '/.well-known/oauth-protected-resource',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AuthenticatedPanelRoute = AuthenticatedPanelRouteImport.update({
+  id: '/panel',
+  path: '/panel',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -301,123 +301,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/terminos': {
-      id: '/terminos'
-      path: '/terminos'
-      fullPath: '/terminos'
-      preLoaderRoute: typeof TerminosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recursos': {
-      id: '/recursos'
-      path: '/recursos'
-      fullPath: '/recursos'
-      preLoaderRoute: typeof RecursosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacidad': {
-      id: '/privacidad'
-      path: '/privacidad'
-      fullPath: '/privacidad'
-      preLoaderRoute: typeof PrivacidadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/plataforma': {
-      id: '/plataforma'
-      path: '/plataforma'
-      fullPath: '/plataforma'
-      preLoaderRoute: typeof PlataformaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/nosotros': {
-      id: '/nosotros'
-      path: '/nosotros'
-      fullPath: '/nosotros'
-      preLoaderRoute: typeof NosotrosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mision-ninos': {
-      id: '/mision-ninos'
-      path: '/mision-ninos'
-      fullPath: '/mision-ninos'
-      preLoaderRoute: typeof MisionNinosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mision-familias': {
-      id: '/mision-familias'
-      path: '/mision-familias'
-      fullPath: '/mision-familias'
-      preLoaderRoute: typeof MisionFamiliasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mision-docentes': {
-      id: '/mision-docentes'
-      path: '/mision-docentes'
-      fullPath: '/mision-docentes'
-      preLoaderRoute: typeof MisionDocentesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mision-conexion': {
-      id: '/mision-conexion'
-      path: '/mision-conexion'
-      fullPath: '/mision-conexion'
-      preLoaderRoute: typeof MisionConexionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mision-adultos': {
-      id: '/mision-adultos'
-      path: '/mision-adultos'
-      fullPath: '/mision-adultos'
-      preLoaderRoute: typeof MisionAdultosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mision-adolescentes': {
-      id: '/mision-adolescentes'
-      path: '/mision-adolescentes'
-      fullPath: '/mision-adolescentes'
-      preLoaderRoute: typeof MisionAdolescentesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/membresia-vip': {
-      id: '/membresia-vip'
-      path: '/membresia-vip'
-      fullPath: '/membresia-vip'
-      preLoaderRoute: typeof MembresiaVipRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/comunidad': {
-      id: '/comunidad'
-      path: '/comunidad'
-      fullPath: '/comunidad'
-      preLoaderRoute: typeof ComunidadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/charlas-y-talleres': {
-      id: '/charlas-y-talleres'
-      path: '/charlas-y-talleres'
-      fullPath: '/charlas-y-talleres'
-      preLoaderRoute: typeof CharlasYTalleresRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/acompanamiento-profesional': {
-      id: '/acompanamiento-profesional'
-      path: '/acompanamiento-profesional'
-      fullPath: '/acompanamiento-profesional'
-      preLoaderRoute: typeof AcompanamientoProfesionalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/acceso': {
-      id: '/acceso'
-      path: '/acceso'
-      fullPath: '/acceso'
-      preLoaderRoute: typeof AccesoRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated': {
@@ -427,11 +315,130 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/acceso': {
+      id: '/acceso'
+      path: '/acceso'
+      fullPath: '/acceso'
+      preLoaderRoute: typeof AccesoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/acompanamiento-profesional': {
+      id: '/acompanamiento-profesional'
+      path: '/acompanamiento-profesional'
+      fullPath: '/acompanamiento-profesional'
+      preLoaderRoute: typeof AcompanamientoProfesionalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/charlas-y-talleres': {
+      id: '/charlas-y-talleres'
+      path: '/charlas-y-talleres'
+      fullPath: '/charlas-y-talleres'
+      preLoaderRoute: typeof CharlasYTalleresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comunidad': {
+      id: '/comunidad'
+      path: '/comunidad'
+      fullPath: '/comunidad'
+      preLoaderRoute: typeof ComunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/membresia-vip': {
+      id: '/membresia-vip'
+      path: '/membresia-vip'
+      fullPath: '/membresia-vip'
+      preLoaderRoute: typeof MembresiaVipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mision-adolescentes': {
+      id: '/mision-adolescentes'
+      path: '/mision-adolescentes'
+      fullPath: '/mision-adolescentes'
+      preLoaderRoute: typeof MisionAdolescentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mision-adultos': {
+      id: '/mision-adultos'
+      path: '/mision-adultos'
+      fullPath: '/mision-adultos'
+      preLoaderRoute: typeof MisionAdultosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mision-conexion': {
+      id: '/mision-conexion'
+      path: '/mision-conexion'
+      fullPath: '/mision-conexion'
+      preLoaderRoute: typeof MisionConexionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mision-docentes': {
+      id: '/mision-docentes'
+      path: '/mision-docentes'
+      fullPath: '/mision-docentes'
+      preLoaderRoute: typeof MisionDocentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mision-familias': {
+      id: '/mision-familias'
+      path: '/mision-familias'
+      fullPath: '/mision-familias'
+      preLoaderRoute: typeof MisionFamiliasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mision-ninos': {
+      id: '/mision-ninos'
+      path: '/mision-ninos'
+      fullPath: '/mision-ninos'
+      preLoaderRoute: typeof MisionNinosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plataforma': {
+      id: '/plataforma'
+      path: '/plataforma'
+      fullPath: '/plataforma'
+      preLoaderRoute: typeof PlataformaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos': {
+      id: '/recursos'
+      path: '/recursos'
+      fullPath: '/recursos'
+      preLoaderRoute: typeof RecursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terminos': {
+      id: '/terminos'
+      path: '/terminos'
+      fullPath: '/terminos'
+      preLoaderRoute: typeof TerminosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated/panel': {
@@ -440,13 +447,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/panel'
       preLoaderRoute: typeof AuthenticatedPanelRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
-      parentRoute: typeof rootRouteImport
     }
   }
 }
