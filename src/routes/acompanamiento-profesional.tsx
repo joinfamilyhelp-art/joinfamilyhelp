@@ -1,3 +1,5 @@
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
@@ -378,6 +380,7 @@ function AcompanamientoPage() {
 
   return (
     <div className="bg-[var(--color-brand-cream)]">
+      <Navbar />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div
@@ -491,6 +494,7 @@ function AcompanamientoPage() {
           onClose={() => setSeleccionado(null)}
         />
       ) : null}
+      <Footer />
     </div>
   );
 }

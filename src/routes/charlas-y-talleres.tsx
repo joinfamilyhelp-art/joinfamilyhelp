@@ -1,3 +1,5 @@
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
@@ -295,6 +297,7 @@ function FormularioPropuesta() {
 function CharlasPage() {
   return (
     <div className="bg-[var(--color-brand-cream)]">
+      <Navbar />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div
@@ -421,6 +424,7 @@ function CharlasPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
