@@ -43,7 +43,7 @@ const BENEFICIOS = [
     icono: Gift,
     titulo: "Primer acompañamiento personalizado incluido",
     texto:
-      "Tu primera sesión 1 a 1 con un profesional de Family Help está incluida al iniciar. Conoces tu caso, defines prioridades y sales con un plan concreto.",
+      "Tu primera sesión 1 a 1 con un profesional de Family Help por 30 minutos está incluida al iniciar. Conoces tu caso, defines prioridades y sales con un plan concreto.",
   },
   {
     icono: Wrench,
@@ -55,13 +55,13 @@ const BENEFICIOS = [
     icono: Ear,
     titulo: "Sala de escucha semanal en vivo",
     texto:
-      "Un encuentro por videollamada para contar lo que está pasando en casa o en el aula y salir con un siguiente paso concreto.",
+      "Un encuentro por videollamada para contar lo que está pasando en casa o en el aula y salir con un siguiente paso concreto. Previa inscripción.",
   },
   {
     icono: HeartHandshake,
     titulo: "Acompañamiento grupal permanente",
     texto:
-      "Comunidad privada moderada por el equipo: preguntas entre semana, casos reales y respuestas del equipo Family Help.",
+      "Comunidad privada moderada por el equipo: preguntas entre semana, casos reales y respuestas del equipo Family Help de acuerdo a disponibilidad.",
   },
   {
     icono: Percent,
