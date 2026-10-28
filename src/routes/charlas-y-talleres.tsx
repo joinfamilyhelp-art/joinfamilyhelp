@@ -16,8 +16,9 @@ import { guardarContacto } from "@/lib/contactos";
 import dianaCharlaAsset from "@/assets/diana-charla.jpeg.asset.json";
 import auditorioRealAsset from "@/assets/auditorio-real.jpeg.asset.json";
 
-
-
+// The external domain does not serve Lovable's asset endpoint.
+const dianaCharlaUrl = new URL(dianaCharlaAsset.url, "https://joinfamilyhelp-com.lovable.app").href;
+const auditorioRealUrl = new URL(auditorioRealAsset.url, "https://joinfamilyhelp-com.lovable.app").href;
 
 export const Route = createFileRoute("/charlas-y-talleres")({
   head: () => ({
@@ -42,6 +43,8 @@ export const Route = createFileRoute("/charlas-y-talleres")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: dianaCharlaUrl },
+      { name: "twitter:image", content: dianaCharlaUrl },
     ],
   }),
   component: CharlasPage,
@@ -333,14 +336,14 @@ function CharlasPage() {
           </div>
           <div className="relative">
             <img
-              src={dianaCharlaAsset.url}
+              src={dianaCharlaUrl}
               alt="Diana facilitando una charla de Family Help ante un grupo de participantes"
               width={1024}
               height={1024}
               className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl"
             />
             <img
-              src={auditorioRealAsset.url}
+              src={auditorioRealUrl}
               alt="Participantes de un taller de Family Help desarrollando una actividad grupal"
               width={1024}
               height={1024}
