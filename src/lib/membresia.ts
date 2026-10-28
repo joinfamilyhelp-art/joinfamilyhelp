@@ -10,7 +10,7 @@ export const VIP_PRECIO = "39 USD";
 export const VIP_PRECIO_DETALLE = "al mes · cancela cuando quieras";
 
 export const VIP_FALLBACK_URL = buildWhatsAppUrl(
-  "Hola, quiero unirme a la Membresía VIP de Family Help (19 USD al mes).",
+  "Hola, quiero unirme a la Membresía VIP de Family Help (39 USD al mes).",
 );
 
 export const vipUrl = VIP_CHECKOUT_URL || VIP_FALLBACK_URL;

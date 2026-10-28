@@ -23,7 +23,7 @@ export const Route = createFileRoute("/membresia-vip")({
       {
         name: "description",
         content:
-          "Membresía VIP de Family Help por 19 USD al mes: recursos nuevos cada semana, sala de escucha semanal en vivo, acompañamiento grupal permanente y descuentos en sesiones personalizadas.",
+          "Membresía VIP de Family Help por 39 USD al mes: recursos nuevos cada semana, sala de escucha semanal en vivo, acompañamiento grupal permanente y descuentos en sesiones personalizadas.",
       },
       { property: "og:title", content: "Membresía VIP | Family Help" },
       {
