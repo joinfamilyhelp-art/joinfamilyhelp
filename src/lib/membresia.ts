@@ -6,7 +6,7 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
  */
 export const VIP_CHECKOUT_URL = "";
 
-export const VIP_PRECIO = "19 USD";
+export const VIP_PRECIO = "39 USD";
 export const VIP_PRECIO_DETALLE = "al mes · cancela cuando quieras";
 
 export const VIP_FALLBACK_URL = buildWhatsAppUrl(
