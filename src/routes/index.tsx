@@ -159,25 +159,29 @@ const PROCESO = [
     icon: Eye,
     step: "01",
     title: "Comprender",
-    text: "Entender cómo está diseñada la atención hoy. Sin alarmismo y sin culpa: primero se ve, después se decide.",
+    antes: "Antes de juzgar.",
+    text: "Observar y descubrir qué está pasando.",
   },
   {
     icon: Ear,
     step: "02",
     title: "Escuchar",
-    text: "Abrir una conversación real en casa o en el aula, donde nadie quede en el papel de acusado.",
+    antes: "Antes de reaccionar.",
+    text: "Reconocer necesidades, emociones y perspectivas.",
   },
   {
     icon: PenLine,
     step: "03",
     title: "Diseñar",
-    text: "Cambiar el entorno, no a la persona: pequeñas fricciones y acuerdos que hacen fácil lo importante.",
+    antes: "Antes de disciplinar.",
+    text: "Crear alternativas, entornos y acuerdos posibles.",
   },
   {
     icon: Compass,
     step: "04",
     title: "Elegir",
-    text: "Decidir con criterio propio, una micro-acción a la vez, hasta que deja de ser esfuerzo y se vuelve hábito.",
+    antes: "Con intención.",
+    text: "Decidir cómo queremos vivir y relacionarnos con la tecnología.",
   },
 ];
 
