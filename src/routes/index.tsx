@@ -4,18 +4,18 @@ import { useState } from "react";
 import {
   ArrowRight,
   Baby,
+  Brain,
   Check,
   ChevronDown,
   Compass,
   Crown,
   Ear,
-  Eye,
   GraduationCap,
   Heart,
   MessageCircle,
-  PenLine,
   Quote,
   Sparkles,
+  Sprout,
   UserRound,
   Users,
   X,
@@ -156,7 +156,7 @@ const METODOS = [
 
 const PROCESO = [
   {
-    icon: Eye,
+    icon: Brain,
     step: "01",
     title: "Comprender",
     antes: "Antes de juzgar.",
@@ -170,7 +170,7 @@ const PROCESO = [
     text: "Reconocer necesidades, emociones y perspectivas.",
   },
   {
-    icon: PenLine,
+    icon: Sprout,
     step: "03",
     title: "Diseñar",
     antes: "Antes de disciplinar.",
