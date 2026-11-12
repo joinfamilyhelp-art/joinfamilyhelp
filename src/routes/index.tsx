@@ -518,11 +518,11 @@ function Home() {
       {/* PROCESO */}
       <section id="proceso" className="scroll-mt-20 bg-[var(--color-brand-sand)]">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-clay)]">
               Cómo funciona
             </p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
               Comprender → Escuchar → Diseñar → Elegir
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
