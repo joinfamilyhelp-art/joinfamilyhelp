@@ -1,3 +1,4 @@
+import { RutaFamilyHelp, DivisorCorazon } from "@/components/RutaFamilyHelp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
@@ -523,6 +524,8 @@ function Home() {
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
               El mismo recorrido detrás de los cinco métodos. Cuatro pasos, ninguno improvisado.
             </p>
+            <RutaFamilyHelp className="mt-8" />
+            <DivisorCorazon className="mt-8" />
           </div>
 
           <ol className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
