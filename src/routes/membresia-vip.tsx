@@ -8,8 +8,6 @@ import {
   Gift,
   HeartHandshake,
   Percent,
-  Sparkles,
-  Users,
   Wrench,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -68,18 +66,6 @@ const BENEFICIOS = [
     titulo: "Descuentos en acompañamiento personalizado",
     texto:
       "Después de tu primera sesión incluida, accedes a tarifa preferencial en sesiones 1 a 1 con nuestros profesionales mientras tu membresía esté activa.",
-  },
-  {
-    icono: Users,
-    titulo: "Cupo prioritario en misiones y talleres",
-    texto:
-      "Entras primero a la Misión Conexión y a los talleres abiertos, sin costo adicional cuando el cupo lo permite.",
-  },
-  {
-    icono: Sparkles,
-    titulo: "Biblioteca y grabaciones",
-    texto:
-      "Acceso a todas las salas grabadas y al archivo completo de recursos de meses anteriores.",
   },
   {
     icono: BookOpenCheck,
