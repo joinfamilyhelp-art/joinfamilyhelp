@@ -4,18 +4,18 @@ import { useState } from "react";
 import {
   ArrowRight,
   Baby,
+  Brain,
   Check,
   ChevronDown,
   Compass,
   Crown,
   Ear,
-  Eye,
   GraduationCap,
   Heart,
   MessageCircle,
-  PenLine,
   Quote,
   Sparkles,
+  Sprout,
   UserRound,
   Users,
   X,
@@ -156,28 +156,32 @@ const METODOS = [
 
 const PROCESO = [
   {
-    icon: Eye,
+    icon: Brain,
     step: "01",
     title: "Comprender",
-    text: "Entender cómo está diseñada la atención hoy. Sin alarmismo y sin culpa: primero se ve, después se decide.",
+    antes: "Antes de juzgar.",
+    text: "Observar y descubrir qué está pasando.",
   },
   {
     icon: Ear,
     step: "02",
     title: "Escuchar",
-    text: "Abrir una conversación real en casa o en el aula, donde nadie quede en el papel de acusado.",
+    antes: "Antes de reaccionar.",
+    text: "Reconocer necesidades, emociones y perspectivas.",
   },
   {
-    icon: PenLine,
+    icon: Sprout,
     step: "03",
     title: "Diseñar",
-    text: "Cambiar el entorno, no a la persona: pequeñas fricciones y acuerdos que hacen fácil lo importante.",
+    antes: "Antes de disciplinar.",
+    text: "Crear alternativas, entornos y acuerdos posibles.",
   },
   {
     icon: Compass,
     step: "04",
     title: "Elegir",
-    text: "Decidir con criterio propio, una micro-acción a la vez, hasta que deja de ser esfuerzo y se vuelve hábito.",
+    antes: "Con intención.",
+    text: "Decidir cómo queremos vivir y relacionarnos con la tecnología.",
   },
 ];
 
@@ -514,11 +518,11 @@ function Home() {
       {/* PROCESO */}
       <section id="proceso" className="scroll-mt-20 bg-[var(--color-brand-sand)]">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-clay)]">
               Cómo funciona
             </p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
               Comprender → Escuchar → Diseñar → Elegir
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-brand-clay)]">
@@ -543,7 +547,10 @@ function Home() {
                     <Icon className="h-5 w-5" />
                   </span>
                   <h3 className="mt-4 text-lg font-bold">{p.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-brand-clay)]">
+                  <p className="mt-2 text-sm font-semibold text-[var(--color-brand-clay)]">
+                    {p.antes}
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-[var(--color-brand-clay)]">
                     {p.text}
                   </p>
                 </li>
