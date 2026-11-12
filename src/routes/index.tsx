@@ -547,7 +547,10 @@ function Home() {
                     <Icon className="h-5 w-5" />
                   </span>
                   <h3 className="mt-4 text-lg font-bold">{p.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-brand-clay)]">
+                  <p className="mt-2 text-sm font-semibold text-[var(--color-brand-clay)]">
+                    {p.antes}
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-[var(--color-brand-clay)]">
                     {p.text}
                   </p>
                 </li>
