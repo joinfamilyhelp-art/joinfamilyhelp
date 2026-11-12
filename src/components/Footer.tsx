@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
+import { RutaFamilyHelp, DivisorCorazon } from "@/components/RutaFamilyHelp";
 const logoAsset = { url: "/family-help-logo.png" };
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -87,16 +88,20 @@ export function Footer() {
           <FooterColumn title="Legal" links={LEGAL} />
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-[var(--color-brand-mist)] pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Family Help®. Todos los derechos reservados.
-          </p>
-          <p
-            className="text-base text-[var(--color-brand-violet)]"
-            style={{ fontFamily: "Satisfy, cursive" }}
-          >
-            Desarrollamos capacidades para que decidas tu propio camino.
-          </p>
+        <div className="mt-14 border-t border-[var(--color-brand-mist)] pt-8">
+          <RutaFamilyHelp discreet className="justify-center" />
+          <DivisorCorazon discreet className="mx-auto mt-5 max-w-md" />
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-slate-500">
+              © {new Date().getFullYear()} Family Help®. Todos los derechos reservados.
+            </p>
+            <p
+              className="text-base text-[var(--color-brand-violet)]"
+              style={{ fontFamily: "Satisfy, cursive" }}
+            >
+              Desarrollamos capacidades para que decidas tu propio camino.
+            </p>
+          </div>
         </div>
 
         {/* Cintillo de descargo Hotmart */}
