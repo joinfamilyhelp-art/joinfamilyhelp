@@ -9,10 +9,11 @@ const WHATSAPP_CTA_URL = buildWhatsAppUrl(
 
 const PRODUCTOS = [
 
-  { label: "Misión Familias", to: "/mision-familias" as const },
-  { label: "Misión Docentes", to: "/mision-docentes" as const },
+  { label: "Misión Niños", to: "/mision-ninos" as const },
   { label: "Misión Adolescentes", to: "/mision-adolescentes" as const },
   { label: "Misión Adultos", to: "/mision-adultos" as const },
+  { label: "Misión Familias", to: "/mision-familias" as const },
+  { label: "Misión Docentes", to: "/mision-docentes" as const },
 ];
 
 const ENLACES = [
