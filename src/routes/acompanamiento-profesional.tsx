@@ -12,6 +12,7 @@ import {
   Landmark,
   Lock,
   MapPin,
+  Scale,
   ShieldCheck,
   Stethoscope,
   Users,
@@ -28,12 +29,12 @@ export const Route = createFileRoute("/acompanamiento-profesional")({
     meta: [
       {
         title:
-          "Acompañamiento Profesional — Orientación, Psicología, Trabajo Social y Psiquiatría | Family Help",
+          "Acompañamiento Profesional — Psicología, Trabajo Social, Psiquiatría y Asesoría Legal | Family Help",
       },
       {
         name: "description",
         content:
-          "Reserva sesiones individuales o institucionales con el equipo interdisciplinario de Family Help: orientación familiar, psicología, trabajo social, psiquiatría y comités de convivencia. Sin juicios, con enfoque práctico.",
+          "Reserva sesiones individuales o institucionales con el equipo interdisciplinario de Family Help: orientación familiar, psicología, trabajo social, psiquiatría, comités de convivencia y asesoría legal. Sin juicios, con enfoque práctico.",
       },
       {
         property: "og:title",
@@ -131,6 +132,21 @@ export const SERVICIOS: Servicio[] = [
       "Colegios con comités de convivencia activos",
       "Equipos docentes frente a casos complejos",
       "Instituciones que buscan protocolos con respaldo técnico",
+    ],
+  },
+  {
+    id: "asesoria-legal",
+    titulo: "Asesoría Legal",
+    foco:
+      "Orientación jurídica en familia, colegio y riesgos digitales.",
+    cta: "Agendar Asesoría",
+    icono: Scale,
+    descripcion:
+      "Revisamos tu caso y te decimos qué pasos jurídicos te convienen: qué documentar, qué pedir por escrito y cuándo corresponde escalar ante el colegio o ante una autoridad.",
+    paraQuien: [
+      "Familias que necesitan acuerdos de crianza o custodia por escrito",
+      "Casos de ciberacoso, grooming o sextorsión que requieren denuncia",
+      "Padres y colegios frente a comisiones de convivencia escolar",
     ],
   },
 ];
